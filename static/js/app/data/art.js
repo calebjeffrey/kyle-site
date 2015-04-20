@@ -1,0 +1,925 @@
+define(function(require, exports, module) {
+
+    module.exports = [
+      {
+        "portraits": [
+             {
+                "title": "The Lord Rye",
+                "slug": "thelordrye",
+                "type": "portraits",
+                "width": "12\"",
+                "height": "16\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                // "inquire": {
+                //     "href": "mailto:chris@whileimstillhere.com",
+                //     "linkText": "Inquire",
+                //     "visible": true
+                // },
+                "imageThumb": "TheLordRye_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "TheLordRye_ChrisPetersen_thumb-2x.jpg",
+                "image": "TheLordRye_ChrisPetersen.jpg",
+                "image2x": "TheLordRye_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Rae The Barber",
+                "slug": "RaeTheBarber",
+                "type": "portraits",
+                "width": "36\"",
+                "height": "48\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "imageThumb": "RaeTheBarber_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "RaeTheBarber_ChrisPetersen_thumb-2x.jpg",
+                "image": "RaeTheBarber_ChrisPetersen.jpg",
+                "image2x": "RaeTheBarber_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Trying To Be Human",
+                "slug": "TryingToBeHuman",
+                "type": "portraits",
+                "width": "24\"",
+                "height": "36\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "imageThumb": "TryingToBeHuman_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "TryingToBeHuman_ChrisPetersen_thumb-2x.jpg",
+                "image": "TryingToBeHuman_ChrisPetersen.jpg",
+                "image2x": "TryingToBeHuman_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Calling Collect",
+                "slug": "CallingCollect",
+                "type": "portraits",
+                "width": "16\"",
+                "height": "20\"",
+                "material": "OIL ON CANVAS",
+                "date": "2012",
+                "imageThumb": "CallingCollect_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "CallingCollect_ChrisPetersen_thumb-2x.jpg",
+                "image": "CallingCollect_ChrisPetersen.jpg",
+                "image2x": "CallingCollect_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Red Line",
+                "slug": "RedLine",
+                "type": "portraits",
+                "width": "16\"",
+                "height": "20\"",
+                "material": "OIL ON CANVAS",
+                "date": "2012",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "RedLine_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "RedLine_ChrisPetersen_thumb-2x.jpg",
+                "image": "RedLine_ChrisPetersen.jpg",
+                "image2x": "RedLine_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Deaf to it All",
+                "slug": "DeafToItAll",
+                "type": "portraits",
+                "width": "18\"",
+                "height": "24\"",
+                "material": "OIL ON CANVAS",
+                "date": "2012",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Deaf_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Deaf_ChrisPetersen_thumb-2x.jpg",
+                "image": "Deaf_ChrisPetersen.jpg",
+                "image2x": "Deaf_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Study for Mossberg",
+                "slug": "StudyForMossberg",
+                "type": "portraits",
+                "width": "12\"",
+                "height": "16\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "PFunk_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "PFunk_ChrisPetersen_thumb-2x.jpg",
+                "image": "PFunk_ChrisPetersen.jpg",
+                "image2x": "PFunk_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Willie",
+                "slug": "Willie",
+                "type": "portraits",
+                "width": "9\"",
+                "height": "12\"",
+                "material": "OIL ON CANVAS",
+                "date": "2012",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Willie_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Willie_ChrisPetersen_thumb-2x.jpg",
+                "image": "Willie_ChrisPetersen.jpg",
+                "image2x": "Willie_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Mac",
+                "slug": "Mac",
+                "type": "portraits",
+                "width": "9\"",
+                "height": "12\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "MacStudy_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "MacStudy_ChrisPetersen_thumb-2x.jpg",
+                "image": "MacStudy_ChrisPetersen.jpg",
+                "image2x": "MacStudy_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Flouresence",
+                "slug": "Flouresence",
+                "type": "portraits",
+                "width": "16\"",
+                "height": "20\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Flouresence_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Flouresence_ChrisPetersen_thumb-2x.jpg",
+                "image": "Flouresence_ChrisPetersen.jpg",
+                "image2x": "Flouresence_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Backpacker",
+                "slug": "Backpacker",
+                "type": "portraits",
+                "width": "16\"",
+                "height": "20\"",
+                "material": "OIL ON CANVAS",
+                "date": "2012",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Backpacker_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Backpacker_ChrisPetersen_thumb-2x.jpg",
+                "image": "Backpacker_ChrisPetersen.jpg",
+                "image2x": "Backpacker_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Divine Inspiration",
+                "slug": "DivineInspiration",
+                "type": "portraits",
+                "width": "24\"",
+                "height": "18\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "DivineInspiration_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "DivineInspiration_ChrisPetersen_thumb-2x.jpg",
+                "image": "DivineInspiration_ChrisPetersen.jpg",
+                "image2x": "DivineInspiration_ChrisPetersen-2x.jpg"
+            }
+        ],
+        "cityscapes": [
+            {
+                "title": "Alameda Cuts",
+                "slug": "AlamedaCuts",
+                "type": "cityscapes",
+                "width": "12\"",
+                "height": "36\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "AlamedaCuts_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "AlamedaCuts_ChrisPetersen_thumb-2x.jpg",
+                "image": "AlamedaCuts_ChrisPetersen.jpg",
+                "image2x": "AlamedaCuts_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Stranded",
+                "slug": "Stranded",
+                "type": "cityscapes",
+                "width": "20\"",
+                "height": "24\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Stranded_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Stranded_ChrisPetersen_thumb-2x.jpg",
+                "image": "Stranded_ChrisPetersen.jpg",
+                "image2x": "Stranded_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "No Parking",
+                "slug": "NoParking",
+                "type": "cityscapes",
+                "width": "10\"",
+                "height": "8\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "NoParking_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "NoParking_ChrisPetersen_thumb-2x.jpg",
+                "image": "NoParking_ChrisPetersen.jpg",
+                "image2x": "NoParking_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Down On Broadway",
+                "slug": "DownOnBroadway",
+                "type": "cityscapes",
+                "width": "12\"",
+                "height": "12\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "DownOnBroadway_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "DownOnBroadway_ChrisPetersen_thumb-2x.jpg",
+                "image": "DownOnBroadway_ChrisPetersen.jpg",
+                "image2x": "DownOnBroadway_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Parked On Franklin",
+                "slug": "ParkedOnFranklin",
+                "type": "cityscapes",
+                "width": "14\"",
+                "height": "11\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "ParkedOnFranklin_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "ParkedOnFranklin_ChrisPetersen_thumb-2x.jpg",
+                "image": "ParkedOnFranklin_ChrisPetersen.jpg",
+                "image2x": "ParkedOnFranklin_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Sunset Liquor",
+                "slug": "SunsetLiquor",
+                "type": "cityscapes",
+                "width": "11\"",
+                "height": "14\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "SunsetLiquor_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "SunsetLiquor_ChrisPetersen_thumb-2x.jpg",
+                "image": "SunsetLiquor_ChrisPetersen.jpg",
+                "image2x": "SunsetLiquor_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Street Sleeper",
+                "slug": "StreetSleeper",
+                "type": "cityscapes",
+                "width": "16\"",
+                "height": "20\"",
+                "material": "OIL ON CANVAS",
+                "date": "2012",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "StreetSleeper_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "StreetSleeper_ChrisPetersen_thumb-2x.jpg",
+                "image": "StreetSleeper_ChrisPetersen.jpg",
+                "image2x": "StreetSleeper_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "4th St Bridge",
+                "slug": "4thStBridge",
+                "type": "cityscapes",
+                "width": "16\"",
+                "height": "16\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "4thStBridge_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "4thStBridge_ChrisPetersen_thumb-2x.jpg",
+                "image": "4thStBridge_ChrisPetersen.jpg",
+                "image2x": "4thStBridge_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Below The Bridge",
+                "slug": "BelowTheBridge",
+                "type": "cityscapes",
+                "width": "8\"",
+                "height": "24\"",
+                "material": "OIL ON CANVAS",
+                "date": "2012",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "BelowTheBridge_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "BelowTheBridge_ChrisPetersen_thumb-2x.jpg",
+                "image": "BelowTheBridge_ChrisPetersen.jpg",
+                "image2x": "BelowTheBridge_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Lurking",
+                "slug": "Lurking",
+                "type": "cityscapes",
+                "width": "24\"",
+                "height": "24\"",
+                "material": "OIL ON CANVAS",
+                "date": "2012",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Lurking_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Lurking_ChrisPetersen_thumb-2x.jpg",
+                "image": "Lurking_ChrisPetersen.jpg",
+                "image2x": "Lurking_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Under The Bridge",
+                "slug": "UnderTheBridge",
+                "type": "cityscapes",
+                "width": "16\"",
+                "height": "16\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "UnderTheBridge_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "UnderTheBridge_ChrisPetersen_thumb-2x.jpg",
+                "image": "UnderTheBridge_ChrisPetersen.jpg",
+                "image2x": "UnderTheBridge_ChrisPetersen-2x.jpg"
+            }
+        ],
+        "allaprima": [
+            {
+                "title": "Allaprima",
+                "slug": "Allaprima01",
+                "type": "allaprima",
+                "width": "18\"",
+                "height": "24\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Allaprima01_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Allaprima01_ChrisPetersen_thumb-2x.jpg",
+                "image": "Allaprima01_ChrisPetersen.jpg",
+                "image2x": "Allaprima01_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Allaprima",
+                "slug": "Allaprima02",
+                "type": "allaprima",
+                "width": "18\"",
+                "height": "24\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Allaprima02_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Allaprima02_ChrisPetersen_thumb-2x.jpg",
+                "image": "Allaprima02_ChrisPetersen.jpg",
+                "image2x": "Allaprima02_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Allaprima",
+                "slug": "Allaprima03",
+                "type": "allaprima",
+                "width": "18\"",
+                "height": "24\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Allaprima03_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Allaprima03_ChrisPetersen_thumb-2x.jpg",
+                "image": "Allaprima03_ChrisPetersen.jpg",
+                "image2x": "Allaprima03_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Allaprima",
+                "slug": "Allaprima04",
+                "type": "allaprima",
+                "width": "18\"",
+                "height": "24\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Allaprima04_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Allaprima04_ChrisPetersen_thumb-2x.jpg",
+                "image": "Allaprima04_ChrisPetersen.jpg",
+                "image2x": "Allaprima04_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Allaprima",
+                "slug": "Allaprima05",
+                "type": "allaprima",
+                "width": "18\"",
+                "height": "24\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Allaprima05_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Allaprima05_ChrisPetersen_thumb-2x.jpg",
+                "image": "Allaprima05_ChrisPetersen.jpg",
+                "image2x": "Allaprima05_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Allaprima",
+                "slug": "Allaprima06",
+                "type": "allaprima",
+                "width": "16\"",
+                "height": "20\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Allaprima06_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Allaprima06_ChrisPetersen_thumb-2x.jpg",
+                "image": "Allaprima06_ChrisPetersen.jpg",
+                "image2x": "Allaprima06_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Allaprima",
+                "slug": "Allaprima07",
+                "type": "allaprima",
+                "width": "16\"",
+                "height": "20\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Allaprima07_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Allaprima07_ChrisPetersen_thumb-2x.jpg",
+                "image": "Allaprima07_ChrisPetersen.jpg",
+                "image2x": "Allaprima07_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Allaprima",
+                "slug": "Allaprima08",
+                "type": "allaprima",
+                "width": "16\"",
+                "height": "20\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Allaprima08_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Allaprima08_ChrisPetersen_thumb-2x.jpg",
+                "image": "Allaprima08_ChrisPetersen.jpg",
+                "image2x": "Allaprima08_ChrisPetersen-2x.jpg"
+            }
+        ],
+        "pleinair": [
+            {
+                "title": "Colgate Estate",
+                "slug": "ColgateEstate",
+                "type": "pleinair",
+                "width": "11\"",
+                "height": "14\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "ColgateEstate_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "ColgateEstate_ChrisPetersen_thumb-2x.jpg",
+                "image": "ColgateEstate_ChrisPetersen.jpg",
+                "image2x": "ColgateEstate_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Atwater Crossing",
+                "slug": "AtwaterCrossing",
+                "type": "pleinair",
+                "width": "14\"",
+                "height": "11\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "AtwaterCrossing_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "AtwaterCrossing_ChrisPetersen_thumb-2x.jpg",
+                "image": "AtwaterCrossing_ChrisPetersen.jpg",
+                "image2x": "AtwaterCrossing_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Andy Griffith Pond",
+                "slug": "AndyGriffithPond",
+                "type": "pleinair",
+                "width": "14\"",
+                "height": "11\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "AndyGriffith_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "AndyGriffith_ChrisPetersen_thumb-2x.jpg",
+                "image": "AndyGriffith_ChrisPetersen.jpg",
+                "image2x": "AndyGriffith_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Meadow",
+                "slug": "Meadow",
+                "type": "pleinair",
+                "width": "8\"",
+                "height": "10\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Meadow_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Meadow_ChrisPetersen_thumb-2x.jpg",
+                "image": "Meadow_ChrisPetersen.jpg",
+                "image2x": "Meadow_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Facing Mullholland",
+                "slug": "FacingMullholland",
+                "type": "pleinair",
+                "width": "11\"",
+                "height": "8\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "FacingMullholland_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "FacingMullholland_ChrisPetersen_thumb-2x.jpg",
+                "image": "FacingMullholland_ChrisPetersen.jpg",
+                "image2x": "FacingMullholland_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Creeper Canyon",
+                "slug": "CreeperCanyon",
+                "type": "pleinair",
+                "width": "10\"",
+                "height": "8\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "CreeperCanyon_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "CreeperCanyon_ChrisPetersen_thumb-2x.jpg",
+                "image": "CreeperCanyon_ChrisPetersen.jpg",
+                "image2x": "CreeperCanyon_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Down By The River",
+                "slug": "DownByTheRiver",
+                "type": "pleinair",
+                "width": "10\"",
+                "height": "8\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "DownByTheRiver_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "DownByTheRiver_ChrisPetersen_thumb-2x.jpg",
+                "image": "DownByTheRiver_ChrisPetersen.jpg",
+                "image2x": "DownByTheRiver_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Off The Mullholland Path",
+                "slug": "OffTheMullhollandPath",
+                "type": "pleinair",
+                "width": "10\"",
+                "height": "8\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "OffTheMullhollandPath_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "OffTheMullhollandPath_ChrisPetersen_thumb-2x.jpg",
+                "image": "OffTheMullhollandPath_ChrisPetersen.jpg",
+                "image2x": "OffTheMullhollandPath_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "China Town",
+                "slug": "ChinaTown",
+                "type": "pleinair",
+                "width": "8\"",
+                "height": "10\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "ChinaTown_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "ChinaTown_ChrisPetersen_thumb-2x.jpg",
+                "image": "ChinaTown_ChrisPetersen.jpg",
+                "image2x": "ChinaTown_ChrisPetersen-2x.jpg"
+            }
+        ],
+        "studies": [
+            {
+                "title": "Ivy Skull",
+                "slug": "IvySkull",
+                "type": "studies",
+                "width": "6\"",
+                "height": "6\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "IvySkull_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "IvySkull_ChrisPetersen_thumb-2x.jpg",
+                "image": "IvySkull_ChrisPetersen.jpg",
+                "image2x": "IvySkull_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Screaming Skull",
+                "slug": "ScreamingSkull",
+                "type": "studies",
+                "width": "6\"",
+                "height": "6\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "ScreamingSkull_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "ScreamingSkull_ChrisPetersen_thumb-2x.jpg",
+                "image": "ScreamingSkull_ChrisPetersen.jpg",
+                "image2x": "ScreamingSkull_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Self Portrait 2013",
+                "slug": "SelfPortrait2013",
+                "type": "studies",
+                "width": "8\"",
+                "height": "10\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "SelfPortrait2013_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "SelfPortrait2013_ChrisPetersen_thumb-2x.jpg",
+                "image": "SelfPortrait2013_ChrisPetersen.jpg",
+                "image2x": "SelfPortrait2013_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "The Dark Side",
+                "slug": "TheDarkSide",
+                "type": "studies",
+                "width": "8\"",
+                "height": "10\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "TheDarkSide_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "TheDarkSide_ChrisPetersen_thumb-2x.jpg",
+                "image": "TheDarkSide_ChrisPetersen.jpg",
+                "image2x": "TheDarkSide_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "What Was Your Name",
+                "slug": "WhatWasYourName",
+                "type": "studies",
+                "width": "10\"",
+                "height": "20\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "WhatWasYourName_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "WhatWasYourName_ChrisPetersen_thumb-2x.jpg",
+                "image": "WhatWasYourName_ChrisPetersen.jpg",
+                "image2x": "WhatWasYourName_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Living Dead",
+                "slug": "LivingDead",
+                "type": "studies",
+                "width": "6\"",
+                "height": "6\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "LivingDead_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "LivingDead_ChrisPetersen_thumb-2x.jpg",
+                "image": "LivingDead_ChrisPetersen.jpg",
+                "image2x": "LivingDead_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Hollywood Hotel",
+                "slug": "HollywoodHotel",
+                "type": "studies",
+                "width": "12\"",
+                "height": "9\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "HollywoodHotel_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "HollywoodHotel_ChrisPetersen_thumb-2x.jpg",
+                "image": "HollywoodHotel_ChrisPetersen.jpg",
+                "image2x": "HollywoodHotel_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "K-Town Self Portrait",
+                "slug": "KTownSelfPortrait",
+                "type": "studies",
+                "width": "14\"",
+                "height": "18\"",
+                "material": "OIL ON CANVAS",
+                "date": "2012",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "KTown_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "KTown_ChrisPetersen_thumb-2x.jpg",
+                "image": "KTown_ChrisPetersen.jpg",
+                "image2x": "KTown_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "The Ringleader",
+                "slug": "TheRingleader",
+                "type": "studies",
+                "width": "14\"",
+                "height": "18\"",
+                "material": "OIL ON CANVAS",
+                "date": "2012",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "TheRingleader_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "TheRingleader_ChrisPetersen_thumb-2x.jpg",
+                "image": "TheRingleader_ChrisPetersen.jpg",
+                "image2x": "TheRingleader_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "I Need A Beer",
+                "slug": "INeedABeer",
+                "type": "studies",
+                "width": "16\"",
+                "height": "20\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "INeedABeer_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "INeedABeer_ChrisPetersen_thumb-2x.jpg",
+                "image": "INeedABeer_ChrisPetersen.jpg",
+                "image2x": "INeedABeer_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Self Portrait 2014",
+                "slug": "SelfPortrait2014",
+                "type": "studies",
+                "width": "8\"",
+                "height": "10\"",
+                "material": "OIL ON CANVAS",
+                "date": "2014",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "SelfPortrait2014_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "SelfPortrait2014_ChrisPetersen_thumb-2x.jpg",
+                "image": "SelfPortrait2014_ChrisPetersen.jpg",
+                "image2x": "SelfPortrait2014_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Still Life",
+                "slug": "StillLife",
+                "type": "studies",
+                "width": "14\"",
+                "height": "11\"",
+                "material": "OIL ON CANVAS",
+                "date": "2012",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "StillLife_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "StillLife_ChrisPetersen_thumb-2x.jpg",
+                "image": "StillLife_ChrisPetersen.jpg",
+                "image2x": "StillLife_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Blue Woman",
+                "slug": "BlueWoman",
+                "type": "studies",
+                "width": "8\"",
+                "height": "10\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "BlueWoman_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "BlueWoman_ChrisPetersen_thumb-2x.jpg",
+                "image": "BlueWoman_ChrisPetersen.jpg",
+                "image2x": "BlueWoman_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Hipster Chick",
+                "slug": "HipsterChick",
+                "type": "studies",
+                "width": "12\"",
+                "height": "16\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Hipster_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Hipster_ChrisPetersen_thumb-2x.jpg",
+                "image": "Hipster_ChrisPetersen.jpg",
+                "image2x": "Hipster_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Sideshow",
+                "slug": "Sideshow",
+                "type": "studies",
+                "width": "11\"",
+                "height": "14\"",
+                "material": "OIL ON CANVAS",
+                "date": "2012",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Sideshow_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Sideshow_ChrisPetersen_thumb-2x.jpg",
+                "image": "Sideshow_ChrisPetersen.jpg",
+                "image2x": "Sideshow_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Jogger",
+                "slug": "Jogger",
+                "type": "studies",
+                "width": "12\"",
+                "height": "16\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "Jogger_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "Jogger_ChrisPetersen_thumb-2x.jpg",
+                "image": "Jogger_ChrisPetersen.jpg",
+                "image2x": "Jogger_ChrisPetersen-2x.jpg"
+            },
+            {
+                "title": "Stacked Skulls",
+                "slug": "StackedSkulls",
+                "type": "studies",
+                "width": "12\"",
+                "height": "24\"",
+                "material": "OIL ON CANVAS",
+                "date": "2013",
+                "inquire": {
+                    "externalUrl": ""
+                },
+                "imageThumb": "StackedSkulls_ChrisPetersen_thumb.jpg",
+                "imageThumb2x": "StackedSkulls_ChrisPetersen_thumb-2x.jpg",
+                "image": "StackedSkulls_ChrisPetersen.jpg",
+                "image2x": "StackedSkulls_ChrisPetersen-2x.jpg"
+            }
+        ]
+      }
+    ];
+
+    return module.exports;
+
+});

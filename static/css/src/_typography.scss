@@ -1,0 +1,84 @@
+//
+// Typography
+// ---------------------------
+
+// Links
+// ------
+a {
+    color: $linkColor;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    &:hover {
+        color: $linkColorHover;
+        text-decoration: none;
+    }
+}
+
+// Body text
+// ----------
+p {
+    margin: 0 0 1.5em;
+}
+
+p, .p, {
+    font-size: 1.8em;
+    line-height: 2em;
+    letter-spacing: 0.05em;
+}
+
+// Headings
+// ---------
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6 {
+    margin: ($baseLineHeight / 2) 0;
+    font-weight: $headingsFontWeight;
+    font-family: $headingsFontFamily;
+    line-height: 1;
+    color: $headingsColor;
+    text-rendering: optimizelegibility; // Fix the character spacing for headings
+    -webkit-font-smoothing: antialiased;
+}
+h1,.h1 {
+    font-family: $LincolnBoldItalic;
+    font-style: italic;
+    font-size: 10em;
+    color: $red;
+}
+h2,.h2 {
+    font-family: $LincolnBoldItalic;
+    font-style: italic;
+    font-size: 6.2em;
+    color: $white;
+    // font-family: $LincolnSemiBoldItalic;
+    // font-size: 3.7em;
+    // color: $white;
+}
+h3,.h3 {
+    // font-family: $DinCondBlack;
+    font-size: 2.7em;
+    letter-spacing: -1px;
+    color: $white;
+}
+h4,.h4 {
+    font-family: $Montserrat;
+    font-size: 1.9em;
+    color: $gray;
+}
+h5,.h5 {
+    // font-family: $DinRegular;
+    font-size: 1.4em;
+    color: $gray;
+}
+h6,.h6 {
+
+}
+
+
+
+
+
+

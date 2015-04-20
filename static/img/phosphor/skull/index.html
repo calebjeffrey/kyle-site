@@ -1,0 +1,168 @@
+<html>
+<head>
+  <meta http-equiv="Cache-control" content="no-cache">
+  <title>skull</title>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript" src="phosphorframework.js"></script>
+</head>
+
+
+<body>
+	
+	<p>skull.</p>
+
+	<img id="anim_target_skull" src="skull.jpg" width="500" height="500"/>
+
+	<br/>
+
+  <form>
+      
+
+    <button onclick="playPhosphor();return false;">Play</button>
+    <button onclick="pausePhosphor();return false;">Pause</button>
+
+    <button onclick="jumpBackwardPhosphor();return false;">jump back</button>
+    <button onclick="jumpForwardPhosphor();return false;">jump forward</button>
+  </form>
+
+  <script>
+
+  var player_skull = null;
+  var player_skull_path = ""; // path to Phosphor files on your server
+  var skull_framecount = 0;
+
+
+  /**
+   * After the page has loaded, we register a callback which will be triggered by the jsonp file.
+   * Once the callback is registered, we inject the jsonp script file into the page's HEAD block.
+   * An alternative method is to use AJAX (getJSON, etc) to load the corresponding json file.  After loading the
+   * data, instantiate the player in the same way.
+   */
+
+   $(document).ready(function(){
+    player_skull = new PhosphorPlayer('anim_target_skull');
+    phosphorCallback_skull = function(data) {
+
+      /**
+       * Instantiate the player.  The player supports a variate of callbacks for deeper integration into your site.
+       */
+
+       skull_framecount = data.frames.length;
+       player_skull.load_animation({
+        imageArray:["skull_atlas000.jpg","skull_atlas001.jpg","skull_atlas002.jpg","skull_atlas003.jpg","skull_atlas004.jpg","skull_atlas005.jpg","skull_atlas006.jpg","skull_atlas007.jpg","skull_atlas008.jpg","skull_atlas009.jpg"],
+        imagePath: player_skull_path,
+        animationData: data,
+        loop: true,
+        onLoad: function() {
+          player_skull.play();
+
+          /**
+           * If your Phosphor composition was created with the "interactive" mode set, the code below enables that
+           * interation.  Handlers are registered for both mouse drag and touch events.
+           */
+
+           var trappedMouse = false;
+           var trappedXPos;
+
+           var enableInteractivity = false;
+
+           if(enableInteractivity) {
+            $("#anim_target_skull").mousedown(function(e){
+              e.preventDefault();
+              player_skull.stop();
+              trappedMouse = true;
+              trappedXPos = e.pageX;
+              $(document).bind('mousemove',function(event) {
+                if(trappedMouse){
+                  var pos =  (event.pageX - trappedXPos) / 5;
+                  var seekTime = (skull_framecount + player_skull.currentFrameNumber() + parseInt(pos)) % skull_framecount;
+                  player_skull.setCurrentFrameNumber(seekTime);
+                  trappedXPos = event.pageX;
+                }
+
+              });
+
+            });
+
+            $(document).mouseup(function(e){
+              trappedMouse = false;
+              $(document).unbind('mousemove');
+            });
+
+          
+
+            $("#anim_target_skull").bind("touchstart",function(event){
+             var e = event.originalEvent;
+             e.preventDefault();
+             player_skull.stop();
+             trappedMouse = true;
+             trappedXPos = e.pageX;
+             $(document).bind('touchmove', function(e) {
+              if(trappedMouse){
+                var e = e.originalEvent;
+                e.preventDefault();
+                var pos =  (e.pageX - trappedXPos) / 5;
+                var seekTime = (skull_framecount + player_skull.currentFrameNumber() + parseInt(pos)) % skull_framecount;
+                player_skull.setCurrentFrameNumber(seekTime);
+                trappedXPos = e.pageX;
+              }
+             });
+           });
+
+            $("#anim_target_skull").bind("touchend",function(event){
+             var e = event.originalEvent;
+             e.preventDefault();
+             trappedMouse = false;
+             player_skull.play(true);
+             $(document).unbind('touchmove');
+           });
+
+          }
+
+        }
+      });
+     }
+     var jsonpScript = document.createElement("script");
+     jsonpScript.type = "text/javascript";
+     jsonpScript.id = "jsonPinclude_skull";
+     jsonpScript.src = player_skull_path + "skull_animationData.jsonp";
+     document.getElementsByTagName("head")[0].appendChild(jsonpScript);
+
+
+});
+
+  /**
+   * These functions demonstrate some of the ways you can control the Phosphor player.
+   * If you simply wish to play a Phosphor composition on your page, none of these need to be
+   * defined.
+   */
+
+   function toggleDebug(){
+    player_skull.debug(document.getElementById("debugCheckbox").checked);
+  };
+
+  function playPhosphor(){
+    player_skull.play(true);
+  };
+
+  function pausePhosphor(){
+    player_skull.stop();
+  };
+
+  function jumpForwardPhosphor(){
+    player_skull.stop();
+
+    var seekTime = (player_skull.currentFrameNumber() + 1) % skull_framecount;
+    player_skull.setCurrentFrameNumber(seekTime);
+  };
+
+  function jumpBackwardPhosphor(){
+    player_skull.stop();
+
+    var seekTime = (skull_framecount + player_skull.currentFrameNumber() - 1) % skull_framecount;
+    player_skull.setCurrentFrameNumber(seekTime);
+  };
+
+  </script>
+</body>
+</html>

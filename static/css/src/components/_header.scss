@@ -1,0 +1,146 @@
+//
+// Header (Global)
+// ---------------------------
+
+.header {
+    @include transition(all 0.6s $ease-custom);
+
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &.gallery-header-showing {
+
+        .header-logo, .hamburger, {
+            @include transition(transform 0.6s 0.6s $ease-out-cubic);
+            @include translate3d(0, 42px, 0);
+        }
+    }
+
+    .hamburger {
+        @extend %transition-all-slow;
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        z-index: 10;
+        &:after {
+            @extend %spread;
+            top: -10px;
+            right: -10px;
+            bottom: -10px;
+            left: -10px;
+            padding: 10px;
+        }
+        .no-touch &:hover {
+            .patty {
+                &:before {
+                    top: -9px;
+                }
+                &:after {
+                    top: 9px;
+                }
+            }
+
+            .cover {
+                width: 23px;
+                opacity: 1;
+
+                &:before, &:after {
+                    opacity: 1;
+                    width: 23px;
+                }
+            }
+        }
+        .menu-is-open & {
+            .no-touch &:hover {
+                @include rotate(90deg);
+            }
+
+            .patty, .cover {
+                background: none !important;
+                opacity: 1;
+                &:before, &:after {
+                    top: 0 !important;
+                    opacity: 1;
+                }
+                &:before {
+                    @include rotate(-45deg);
+                }
+                &:after {
+                    @include rotate(45deg);
+                }
+            }
+        }
+
+        .patty {
+            @extend %transition-all-slow;
+            position: absolute;
+            top: 16px;
+            left: 7px;
+            width: 23px;
+            height: 4px;
+            margin: 0;
+            background: $gray;
+            cursor: pointer;
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                width: 23px;
+                height: 4px;
+                display: block;
+                background: $gray;
+            }
+            &:before {
+                top: -8px;
+            }
+            &:after {
+                top: 8px;
+            }
+            &.cover {
+                @extend %transition-all-slow;
+                background: $red;
+                width: 0;
+                opacity: 0;
+
+                &:before, &:after {
+                    @extend %transition-all-slow;
+                    background: $red;
+                    overflow: hidden;
+                    opacity: 0;
+                    width: 0;
+                }
+            }
+        }
+    }
+
+    .header-logo {
+        @extend %transition-all-slow;
+        position: fixed;
+        top: 40px;
+        left: 40px;
+        z-index: 10;
+        opacity: 0;
+        @include translate3d(0, -200%, 0);
+        // @include transition(all 1s $ease-in-out);
+        // @include transition-delay(1.5s);
+
+        &.is-showing {
+            opacity: 1;
+            @include translate3d(0, 0, 0);
+        }
+
+        &.gallery-header-showing {
+            @include transition(transform 0.6s 0.6s $ease-out-cubic);
+            @include translate3d(0, 42px, 0);
+        }
+
+        a {
+            @extend %text-replacement;
+            @extend .ui-logo-small;
+        }
+    }
+}

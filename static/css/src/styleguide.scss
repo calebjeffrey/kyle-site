@@ -1,0 +1,74 @@
+
+// Styleguide
+// ----------------------------------------------------------------
+// Non-critical styles for the presentation of the styleguide
+
+.styleguide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 150px 10% 10%;
+    background: #bebebe;
+    section {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 0 0 2.5%;
+    }
+    .block {
+        float: left;
+        width: 70%;
+    }
+    dl {
+        float: right;
+        width: 25%;
+        background: rgba(#fff, 0.2);
+        font-size: 1.2em;
+        font-family: monospace;
+        dt,dd {
+            padding: 0.5em 1em;
+        }
+        dt {
+            background: rgba(#fff, 0.2);
+            font-weight: bold;
+        }
+    }
+    dl,dt,dd {
+        margin: 0;
+    }
+    .swatch {
+        float: left;
+        width: 8em;
+        height: 8em;
+        font-size: 1.2em;
+        font-family: monospace;
+        span {
+            position: relative;
+            top: 50%;
+            width: 100%;
+            margin-top: -20px;
+            display: block;
+            text-align: center;
+        }
+        &.black,
+        &.al-gore-blue {
+            span {
+                color: #bfbdbc;
+            }
+        }
+    }
+    details {
+        margin: 1.25% 0 2.5%;
+        border-bottom: 1px solid #999;
+        summary {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            &:focus,
+            &:active {
+                outline: 0;
+            }
+        }
+    }
+}

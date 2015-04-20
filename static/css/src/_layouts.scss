@@ -1,0 +1,60 @@
+//
+// Layouts
+// ---------------------------
+
+.app {
+    position: relative;
+    height: 100%;
+    min-height: 100%;
+    overflow: auto;
+}
+
+.panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    // background-color: $white;
+}
+
+.page {
+    height: 100%;
+    position: relative;
+    background-color: $white;
+    text-align: center;
+    // .views-transitioning & {
+    //     // @extend %transition-all-super-slow;
+    //     @include transition(all 1s $ease-custom);
+    //     transition-duration: 1s;
+    // }
+    // [data-page-trans="fade"] & {
+        // &.before-transition {
+        //     @include translate3d(0, 100%, 0);
+        // }
+        // &.transitioning-in {
+        //     @include transition(transform 1s 0.5s $ease-custom);
+        //     @include translate3d(0, 0, 0);
+        // }
+        // &.transitioning-out {
+        //     opacity: 0;
+        // }
+    // }
+
+    // &.gallery-before-transition {
+    //     @include translate3d(0, 100%, 0);
+    // }
+    // &.gallery-transitioning-in {
+    //     @include transition(transform 1s 3s $ease-custom);
+    //     @include translate3d(0, 0, 0);
+    // }
+    // &.gallery-transitioning-out {
+    //     @include transition(opacity 0.6s 0s $ease-in);
+    //     opacity: 0;
+    // }
+
+}
+
+// #region-page, #region-main, #region-main > div {
+//     height: 100%;
+// }

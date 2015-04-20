@@ -1,0 +1,78 @@
+/* line 6, src/styleguide.scss */
+.styleguide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 150px 10% 10%;
+  background: #bebebe;
+}
+/* line 13, src/styleguide.scss */
+.styleguide section {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0 0 2.5%;
+}
+/* line 19, src/styleguide.scss */
+.styleguide .block {
+  float: left;
+  width: 70%;
+}
+/* line 23, src/styleguide.scss */
+.styleguide dl {
+  float: right;
+  width: 25%;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 1.2em;
+  font-family: monospace;
+}
+/* line 29, src/styleguide.scss */
+.styleguide dl dt, .styleguide dl dd {
+  padding: 0.5em 1em;
+}
+/* line 32, src/styleguide.scss */
+.styleguide dl dt {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+/* line 37, src/styleguide.scss */
+.styleguide dl, .styleguide dt, .styleguide dd {
+  margin: 0;
+}
+/* line 40, src/styleguide.scss */
+.styleguide .swatch {
+  float: left;
+  width: 8em;
+  height: 8em;
+  font-size: 1.2em;
+  font-family: monospace;
+}
+/* line 46, src/styleguide.scss */
+.styleguide .swatch span {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  margin-top: -20px;
+  display: block;
+  text-align: center;
+}
+/* line 56, src/styleguide.scss */
+.styleguide .swatch.black span, .styleguide .swatch.al-gore-blue span {
+  color: #bfbdbc;
+}
+/* line 61, src/styleguide.scss */
+.styleguide details {
+  margin: 1.25% 0 2.5%;
+  border-bottom: 1px solid #999;
+}
+/* line 64, src/styleguide.scss */
+.styleguide details summary {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+/* line 69, src/styleguide.scss */
+.styleguide details summary:focus, .styleguide details summary:active {
+  outline: 0;
+}

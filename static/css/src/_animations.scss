@@ -1,0 +1,138 @@
+//
+// CSS3 Keyframe Animations
+// --------------------------------------------------
+
+@include keyframes(fadeIn) {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@include keyframes(textFill) {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@include keyframes(slideUp) {
+    0% {
+        @include translate3d(0, 0, 0);
+    }
+    100% {
+        @include translate3d(0, -100%, 0);
+    }
+}
+
+@include keyframes(slideDown) {
+    0% {
+        @include translate3d(0, 0, 0);
+    }
+    100% {
+        @include translate3d(0, 100%, 0);
+    }
+}
+
+@include keyframes(fadeInLeft) {
+    0% {
+        opacity: 0;
+        @include translate3d(-10%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        @include translate3d(0%, 0, 0);
+    }
+}
+
+@include keyframes(fadeInUp) {
+    0% {
+        opacity: 0;
+        @include translate3d(-50%, -40%, 0);
+    }
+    100% {
+        opacity: 1;
+        @include translate3d(-50%, -50%, 0);
+    }
+}
+
+@include keyframes(fadeInDown) {
+    0% {
+        opacity: 0;
+        @include translate3d(-50%, -60%, 0);
+    }
+    100% {
+        opacity: 1;
+        @include translate3d(-50%, -50%, 0);
+    }
+}
+
+@include keyframes(fadeOutUp) {
+    0% {
+        opacity: 1;
+        @include translate3d(-50%, -50%, 0);
+    }
+    100% {
+        opacity: 0;
+        @include translate3d(-50%, -60%, 0);
+    }
+}
+
+@include keyframes(slideDownOut) {
+    0% {
+        opacity: 1;
+        @include translate3d(0, 0, 0);
+    }
+    100% {
+        opacity: 0;
+        @include translate3d(0, 200px, 0);
+    }
+}
+
+@include keyframes(slideDownIn) {
+    0% {
+        opacity: 0;
+        @include translate3d(0, -200px, 0);
+    }
+    100% {
+        opacity: 1;
+        @include translate3d(0, 0, 0);
+    }
+}
+
+@include keyframes(detailSlideDownIn) {
+    0% {
+        opacity: 0;
+        @include translate3d(-50%, -80%, 0);
+    }
+    100% {
+        opacity: 1;
+        @include translate3d(-50%, -50%, 0);
+    }
+}
+
+@include keyframes(detailSlideDownOut) {
+    0% {
+        opacity: 1;
+        @include translate3d(-50%, -50%, 0);
+    }
+    100% {
+        opacity: 0;
+        @include translate3d(-50%, -20%, 0);
+    }
+}
+
+@include keyframes(detailTitle) {
+    0% {
+        opacity: 1;
+        @include translate3d(0%, 25px, 0);
+    }
+    100% {
+        opacity: 1;
+        @include translate3d(0, 0, 0);
+    }
+}

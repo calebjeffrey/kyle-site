@@ -1,0 +1,51 @@
+.info {
+    @extend %spread;
+    position: absolute;
+    background-image: url(../img/backgrounds/bg-info.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+
+    .headlines {
+        @extend %absolute-center;
+        width: 90%;
+        max-width: 600px;
+    }
+
+    .headline {
+
+        padding-bottom: 4.5em;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        h4 {
+            font-family: $Montserrat;
+            font-size: 19px;
+            line-height: 32px;
+            color: #8c9397;
+            opacity: 0.65;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 0 15px;
+            font-family: $LincolnSemiBoldItalic;
+            font-size: 37px;
+            line-height: 58px;
+            color: $white;
+            text-decoration: underline;
+            opacity: 0.9;
+            @include transition(color 0.3s 0s $ease-in-out);
+
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<header class="header">
+    <div class="header-logo"><a href="/">Chris Petersen</a></div>
+    <div class="btn hamburger hide">
+        <div class="patty"></div>
+        <div class="patty cover"></div>
+    </div>
+    <div class="menu-overlay">
+        <nav class="menu">
+            <ul>
+                {{#each menuData}}
+                    <li>
+                        <a data-text="{{{title}}}" href="{{link}}">{{{title}}}</a>
+                    </li>
+                {{/each}}
+            </ul>
+        </nav>
+    </div>
+</header>

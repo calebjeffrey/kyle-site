@@ -1,0 +1,108 @@
+.art-detail {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    cursor: url(../img/cursor/close-cursor.svg), auto;
+
+    &.show-meta {
+
+        .overlay, .meta {
+            opacity: 1;
+        }
+
+        h4 {
+            opacity: 1;
+            @include transition(opacity 0.5s 0.7s $ease-in-out);
+        }
+
+        h1 {
+            @include animation(detailTitle, 1s, 0s, $ease-out-cubic, 1, forwards);
+            @include transition(opacity 0.5s 0s $ease-in-out);
+        }
+
+        figure {
+            .no-touch &:hover {
+                cursor: url(../img/cursor/minimize-cursor.svg), auto;
+            }
+        }
+    }
+
+    .wrapper {
+        @extend %spread;
+    }
+
+    .content {
+        @extend %absolute-center;
+        width: 100%;
+        height: 100%;
+        margin: 13em 0;
+    }
+
+    .overlay {
+        @extend %spread;
+        background-color: rgba($black, 0.8);
+        opacity: 0;
+        @include transition(opacity 0.5s 0s $ease-in-out);
+        pointer-events: none;
+    }
+
+    figure {
+        @extend %absolute-center;
+        opacity: 0;
+        @include translate3d(-50%, -300%, 0);
+        @include animation(detailSlideDownIn, 1.2s, 0.6s, $ease-custom, 1, forwards);
+
+        &.is-animating-down {
+            @include animation(detailSlideDownOut, 1.2s, 0s, $ease-custom, 1, forwards);
+        }
+
+        &.animate-in {
+            opacity: 0;
+        }
+
+        .no-touch &:hover {
+            cursor: url(../img/cursor/open-cursor.svg), auto;
+        }
+    }
+
+    .meta {
+        @extend %absolute-center;
+        width: 200%;
+        text-align: center;
+        opacity: 0;
+        @include transition(opacity 0.5s 0s $ease-in-out);
+    }
+
+    h1 {
+        margin: 20px 0;
+        text-transform: uppercase;
+        pointer-events: none;
+        opacity: 0;
+        @include transition(opacity 0.5s 0s $ease-in-out);
+    }
+
+    h4 {
+        color: $grayDark;
+        opacity: 0;
+        @include transition(opacity 0.5s 0s $ease-in-out);
+    }
+
+    a {
+        @extend .h4;
+        color: $red;
+        font-size: 19px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        @include transition(color 0.3s 0s linear);
+
+        .no-touch &:hover {
+            color: $white;
+        }
+    }
+
+    span {
+        position: relative;
+        top: -2px;
+        font-size: 0.9em;
+        color: #5a5e60;
+    }
+}

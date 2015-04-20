@@ -1,0 +1,32 @@
+//
+// Scaffolding
+// ---------------------------
+
+@-webkit-viewport { width: device-width; }
+@-moz-viewport { width: device-width; }
+@-ms-viewport { width: device-width; }
+@-o-viewport { width: device-width; }
+@viewport { width: device-width; }
+
+
+// Border-box everything
+// ----------------------
+* {
+    @include box-sizing(border-box);
+}
+
+// Body reset
+// -----------
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-size: $baseFontSize;
+    font-family: $baseFontFamily;
+    line-height: $baseLineHeight;
+    color: $textColor;
+}

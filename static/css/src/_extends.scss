@@ -1,0 +1,127 @@
+//
+// @extends
+// ---------------------------
+
+// Animations
+// -----------
+
+// All
+%transition-all { @include transition(all $transTime $ease-default); }
+%transition-all-fast { @include transition(all $transTimeFast $ease-default); }
+%transition-all-slow { @include transition(all $transTimeSlow $ease-default); }
+%transition-all-super-slow { @include transition(all $transTimeSuperSlow $ease-default); }
+
+// Opacity
+%transition-opacity { @include transition(opacity $transTime $ease-default); }
+%transition-opacity-fast { @include transition(opacity $transTimeFast $ease-default); }
+%transition-opacity-slow { @include transition(opacity $transTimeSlow $ease-default); }
+%transition-opacity-super-slow { @include transition(opacity $transTimeSuperSlow $ease-default); }
+
+// Transform
+%transition-transform { @include transition(transform $transTime $ease-default); }
+%transition-transform-fast { @include transition(transform $transTimeFast $ease-default); }
+%transition-transform-slow { @include transition(transform $transTimeSlow $ease-default); }
+%transition-transform-super-slow { @include transition(transform $transTimeSuperSlow $ease-default); }
+
+// Background color
+%transition-background-color { @include transition(background-color $transTime $ease-default); }
+%transition-color { @include transition(color $transTime $ease-default); }
+
+// Transition delays
+%transition-no-delay { @include transition-delay(0s); }
+%transition-short-delay { @include transition-delay(0s); }
+%transition-standard-delay { @include transition-delay(0s); }
+%transition-long-delay { @include transition-delay(0s); }
+
+// Translate3d reset
+%translate3d-reset { @include translate3d(0,0,0); }
+
+
+// Layout
+// -------
+
+.full-bleed {
+    @extend %spread;
+}
+
+%spread {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+}
+
+%spread-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.fullscreen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    @include background-size(cover);
+}
+
+%horizontal-center {
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+}
+
+%vertical-center {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+
+%absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translateX(-50%) translateY(-50%));
+}
+
+%text-replacement {
+    text-indent: -999em;
+    display: block;
+    border: none;
+    outline: none;
+}
+
+// Responsive media embeds
+// -------------------------
+
+.embed-container {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; // 16:9 aspect ratio (adjust accordingly)
+    overflow: hidden;
+    iframe, object, embed, video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

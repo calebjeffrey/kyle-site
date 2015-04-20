@@ -1,0 +1,26 @@
+.header-wrapper {
+    .no-touch &:hover {
+        .grid-header {
+            @include translate3d(0, 0, 0);
+        }
+    }
+}
+
+.grid-header {
+    background-color: $red;
+    @include transition(transform 0.6s 0.3s $ease-out-cubic);
+    @include translate3d(0, -100%, 0);
+
+    a {
+        @include transition(transform 0.6s 0s $ease-out-cubic);
+        @include translate3d(0, 0, 0);
+        display: block;
+        margin: 0;
+        padding: 10px 0;
+        background-color: $red;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+    }
+}

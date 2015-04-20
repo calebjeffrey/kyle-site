@@ -1,0 +1,37 @@
+.title-card {
+    background-color: $red;
+    z-index: 20;
+    @include transition(transform 1s $ease-custom);
+
+    &.prev {
+        @include translate3d(0, -100%, 0);
+
+        &.is-showing {
+            @include translate3d(0, 0, 0);
+        }
+
+        &.is-leaving {
+            @include animation(slideDown, 1s, 0s, $ease-custom, 1, forwards);
+        }
+    }
+
+    &.next {
+        @include translate3d(0, 100%, 0);
+
+        &.is-showing {
+            @include translate3d(0, 0, 0);
+        }
+
+        &.is-leaving {
+            @include animation(slideUp, 1s, 0s, $ease-custom, 1, forwards);
+        }
+    }
+
+    h1 {
+        @extend %absolute-center;
+        color: $white;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+
+    }
+}

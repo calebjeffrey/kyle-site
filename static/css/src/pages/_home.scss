@@ -1,0 +1,11 @@
+.home {
+
+    .panel.fg {
+
+        background-color: $white;
+
+        &.is-leaving {
+            @include animation(slideUp, 1s, 0s, $ease-custom, 1, forwards);
+        }
+    }
+}

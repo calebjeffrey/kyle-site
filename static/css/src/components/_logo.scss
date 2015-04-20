@@ -1,0 +1,62 @@
+.logo {
+    @extend %absolute-center;
+
+
+    h1 {
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    .bg {
+        h1 {
+            @extend %text-replacement;
+            @extend .ui-chris-large;
+            opacity: 0;
+            @include animation(fadeInLeft, 1s, 0s, $ease-out-cubic, 1, forwards);
+
+            &:nth-child(2) {
+                @extend .ui-peter-large;
+                @include animation(fadeInLeft, 1s, 0.5s, $ease-out-cubic, 1, forwards);
+                position: relative;
+                top: 10px;
+                left: -10px;
+            }
+
+            &:nth-child(3) {
+                @extend .ui-sen-large;
+                @include animation(fadeInLeft, 1s, 1s, $ease-out-cubic, 1, forwards);
+                position: relative;
+                top: 18px;
+            }
+
+        }
+    }
+
+    .fg {
+        position: absolute;
+        top: 0;
+        width: 0px;
+        overflow: hidden;
+
+        @include animation(textFill, 2s, 2s, $ease-in-cubic, 1, forwards);
+
+        h1 {
+            @extend %text-replacement;
+            @extend .ui-chris-large-red;
+
+            &:nth-child(2) {
+                @extend .ui-peter-large-red;
+                position: relative;
+                top: 10px;
+                left: -10px;
+            }
+
+            &:nth-child(3) {
+                @extend .ui-sen-large-red;
+                position: relative;
+                top: 18px;
+                margin-bottom: 18px;
+            }
+        }
+    }
+}

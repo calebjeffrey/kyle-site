@@ -1,0 +1,11 @@
+.gallery {
+    //for footer hide/show
+    background-color: $whiteDark;
+    overflow: hidden;
+    background-image: url(../img/backgrounds/noise.png);
+
+    footer {
+        opacity: 0;
+        @include animation(fadeIn, 0.6s, 1s, $ease-out, 1, forwards);
+    }
+}

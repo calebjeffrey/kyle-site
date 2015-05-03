@@ -23,11 +23,24 @@ define(function(require, exports, module) {
             'click @ui.wrapper': 'onClickWrapper'
         },
 
+        templateHelpers: function() {
+            return {
+                hasExternalUrl: this.hasExternalUrl,
+                isVisible: this.isVisible,
+                linkText: this.linkText,
+                externalUrl: this.externalUrl,
+                mailto: this.mailTo
+            };
+        },
+
         initialize: function(options) {
             BaseView.prototype.initialize.call(this);
             this.returnUrl = options.returnUrl || '/';
-
-            console.log(options);
+            this.hasExternalUrl = (this.model.get('inquire').externalUrl) ? true : false;
+            this.isVisible = (this.model.get('inquire').visible) ? true : false;
+            this.linkText = this.model.get('inquire').linkText;
+            this.mailTo = this.model.get('inquire').mailto;
+            this.externalUrl = this.model.get('inquire').externalUrl;
         },
 
         handleImage: function() {
@@ -56,8 +69,12 @@ define(function(require, exports, module) {
         },
 
         onClickFigure: function(e) {
+            var $target = $(e.target);
             e.stopPropagation();
-            this.$el.toggleClass('show-meta');
+
+            if (!$target.hasClass('inquire')) {
+                this.$el.toggleClass('show-meta');
+            }
         },
 
         onShow: function() {

@@ -11,11 +11,12 @@ define(function(require, exports, module) {
                 "height": "16\"",
                 "material": "OIL ON CANVAS",
                 "date": "2013",
-                // "inquire": {
-                //     "href": "mailto:chris@whileimstillhere.com",
-                //     "linkText": "Inquire",
-                //     "visible": true
-                // },
+                "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
+                    "externalUrl": ""
+                },
                 "imageThumb": "TheLordRye_ChrisPetersen_thumb.jpg",
                 "imageThumb2x": "TheLordRye_ChrisPetersen_thumb-2x.jpg",
                 "image": "TheLordRye_ChrisPetersen.jpg",
@@ -29,6 +30,12 @@ define(function(require, exports, module) {
                 "height": "48\"",
                 "material": "OIL ON CANVAS",
                 "date": "2013",
+                "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
+                    "externalUrl": ""
+                },
                 "imageThumb": "RaeTheBarber_ChrisPetersen_thumb.jpg",
                 "imageThumb2x": "RaeTheBarber_ChrisPetersen_thumb-2x.jpg",
                 "image": "RaeTheBarber_ChrisPetersen.jpg",
@@ -42,6 +49,12 @@ define(function(require, exports, module) {
                 "height": "36\"",
                 "material": "OIL ON CANVAS",
                 "date": "2013",
+                "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
+                    "externalUrl": ""
+                },
                 "imageThumb": "TryingToBeHuman_ChrisPetersen_thumb.jpg",
                 "imageThumb2x": "TryingToBeHuman_ChrisPetersen_thumb-2x.jpg",
                 "image": "TryingToBeHuman_ChrisPetersen.jpg",
@@ -55,6 +68,12 @@ define(function(require, exports, module) {
                 "height": "20\"",
                 "material": "OIL ON CANVAS",
                 "date": "2012",
+                "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
+                    "externalUrl": ""
+                },
                 "imageThumb": "CallingCollect_ChrisPetersen_thumb.jpg",
                 "imageThumb2x": "CallingCollect_ChrisPetersen_thumb-2x.jpg",
                 "image": "CallingCollect_ChrisPetersen.jpg",
@@ -69,6 +88,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2012",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "RedLine_ChrisPetersen_thumb.jpg",
@@ -85,6 +107,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2012",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Deaf_ChrisPetersen_thumb.jpg",
@@ -101,6 +126,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "PFunk_ChrisPetersen_thumb.jpg",
@@ -117,6 +145,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2012",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Willie_ChrisPetersen_thumb.jpg",
@@ -133,6 +164,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "MacStudy_ChrisPetersen_thumb.jpg",
@@ -149,6 +183,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Flouresence_ChrisPetersen_thumb.jpg",
@@ -165,6 +202,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2012",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Backpacker_ChrisPetersen_thumb.jpg",
@@ -181,6 +221,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "DivineInspiration_ChrisPetersen_thumb.jpg",
@@ -199,6 +242,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "AlamedaCuts_ChrisPetersen_thumb.jpg",
@@ -215,6 +261,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Stranded_ChrisPetersen_thumb.jpg",
@@ -231,6 +280,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "NoParking_ChrisPetersen_thumb.jpg",
@@ -247,6 +299,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "DownOnBroadway_ChrisPetersen_thumb.jpg",
@@ -263,6 +318,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "ParkedOnFranklin_ChrisPetersen_thumb.jpg",
@@ -279,6 +337,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "SunsetLiquor_ChrisPetersen_thumb.jpg",
@@ -295,6 +356,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2012",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "StreetSleeper_ChrisPetersen_thumb.jpg",
@@ -311,6 +375,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "4thStBridge_ChrisPetersen_thumb.jpg",
@@ -327,6 +394,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2012",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "BelowTheBridge_ChrisPetersen_thumb.jpg",
@@ -343,6 +413,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2012",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Lurking_ChrisPetersen_thumb.jpg",
@@ -359,6 +432,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "UnderTheBridge_ChrisPetersen_thumb.jpg",
@@ -377,6 +453,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Allaprima01_ChrisPetersen_thumb.jpg",
@@ -393,6 +472,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Allaprima02_ChrisPetersen_thumb.jpg",
@@ -409,6 +491,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Allaprima03_ChrisPetersen_thumb.jpg",
@@ -425,6 +510,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Allaprima04_ChrisPetersen_thumb.jpg",
@@ -441,6 +529,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Allaprima05_ChrisPetersen_thumb.jpg",
@@ -457,6 +548,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Allaprima06_ChrisPetersen_thumb.jpg",
@@ -473,6 +567,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Allaprima07_ChrisPetersen_thumb.jpg",
@@ -489,6 +586,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Allaprima08_ChrisPetersen_thumb.jpg",
@@ -507,6 +607,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "ColgateEstate_ChrisPetersen_thumb.jpg",
@@ -523,6 +626,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "AtwaterCrossing_ChrisPetersen_thumb.jpg",
@@ -539,6 +645,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "AndyGriffith_ChrisPetersen_thumb.jpg",
@@ -555,6 +664,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Meadow_ChrisPetersen_thumb.jpg",
@@ -571,6 +683,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "FacingMullholland_ChrisPetersen_thumb.jpg",
@@ -587,6 +702,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "CreeperCanyon_ChrisPetersen_thumb.jpg",
@@ -603,6 +721,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "DownByTheRiver_ChrisPetersen_thumb.jpg",
@@ -619,6 +740,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "OffTheMullhollandPath_ChrisPetersen_thumb.jpg",
@@ -635,6 +759,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "ChinaTown_ChrisPetersen_thumb.jpg",
@@ -653,6 +780,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "IvySkull_ChrisPetersen_thumb.jpg",
@@ -669,6 +799,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "ScreamingSkull_ChrisPetersen_thumb.jpg",
@@ -685,6 +818,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "SelfPortrait2013_ChrisPetersen_thumb.jpg",
@@ -701,6 +837,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "TheDarkSide_ChrisPetersen_thumb.jpg",
@@ -717,6 +856,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "WhatWasYourName_ChrisPetersen_thumb.jpg",
@@ -733,6 +875,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "LivingDead_ChrisPetersen_thumb.jpg",
@@ -749,6 +894,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "HollywoodHotel_ChrisPetersen_thumb.jpg",
@@ -765,6 +913,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2012",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "KTown_ChrisPetersen_thumb.jpg",
@@ -781,6 +932,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2012",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "TheRingleader_ChrisPetersen_thumb.jpg",
@@ -797,6 +951,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "INeedABeer_ChrisPetersen_thumb.jpg",
@@ -813,6 +970,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2014",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "SelfPortrait2014_ChrisPetersen_thumb.jpg",
@@ -829,6 +989,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2012",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "StillLife_ChrisPetersen_thumb.jpg",
@@ -845,6 +1008,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "BlueWoman_ChrisPetersen_thumb.jpg",
@@ -861,6 +1027,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Hipster_ChrisPetersen_thumb.jpg",
@@ -877,6 +1046,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2012",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Sideshow_ChrisPetersen_thumb.jpg",
@@ -893,6 +1065,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "Jogger_ChrisPetersen_thumb.jpg",
@@ -909,6 +1084,9 @@ define(function(require, exports, module) {
                 "material": "OIL ON CANVAS",
                 "date": "2013",
                 "inquire": {
+                    "mailto": "mailto:chris@whileimstillhere.com",
+                    "linkText": "Inquire",
+                    "visible": true,
                     "externalUrl": ""
                 },
                 "imageThumb": "StackedSkulls_ChrisPetersen_thumb.jpg",

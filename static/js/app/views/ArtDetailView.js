@@ -34,12 +34,19 @@ define(function(require, exports, module) {
             var self = this;
             var image = new Image();
             var windowHeight = $(window).height();
+            var windowWidth = $(window).width();
             var offset = 0.8;
             image.onload = function() {
                 var img = $(this);
-                if (this.naturalHeight > (windowHeight * offset)) {
+                if (this.naturalHeight > (windowHeight * offset) && windowHeight < 1000) {
                     self.ui.img.css({
                         height: windowHeight * 0.8
+                    });
+                }
+
+                if (windowWidth < 1000) {
+                    self.ui.img.css({
+                        height: 'auto'
                     });
                 }
             };

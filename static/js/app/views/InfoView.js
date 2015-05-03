@@ -28,7 +28,8 @@ define(function(require, exports, module) {
         },
 
         onShow: function() {
-            // this.delegateEvents();
+            app.vent.trigger('menu:showLogo');
+            app.vent.trigger('hamburger:show');
         }
 
     });

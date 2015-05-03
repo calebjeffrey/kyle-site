@@ -38,7 +38,10 @@ define(function(require, exports, module) {
             this.listenTo(app.vent, 'gallery:showHeader', this.adjustHeader);
             this.listenTo(app.vent, 'gallery:hideHeader', this.resetHeader);
             this.listenTo(app.vent, 'menu:showLogo', this.showLogo);
+            this.listenTo(app.vent, 'menu:hideLogo', this.hideLogo);
             this.listenTo(app.vent, 'menu:toggle', this.toggleHeader);
+            this.listenTo(app.vent, 'hamburger:show', this.showHamburger);
+            this.listenTo(app.vent, 'hamburger:hide', this.hideHamburger);
         },
 
         toggleMenu: function(options) {
@@ -94,6 +97,18 @@ define(function(require, exports, module) {
 
         showLogo: function() {
             this.ui.logo.addClass('is-showing');
+        },
+
+        hideLogo: function() {
+            this.ui.logo.removeClass('is-showing');
+        },
+
+        showHamburger: function() {
+            this.ui.hamburger.removeClass('hide');
+        },
+
+        hideHamburger: function() {
+            this.ui.hamburger.addClass('hide');
         },
 
         onKeyUp: function(e) {

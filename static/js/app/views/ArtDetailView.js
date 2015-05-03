@@ -58,6 +58,8 @@ define(function(require, exports, module) {
             this.handleImage();
             // app.vent.trigger('header:resetHeader');
             app.vent.trigger('menu:toggle');
+            app.vent.trigger('hamburger:hide');
+            app.vent.trigger('menu:hideLogo');
         },
 
         onClickWrapper: function(e) {
@@ -73,6 +75,11 @@ define(function(require, exports, module) {
                 self.destroy();
             }, 800);
 
+        },
+
+        onDestroy: function() {
+            app.vent.trigger('hamburger:show');
+            app.vent.trigger('menu:showLogo');
         },
 
         serializeData: function() {

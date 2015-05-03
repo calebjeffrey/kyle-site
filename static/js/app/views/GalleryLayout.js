@@ -52,6 +52,9 @@ define(function(require, exports, module) {
             this.bindUIElements();
             this.checkIntro();
             this.lazyLoadImages();
+
+            app.vent.trigger('menu:showLogo');
+            app.vent.trigger('hamburger:show');
         },
 
         onClickGridLink: function(e) {
@@ -90,57 +93,6 @@ define(function(require, exports, module) {
         onClickNextGallery: function(e) {
             this.$el.addClass('title-card-showing');
             app.vent.trigger('titleCard:show', this.model.get('nextGallery'), 'next');
-        },
-
-        animateArt: function() {
-            // var player_skull = null;
-            // var player_skull_path = "/img/phosphor/skull/"; // path to Phosphor files on your server
-            // var skull_framecount = 0;
-            // var self = this;
-
-            // var playerID = 'phosphor';
-            // var player_path = "/static/img/phosphor/skull/"; // path to Phosphor files on your server
-
-            // var player_gesture = new PhosphorPlayer(playerID);
-            // phosphorCallback_skull = function(data) {
-            //     skull_framecount = data.frames.length;
-            //     player_skull.load_animation({
-            //         imageArray: ["skull_atlas000.jpg"],
-            //         imagePath: player_path,
-            //         animationData: data,
-            //         loop: true,
-            //         onLoad: function() {
-            //             player_gesture.play();
-            //         }
-            //     });
-            // };
-
-            // var jsonpScript = document.createElement("script");
-            // jsonpScript.type = "text/javascript";
-            // jsonpScript.id = "jsonPinclude_skull";
-            // jsonpScript.src = player_path + "skull_animationData.jsonp";
-            // document.getElementsByTagName("head")[0].appendChild(jsonpScript);
-
-            // player_skull = new PhosphorPlayer('anim_target_skull');
-            // phosphorCallback_skull = function(data) {
-            //     skull_framecount = data.frames.length;
-            //     player_skull.load_animation({
-            //         imageArray:["skull_atlas000.jpg","skull_atlas001.jpg","skull_atlas002.jpg","skull_atlas003.jpg","skull_atlas004.jpg","skull_atlas005.jpg","skull_atlas006.jpg","skull_atlas007.jpg","skull_atlas008.jpg","skull_atlas009.jpg"],
-            //         imagePath: player_skull_path,
-            //         animationData: data,
-            //         loop: true,
-            //         onLoad: function() {
-            //             console.log('loaded')
-            //             player_skull.play();
-            //         }
-            //     });
-            // };
-
-            // var jsonpScript = document.createElement("script");
-            // jsonpScript.type = "text/javascript";
-            // jsonpScript.id = "jsonPinclude_skull";
-            // jsonpScript.src = player_skull_path + "skull_animationData.jsonp";
-            // document.getElementsByTagName("head")[0].appendChild(jsonpScript);
         },
 
         onDestroy: function() {

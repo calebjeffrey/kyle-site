@@ -4,49 +4,49 @@
   background-repeat: no-repeat;
 }
 
-/* line 84, ../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .ui-chris-large-red, .logo .fg h1 {
   background-position: 0 0;
   height: 124px;
   width: 481px;
 }
 
-/* line 84, ../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .ui-chris-large, .logo .bg h1 {
   background-position: 0 -129px;
   height: 124px;
   width: 481px;
 }
 
-/* line 84, ../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .ui-logo-small, .header .header-logo a {
   background-position: 0 -258px;
   height: 46px;
   width: 44px;
 }
 
-/* line 84, ../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .ui-peter-large-red, .logo .fg h1:nth-child(2) {
   background-position: 0 -309px;
   height: 122px;
   width: 563px;
 }
 
-/* line 84, ../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .ui-peter-large, .logo .bg h1:nth-child(2) {
   background-position: 0 -436px;
   height: 122px;
   width: 563px;
 }
 
-/* line 84, ../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .ui-sen-large-red, .logo .fg h1:nth-child(3) {
   background-position: 0 -563px;
   height: 123px;
   width: 309px;
 }
 
-/* line 84, ../../../../lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
 .ui-sen-large, .logo .bg h1:nth-child(3) {
   background-position: 0 -691px;
   height: 123px;
@@ -1475,8 +1475,9 @@ footer a {
 /* line 8, src/pages/_art-detail.scss */
 .art-detail.show-meta .overlay, .art-detail.show-meta .meta {
   opacity: 1;
+  pointer-events: auto;
 }
-/* line 12, src/pages/_art-detail.scss */
+/* line 13, src/pages/_art-detail.scss */
 .art-detail.show-meta h4 {
   opacity: 1;
   -moz-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0.7s;
@@ -1485,7 +1486,7 @@ footer a {
   -webkit-transition-delay: 0.7s;
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0.7s;
 }
-/* line 17, src/pages/_art-detail.scss */
+/* line 18, src/pages/_art-detail.scss */
 .art-detail.show-meta h1 {
   -webkit-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   -moz-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
@@ -1498,17 +1499,17 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 23, src/pages/_art-detail.scss */
+/* line 24, src/pages/_art-detail.scss */
 .no-touch .art-detail.show-meta figure:hover {
   cursor: url(../img/cursor/minimize-cursor.svg), auto;
 }
-/* line 33, src/pages/_art-detail.scss */
+/* line 34, src/pages/_art-detail.scss */
 .art-detail .content {
   width: 100%;
   height: 100%;
-  margin: 13em 0;
+  margin: 0;
 }
-/* line 40, src/pages/_art-detail.scss */
+/* line 41, src/pages/_art-detail.scss */
 .art-detail .overlay {
   background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
@@ -1519,7 +1520,7 @@ footer a {
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
   pointer-events: none;
 }
-/* line 48, src/pages/_art-detail.scss */
+/* line 49, src/pages/_art-detail.scss */
 .art-detail figure {
   opacity: 0;
   -moz-transform: translate3d(-50%, -300%, 0);
@@ -1531,7 +1532,7 @@ footer a {
   -o-animation: detailSlideDownIn 1.2s 0.6s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
   animation: detailSlideDownIn 1.2s 0.6s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
 }
-/* line 54, src/pages/_art-detail.scss */
+/* line 55, src/pages/_art-detail.scss */
 .art-detail figure.is-animating-down {
   -webkit-animation: detailSlideDownOut 1.2s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
   -moz-animation: detailSlideDownOut 1.2s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
@@ -1539,26 +1540,27 @@ footer a {
   -o-animation: detailSlideDownOut 1.2s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
   animation: detailSlideDownOut 1.2s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
 }
-/* line 58, src/pages/_art-detail.scss */
+/* line 59, src/pages/_art-detail.scss */
 .art-detail figure.animate-in {
   opacity: 0;
 }
-/* line 62, src/pages/_art-detail.scss */
+/* line 63, src/pages/_art-detail.scss */
 .no-touch .art-detail figure:hover {
   cursor: url(../img/cursor/open-cursor.svg), auto;
 }
-/* line 67, src/pages/_art-detail.scss */
+/* line 68, src/pages/_art-detail.scss */
 .art-detail .meta {
   width: 200%;
   text-align: center;
   opacity: 0;
+  pointer-events: none;
   -moz-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
   -o-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
   -webkit-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1);
   -webkit-transition-delay: 0s;
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 75, src/pages/_art-detail.scss */
+/* line 77, src/pages/_art-detail.scss */
 .art-detail h1 {
   margin: 20px 0;
   text-transform: uppercase;
@@ -1570,7 +1572,7 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 83, src/pages/_art-detail.scss */
+/* line 85, src/pages/_art-detail.scss */
 .art-detail h4 {
   color: #8c9397;
   opacity: 0;
@@ -1580,7 +1582,7 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 89, src/pages/_art-detail.scss */
+/* line 91, src/pages/_art-detail.scss */
 .art-detail a {
   color: #fb2323;
   font-size: 19px;
@@ -1592,11 +1594,11 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: color 0.3s linear 0s;
 }
-/* line 97, src/pages/_art-detail.scss */
+/* line 99, src/pages/_art-detail.scss */
 .no-touch .art-detail a:hover {
   color: #ffffff;
 }
-/* line 102, src/pages/_art-detail.scss */
+/* line 104, src/pages/_art-detail.scss */
 .art-detail span {
   position: relative;
   top: -2px;

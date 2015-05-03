@@ -14,7 +14,8 @@ define(function(require, exports, module) {
         ui: {
             figure: 'figure',
             content: '.content',
-            wrapper: '.wrapper'
+            wrapper: '.wrapper',
+            img: 'img'
         },
 
         events: {
@@ -24,7 +25,27 @@ define(function(require, exports, module) {
 
         initialize: function(options) {
             BaseView.prototype.initialize.call(this);
-            this.returnUrl = options.returnUrl;
+            this.returnUrl = options.returnUrl || '/';
+
+            console.log(options);
+        },
+
+        handleImage: function() {
+            var self = this;
+            var image = new Image();
+            var windowHeight = $(window).height();
+            var offset = 0.8;
+            image.onload = function() {
+                var img = $(this);
+                if (this.naturalHeight > (windowHeight * offset)) {
+                    self.ui.img.css({
+                        height: windowHeight * 0.8
+                    });
+                }
+            };
+
+            image.src = '/img/artwork/' + this.model.get('type') + '/' + this.model.get('image2x');
+
         },
 
         onClickFigure: function(e) {
@@ -34,6 +55,7 @@ define(function(require, exports, module) {
 
         onShow: function() {
             this.delegateEvents();
+            this.handleImage();
             // app.vent.trigger('header:resetHeader');
             app.vent.trigger('menu:toggle');
         },

@@ -85,16 +85,18 @@ define(function(require, exports, module) {
     exports.makeTwoColumns = function(array) {
         var temp = [],
             content = [[], []],
+            counter = 0;
             wrapperHtml = '<div class="column"></div>';
 
         for (var i = 0; i < array.length; i++) {
             var elem = array[i];
 
-            if (i % 2 === 0) {
-                content[0].push(elem);
-            } else {
-                content[1].push(elem);
+            if (counter > content.length - 1) {
+                counter = 0;
             }
+
+            content[counter].push(elem);
+            counter++;
         }
 
         $.each(content, function (i) {
@@ -105,20 +107,18 @@ define(function(require, exports, module) {
     exports.makeThreeColumns = function(array) {
         var temp = [],
             content = [[], [], []],
+            counter = 0;
             wrapperHtml = '<div class="column"></div>';
 
         for (var i = 0; i < array.length; i++) {
             var elem = array[i];
 
-            if (i === 0) {
-                content[0].push(elem);
-            } else if (i % 2 === 0 && i % 3 !== 0) {
-                content[0].push(elem);
-            } else if (i % 3 === 0 ) {
-                content[2].push(elem);
-            } else {
-                content[1].push(elem);
+            if (counter > content.length - 1) {
+                counter = 0;
             }
+
+            content[counter].push(elem);
+            counter++;
         }
 
         $.each(content, function (i) {

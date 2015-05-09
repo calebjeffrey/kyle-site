@@ -863,14 +863,6 @@ form ul {
   left: -10px;
   padding: 10px;
 }
-/* line 40, src/components/_header.scss */
-.no-touch .header .hamburger:hover .patty:before {
-  top: -9px;
-}
-/* line 43, src/components/_header.scss */
-.no-touch .header .hamburger:hover .patty:after {
-  top: 9px;
-}
 /* line 48, src/components/_header.scss */
 .no-touch .header .hamburger:hover .cover {
   width: 23px;

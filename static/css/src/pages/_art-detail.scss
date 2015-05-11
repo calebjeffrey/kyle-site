@@ -50,10 +50,10 @@
         @extend %absolute-center;
         opacity: 0;
         @include translate3d(-50%, -300%, 0);
-        @include animation(detailSlideDownIn, 1.2s, 0.6s, $ease-custom, 1, forwards);
+        @include animation(detailSlideDownIn, 1.2s, 0.6s, $ease-in, 1, forwards);
 
         &.is-animating-down {
-            @include animation(detailSlideDownOut, 1.2s, 0s, $ease-custom, 1, forwards);
+            @include animation(detailSlideDownOut, 1.2s, 0s, $ease-in, 1, forwards);
         }
 
         &.animate-in {

@@ -9,6 +9,8 @@ define(function(require, exports, module) {
         lazyLoad = require('lazyLoad'),
         template = require('hbs!templates/gallery-layout');
 
+    require('jquery.velocity');
+
     return Marionette.LayoutView.extend({
 
         className: 'page gallery',
@@ -53,28 +55,29 @@ define(function(require, exports, module) {
             this.checkIntro();
             this.lazyLoadImages();
 
+            this.animateSlidesIn();
+
             app.vent.trigger('menu:showLogo');
             app.vent.trigger('hamburger:show');
+
+            app.vent.on('slides:animate', this.animateSlides, this);
         },
 
         onClickGridLink: function(e) {
+            this.ui.gridItems.css('opacity', 1);
             this.ui.gridItems.removeClass('animate-in is-animating-down');
-            this.ui.gridItems.css('animation-delay', '0.' + this.genRandomNum(100, 300) + 's');
             this.ui.gridItems.addClass('is-animating-down');
         },
 
         checkIntro: function() {
             this.ui.gridItems.removeClass('animate-in is-animating-down');
-            if (this.animIntro) {
-                this.ui.gridItems.addClass('animate-in');
-            }
         },
 
         lazyLoadImages: function() {
             this.bindUIElements();
 
             $('.lazy').lazyload({
-                effect: 'fadeIn',
+                // effect: supDude,
                 container: $('.app'),
                 failure_limit : 40,
                 skip_invisible: false
@@ -93,6 +96,17 @@ define(function(require, exports, module) {
         onClickNextGallery: function(e) {
             this.$el.addClass('title-card-showing');
             app.vent.trigger('titleCard:show', this.model.get('nextGallery'), 'next');
+        },
+
+        animateSlidesIn: function() {
+            var self = this;
+            this.bindUIElements();
+
+            _.each(this.ui.gridItems, function(item) {
+                $(item).css('animation-delay', '0.' + self.genRandomNum(100, 300) + 's');
+            });
+
+            this.ui.gridItems.addClass('animate-in');
         },
 
         onDestroy: function() {

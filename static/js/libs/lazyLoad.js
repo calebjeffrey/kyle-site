@@ -112,7 +112,14 @@
                             } else {
                                 $self.css("background-image", "url('" + original + "')");
                             }
-                            $self[settings.effect](settings.effect_speed);
+
+                            // console.log($self[setttings.effect]);
+                            // var animate = function(el) {
+                            //     console.log(el);
+                            // };
+
+                            $self[settings.effect](0);
+                            // animate($self);
 
                             self.loaded = true;
 

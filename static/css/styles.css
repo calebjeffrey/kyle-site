@@ -873,38 +873,38 @@ form ul {
   opacity: 1;
   width: 23px;
 }
-/* line 59, src/components/_header.scss */
+/* line 60, src/components/_header.scss */
 .no-touch .menu-is-open .header .hamburger:hover {
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-/* line 63, src/components/_header.scss */
+/* line 64, src/components/_header.scss */
 .menu-is-open .header .hamburger .patty, .menu-is-open .header .hamburger .cover {
   background: none !important;
   opacity: 1;
 }
-/* line 66, src/components/_header.scss */
+/* line 67, src/components/_header.scss */
 .menu-is-open .header .hamburger .patty:before, .menu-is-open .header .hamburger .patty:after, .menu-is-open .header .hamburger .cover:before, .menu-is-open .header .hamburger .cover:after {
   top: 0 !important;
   opacity: 1;
 }
-/* line 70, src/components/_header.scss */
+/* line 71, src/components/_header.scss */
 .menu-is-open .header .hamburger .patty:before, .menu-is-open .header .hamburger .cover:before {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-/* line 73, src/components/_header.scss */
+/* line 74, src/components/_header.scss */
 .menu-is-open .header .hamburger .patty:after, .menu-is-open .header .hamburger .cover:after {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 79, src/components/_header.scss */
+/* line 80, src/components/_header.scss */
 .header .hamburger .patty {
   position: absolute;
   top: 16px;
@@ -915,7 +915,7 @@ form ul {
   background: #e2e2e2;
   cursor: pointer;
 }
-/* line 89, src/components/_header.scss */
+/* line 90, src/components/_header.scss */
 .header .hamburger .patty:before, .header .hamburger .patty:after {
   content: '';
   position: absolute;
@@ -924,28 +924,28 @@ form ul {
   display: block;
   background: #e2e2e2;
 }
-/* line 97, src/components/_header.scss */
+/* line 98, src/components/_header.scss */
 .header .hamburger .patty:before {
   top: -8px;
 }
-/* line 100, src/components/_header.scss */
+/* line 101, src/components/_header.scss */
 .header .hamburger .patty:after {
   top: 8px;
 }
-/* line 103, src/components/_header.scss */
+/* line 104, src/components/_header.scss */
 .header .hamburger .patty.cover {
   background: #fb2323;
   width: 0;
   opacity: 0;
 }
-/* line 109, src/components/_header.scss */
+/* line 110, src/components/_header.scss */
 .header .hamburger .patty.cover:before, .header .hamburger .patty.cover:after {
   background: #fb2323;
   overflow: hidden;
   opacity: 0;
   width: 0;
 }
-/* line 120, src/components/_header.scss */
+/* line 121, src/components/_header.scss */
 .header .header-logo {
   position: fixed;
   top: 40px;
@@ -956,14 +956,14 @@ form ul {
   -webkit-transform: translate3d(0, -200%, 0);
   transform: translate3d(0, -200%, 0);
 }
-/* line 131, src/components/_header.scss */
+/* line 132, src/components/_header.scss */
 .header .header-logo.is-showing {
   opacity: 1;
   -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 136, src/components/_header.scss */
+/* line 137, src/components/_header.scss */
 .header .header-logo.gallery-header-showing {
   -moz-transition: -moz-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
   -o-transition: -o-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
@@ -1319,6 +1319,7 @@ footer a {
 .column .item {
   width: 100%;
   padding: 5% 0;
+  opacity: 0;
   -moz-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -1333,39 +1334,39 @@ footer a {
     padding: 10%;
   }
 }
-/* line 45, src/components/_grid.scss */
+/* line 46, src/components/_grid.scss */
 .column .item:first-child {
   padding-top: 0;
 }
-/* line 49, src/components/_grid.scss */
+/* line 50, src/components/_grid.scss */
 .column .item:last-child {
   padding-bottom: 0;
 }
-/* line 53, src/components/_grid.scss */
+/* line 54, src/components/_grid.scss */
 .title-card-showing .column .item {
   opacity: 0;
 }
-/* line 57, src/components/_grid.scss */
+/* line 62, src/components/_grid.scss */
 .column .item.is-animating-down {
-  -webkit-animation: slideDownOut 0.8s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  -moz-animation: slideDownOut 0.8s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  -ms-animation: slideDownOut 0.8s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  -o-animation: slideDownOut 0.8s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  animation: slideDownOut 0.8s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
+  -webkit-animation: slideDownOut 0.8s 0s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  -moz-animation: slideDownOut 0.8s 0s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  -ms-animation: slideDownOut 0.8s 0s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  -o-animation: slideDownOut 0.8s 0s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  animation: slideDownOut 0.8s 0s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
 }
-/* line 61, src/components/_grid.scss */
+/* line 70, src/components/_grid.scss */
 .column .item.animate-in {
-  -webkit-animation: slideDownIn 0.8s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  -moz-animation: slideDownIn 0.8s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  -ms-animation: slideDownIn 0.8s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  -o-animation: slideDownIn 0.8s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  animation: slideDownIn 0.8s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
+  -webkit-animation: slideUpIn 0.8s 0s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  -moz-animation: slideUpIn 0.8s 0s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  -ms-animation: slideUpIn 0.8s 0s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  -o-animation: slideUpIn 0.8s 0s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  animation: slideUpIn 0.8s 0s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
 }
-/* line 65, src/components/_grid.scss */
+/* line 74, src/components/_grid.scss */
 .column .item:hover img {
   outline: #d9d9d9 solid 20px;
 }
-/* line 74, src/components/_grid.scss */
+/* line 83, src/components/_grid.scss */
 .column img {
   width: 100%;
   outline: #d9d9d9 solid 0px;
@@ -1611,19 +1612,19 @@ footer a {
   -moz-transform: translate3d(-50%, -300%, 0);
   -webkit-transform: translate3d(-50%, -300%, 0);
   transform: translate3d(-50%, -300%, 0);
-  -webkit-animation: detailSlideDownIn 1.2s 0.6s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  -moz-animation: detailSlideDownIn 1.2s 0.6s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  -ms-animation: detailSlideDownIn 1.2s 0.6s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  -o-animation: detailSlideDownIn 1.2s 0.6s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  animation: detailSlideDownIn 1.2s 0.6s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
+  -webkit-animation: detailSlideDownIn 1.2s 0.6s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  -moz-animation: detailSlideDownIn 1.2s 0.6s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  -ms-animation: detailSlideDownIn 1.2s 0.6s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  -o-animation: detailSlideDownIn 1.2s 0.6s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  animation: detailSlideDownIn 1.2s 0.6s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
 }
 /* line 55, src/pages/_art-detail.scss */
 .art-detail figure.is-animating-down {
-  -webkit-animation: detailSlideDownOut 1.2s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  -moz-animation: detailSlideDownOut 1.2s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  -ms-animation: detailSlideDownOut 1.2s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  -o-animation: detailSlideDownOut 1.2s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
-  animation: detailSlideDownOut 1.2s 0s cubic-bezier(0.77, 0, 0.175, 1) 1 forwards;
+  -webkit-animation: detailSlideDownOut 1.2s 0s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  -moz-animation: detailSlideDownOut 1.2s 0s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  -ms-animation: detailSlideDownOut 1.2s 0s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  -o-animation: detailSlideDownOut 1.2s 0s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
+  animation: detailSlideDownOut 1.2s 0s cubic-bezier(0.42, 0, 1, 1) 1 forwards;
 }
 /* line 59, src/pages/_art-detail.scss */
 .art-detail figure.animate-in {
@@ -2303,6 +2304,76 @@ footer a {
     -moz-transform: translate3d(0, -200px, 0);
     -webkit-transform: translate3d(0, -200px, 0);
     transform: translate3d(0, -200px, 0);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(0, 200px, 0);
+    -webkit-transform: translate3d(0, 200px, 0);
+    transform: translate3d(0, 200px, 0);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-moz-keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(0, 200px, 0);
+    -webkit-transform: translate3d(0, 200px, 0);
+    transform: translate3d(0, 200px, 0);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-ms-keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(0, 200px, 0);
+    -webkit-transform: translate3d(0, 200px, 0);
+    transform: translate3d(0, 200px, 0);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-o-keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(0, 200px, 0);
+    -webkit-transform: translate3d(0, 200px, 0);
+    transform: translate3d(0, 200px, 0);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(0, 200px, 0);
+    -webkit-transform: translate3d(0, 200px, 0);
+    transform: translate3d(0, 200px, 0);
   }
   100% {
     opacity: 1;

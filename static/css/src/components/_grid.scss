@@ -34,6 +34,7 @@
     .item {
         width: 100%;
         padding: 5% 0;
+        opacity: 0;
 
         @include transform-style(preserve-3d);
         @include transition(opacity 0.6s $ease-in-out);
@@ -54,12 +55,20 @@
             opacity: 0;
         }
 
+        // &.is-animating-down {
+        //     @include animation(slideDownOut, 0.8s, 0s, $ease-custom, 1, forwards);
+        // }
+
         &.is-animating-down {
-            @include animation(slideDownOut, 0.8s, 0s, $ease-custom, 1, forwards);
+            @include animation(slideDownOut, 0.8s, 0s, $ease-in, 1, forwards);
         }
 
+        // &.animate-in {
+        //     // @include animation(slideDownIn, 0.8s, 0s, $ease-custom, 1, forwards);
+        // }
+
         &.animate-in {
-            @include animation(slideDownIn, 0.8s, 0s, $ease-custom, 1, forwards);
+            @include animation(slideUpIn, 0.8s, 0s, $ease-in, 1, forwards);
         }
 
         &:hover img {

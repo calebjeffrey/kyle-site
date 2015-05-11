@@ -32,11 +32,11 @@ define(function(require, exports, module) {
                     container: $('.app'),
                     duration: 10
                 });
-            }, 2000);
+            }, 3000);
 
             setTimeout(function(){
                 self.destroy();
-            }, 3000);
+            }, 4000);
         },
 
         serializeData: function() {

@@ -32,6 +32,8 @@
         color: $white;
         text-transform: capitalize;
         letter-spacing: 2px;
+        opacity: 0;
+        @include animation(textSlide, 2s, 1s, $ease-in-out, 1, forwards);
 
     }
 }

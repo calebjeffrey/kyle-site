@@ -27,12 +27,16 @@
         @include translate3d(0, 0, 0);
 
         .menu {
-            @include animation(fadeInDown, 1s, 0.7s, $ease-out, 1, forwards);
+            @include animation(fadeInUp, 1s, 1s, $ease-out, 1, forwards);
         }
     }
 
     &.transition-down-out {
-        @include animation(slideDown, 1s, 0s, $ease-custom, 1, forwards);
+        @include animation(slideDown, 1s, 0.5s, $ease-custom, 1, forwards);
+
+        .menu {
+            @include animation(fadeOutDown, 0.5s, 0s, $ease-out, 1, forwards);
+        }
     }
 
     .menu {
@@ -72,7 +76,8 @@
                 content: attr(data-text);
                 left: 0;
                 position: absolute;
-                top: 6px;
+                top: 0px;
+                padding: 6px 0;
                 z-index: 0;
                 width: 0;
                 overflow: hidden;

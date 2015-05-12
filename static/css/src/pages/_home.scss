@@ -5,8 +5,7 @@
         background-color: $white;
 
         &.is-leaving {
-            @include animation(slideUp, 1s, 0s, $ease-custom, 1, forwards);
-            // @include animation(slideUp, 0.5s, 0s, linear, 1, forwards);
+            @include animation(slideUp, 1s, 0s, $ease-in-quart, 1, forwards);
         }
     }
 

@@ -32,10 +32,10 @@
     }
 
     &.transition-down-out {
-        @include animation(slideDown, 1s, 0.5s, $ease-custom, 1, forwards);
+        @include animation(slideDown, 1s, 0.5s, $ease-in-quart, 1, forwards);
 
         .menu {
-            @include animation(fadeOutDown, 0.5s, 0s, $ease-out, 1, forwards);
+            @include animation(fadeOutDown, 0.5s, 0s, $ease-in-quart, 1, forwards);
         }
     }
 

@@ -60,7 +60,7 @@
         // }
 
         &.is-animating-down {
-            @include animation(slideDownOut, 0.8s, 0s, $ease-in, 1, forwards);
+            @include animation(slideDownOutGrid, 0.8s, 0s, $ease-in-quart, 1, forwards);
         }
 
         // &.animate-in {
@@ -68,7 +68,7 @@
         // }
 
         &.animate-in {
-            @include animation(slideUpIn, 0.8s, 0s, $ease-in, 1, forwards);
+            @include animation(slideUpIn, 0.8s, 0s, $ease-out-quart, 1, forwards);
         }
 
         &:hover img {

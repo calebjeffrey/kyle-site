@@ -104,6 +104,17 @@
     }
 }
 
+@include keyframes(slideDownOutGrid) {
+    0% {
+        opacity: 1;
+        @include translate3d(0, 0, 0);
+    }
+    100% {
+        opacity: 0;
+        @include translate3d(0, 200px, 0);
+    }
+}
+
 @include keyframes(slideDownIn) {
     0% {
         opacity: 0;

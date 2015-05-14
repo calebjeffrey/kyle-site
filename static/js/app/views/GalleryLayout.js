@@ -77,7 +77,7 @@ define(function(require, exports, module) {
             this.bindUIElements();
 
             $('.lazy').lazyload({
-                // effect: supDude,
+                effect: 'fadeIn',
                 container: $('.app'),
                 failure_limit : 40,
                 skip_invisible: false

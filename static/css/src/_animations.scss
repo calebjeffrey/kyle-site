@@ -29,6 +29,17 @@
     }
 }
 
+@include keyframes(menuSlideUp) {
+    0% {
+        visibility: visible;
+        @include translate3d(0, 100%, 0);
+    }
+    100% {
+        visibility: visible;
+        @include translate3d(0, 0, 0);
+    }
+}
+
 @include keyframes(slideDown) {
     0% {
         @include translate3d(0, 0, 0);

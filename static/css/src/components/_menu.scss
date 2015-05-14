@@ -31,6 +31,14 @@
         }
     }
 
+    &.menu-open-first {
+        @include translate3d(0, 100%, 0);
+        @include animation(menuSlideUp, 1s, 0s, $ease-in-quart, 1, forwards);
+        .menu {
+            @include animation(fadeInUp, 1s, 1s, $ease-out, 1, forwards);
+        }
+    }
+
     &.transition-down-out {
         @include animation(slideDown, 1s, 0.5s, $ease-in-quart, 1, forwards);
 

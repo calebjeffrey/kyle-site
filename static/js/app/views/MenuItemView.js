@@ -10,7 +10,6 @@ define(function(require, exports, module) {
         tagName: 'li',
 
         initialize: function() {
-            console.log(this.model);
         }
 
     });

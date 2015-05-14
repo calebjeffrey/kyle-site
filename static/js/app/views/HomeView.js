@@ -34,7 +34,8 @@ define(function(require, exports, module) {
             }, 4000);
 
             setTimeout(function(){
-                app.vent.trigger('menu:open', 'hideHamburger');
+                // app.vent.trigger('menu:open', 'hideHamburger', 'first');
+                app.vent.trigger('menu:openFirst');
                 app.vent.trigger('menu:showLogo');
             }, 5000);
         }

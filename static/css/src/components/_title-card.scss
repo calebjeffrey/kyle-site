@@ -1,7 +1,7 @@
 .title-card {
     background-color: $red;
     z-index: 20;
-    @include transition(transform 1s $ease-custom);
+    @include transition(transform 1s $ease-out-quart);
 
     &.prev {
         @include translate3d(0, -100%, 0);
@@ -11,7 +11,7 @@
         }
 
         &.is-leaving {
-            @include animation(slideDown, 1s, 0s, $ease-custom, 1, forwards);
+            @include animation(slideDown, 1s, 0s, $ease-in-quart, 1, forwards);
         }
     }
 
@@ -23,7 +23,7 @@
         }
 
         &.is-leaving {
-            @include animation(slideUp, 1s, 0s, $ease-custom, 1, forwards);
+            @include animation(slideUp, 1s, 0s, $ease-in-quart, 1, forwards);
         }
     }
 

@@ -1,6 +1,5 @@
 .art-detail {
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden;
     cursor: url(../img/cursor/close-cursor.svg), auto;
 
     &.show-meta {

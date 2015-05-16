@@ -817,10 +817,6 @@ form ul {
   background-attachment: fixed;
   background-position: center center;
 }
-/* line 16, src/components/_background.scss */
-.app-background .bg.skull {
-  background-image: url(../img/backgrounds/bg-art-01.jpg);
-}
 
 /* line 5, src/components/_header.scss */
 .header {

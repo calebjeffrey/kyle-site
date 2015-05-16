@@ -1,5 +1,5 @@
 /* line 96, sprites/ui/*.png */
-.ui-sprite, .ui-chris-large-red, .logo .fg h1, .ui-chris-large, .logo .bg h1, .ui-logo-small, .header .header-logo a, .ui-peter-large-red, .logo .fg h1:nth-child(2), .ui-peter-large, .logo .bg h1:nth-child(2), .ui-sen-large-red, .logo .fg h1:nth-child(3), .ui-sen-large, .logo .bg h1:nth-child(3) {
+.ui-sprite, .ui-chris-large-red, .logo .fg h1, .ui-chris-large, .logo .bg h1, .ui-logo-small, .ui-peter-large-red, .logo .fg h1:nth-child(2), .ui-peter-large, .logo .bg h1:nth-child(2), .ui-sen-large-red, .logo .fg h1:nth-child(3), .ui-sen-large, .logo .bg h1:nth-child(3) {
   background-image: url('../img/sprites/ui-s3459ee44e6.png');
   background-repeat: no-repeat;
 }
@@ -19,7 +19,7 @@
 }
 
 /* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
-.ui-logo-small, .header .header-logo a {
+.ui-logo-small {
   background-position: 0 -258px;
   height: 46px;
   width: 44px;
@@ -948,22 +948,29 @@ form ul {
 /* line 121, src/components/_header.scss */
 .header .header-logo {
   position: fixed;
-  top: 40px;
-  left: 40px;
+  top: 20px;
+  left: 20px;
   z-index: 10;
   opacity: 0;
   -moz-transform: translate3d(0, -200%, 0);
   -webkit-transform: translate3d(0, -200%, 0);
   transform: translate3d(0, -200%, 0);
 }
-/* line 132, src/components/_header.scss */
+@media only screen and (min-width: 768px) {
+  /* line 121, src/components/_header.scss */
+  .header .header-logo {
+    top: 40px;
+    left: 40px;
+  }
+}
+/* line 134, src/components/_header.scss */
 .header .header-logo.is-showing {
   opacity: 1;
   -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 137, src/components/_header.scss */
+/* line 139, src/components/_header.scss */
 .header .header-logo.gallery-header-showing {
   -moz-transition: -moz-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
   -o-transition: -o-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
@@ -973,6 +980,24 @@ form ul {
   -moz-transform: translate3d(0, 42px, 0);
   -webkit-transform: translate3d(0, 42px, 0);
   transform: translate3d(0, 42px, 0);
+}
+/* line 144, src/components/_header.scss */
+.header .header-logo a {
+  display: block;
+  width: 115px;
+  height: 14px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/logo/logo-mobile.svg);
+}
+@media only screen and (min-width: 768px) {
+  /* line 144, src/components/_header.scss */
+  .header .header-logo a {
+    background-image: url(../img/logo/logo.svg);
+    width: 44px;
+    height: 46px;
+  }
 }
 
 /* line 3, src/components/_grid-header.scss */

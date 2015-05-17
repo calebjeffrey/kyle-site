@@ -1662,11 +1662,11 @@ footer a {
 /* line 29, src/pages/_art-detail.scss */
 .art-detail.show-meta h4 {
   opacity: 1;
-  -moz-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0.7s;
-  -o-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0.7s;
-  -webkit-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1);
-  -webkit-transition-delay: 0.7s;
-  transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0.7s;
+  -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
+  -o-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
+  -webkit-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition-delay: 0.4s;
+  transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
 }
 /* line 34, src/pages/_art-detail.scss */
 .art-detail.show-meta h1 {
@@ -1736,35 +1736,34 @@ footer a {
   text-align: center;
   opacity: 0;
   pointer-events: none;
-  -moz-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
-  -o-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
-  -webkit-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -o-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -webkit-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1);
   -webkit-transition-delay: 0s;
-  transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
 /* line 93, src/pages/_art-detail.scss */
 .art-detail h1 {
   margin: 20px 0;
   text-transform: uppercase;
   pointer-events: none;
-  opacity: 0;
-  -moz-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
-  -o-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
-  -webkit-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -o-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -webkit-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1);
   -webkit-transition-delay: 0s;
-  transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 101, src/pages/_art-detail.scss */
+/* line 102, src/pages/_art-detail.scss */
 .art-detail h4 {
   color: #8c9397;
   opacity: 0;
-  -moz-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
-  -o-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
-  -webkit-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -o-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -webkit-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1);
   -webkit-transition-delay: 0s;
-  transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 107, src/pages/_art-detail.scss */
+/* line 109, src/pages/_art-detail.scss */
 .art-detail a {
   color: #fb2323;
   font-size: 19px;
@@ -1776,11 +1775,11 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: color 0.3s linear 0s;
 }
-/* line 115, src/pages/_art-detail.scss */
+/* line 117, src/pages/_art-detail.scss */
 .no-touch .art-detail a:hover {
   color: #ffffff;
 }
-/* line 120, src/pages/_art-detail.scss */
+/* line 122, src/pages/_art-detail.scss */
 .art-detail span {
   position: relative;
   top: -2px;
@@ -2871,9 +2870,9 @@ footer a {
 @-webkit-keyframes detailTitle {
   0% {
     opacity: 1;
-    -moz-transform: translate3d(0%, 25px, 0);
-    -webkit-transform: translate3d(0%, 25px, 0);
-    transform: translate3d(0%, 25px, 0);
+    -moz-transform: translate3d(0%, 45px, 0);
+    -webkit-transform: translate3d(0%, 45px, 0);
+    transform: translate3d(0%, 45px, 0);
   }
   100% {
     opacity: 1;
@@ -2885,9 +2884,9 @@ footer a {
 @-moz-keyframes detailTitle {
   0% {
     opacity: 1;
-    -moz-transform: translate3d(0%, 25px, 0);
-    -webkit-transform: translate3d(0%, 25px, 0);
-    transform: translate3d(0%, 25px, 0);
+    -moz-transform: translate3d(0%, 45px, 0);
+    -webkit-transform: translate3d(0%, 45px, 0);
+    transform: translate3d(0%, 45px, 0);
   }
   100% {
     opacity: 1;
@@ -2899,9 +2898,9 @@ footer a {
 @-ms-keyframes detailTitle {
   0% {
     opacity: 1;
-    -moz-transform: translate3d(0%, 25px, 0);
-    -webkit-transform: translate3d(0%, 25px, 0);
-    transform: translate3d(0%, 25px, 0);
+    -moz-transform: translate3d(0%, 45px, 0);
+    -webkit-transform: translate3d(0%, 45px, 0);
+    transform: translate3d(0%, 45px, 0);
   }
   100% {
     opacity: 1;
@@ -2913,9 +2912,9 @@ footer a {
 @-o-keyframes detailTitle {
   0% {
     opacity: 1;
-    -moz-transform: translate3d(0%, 25px, 0);
-    -webkit-transform: translate3d(0%, 25px, 0);
-    transform: translate3d(0%, 25px, 0);
+    -moz-transform: translate3d(0%, 45px, 0);
+    -webkit-transform: translate3d(0%, 45px, 0);
+    transform: translate3d(0%, 45px, 0);
   }
   100% {
     opacity: 1;
@@ -2927,9 +2926,9 @@ footer a {
 @keyframes detailTitle {
   0% {
     opacity: 1;
-    -moz-transform: translate3d(0%, 25px, 0);
-    -webkit-transform: translate3d(0%, 25px, 0);
-    transform: translate3d(0%, 25px, 0);
+    -moz-transform: translate3d(0%, 45px, 0);
+    -webkit-transform: translate3d(0%, 45px, 0);
+    transform: translate3d(0%, 45px, 0);
   }
   100% {
     opacity: 1;

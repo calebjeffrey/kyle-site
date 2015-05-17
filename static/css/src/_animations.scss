@@ -182,7 +182,7 @@
 @include keyframes(detailTitle) {
     0% {
         opacity: 1;
-        @include translate3d(0%, 25px, 0);
+        @include translate3d(0%, 45px, 0);
     }
     100% {
         opacity: 1;

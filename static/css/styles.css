@@ -1037,6 +1037,7 @@ form ul {
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-family: "Montserrat-Regular", sans-serif;
 }
 
 /* line 3, src/components/_footer.scss */

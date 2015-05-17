@@ -495,7 +495,7 @@ th {
 }
 
 /* line 11, src/_extends.scss */
-.header .hamburger, .header .hamburger .patty, .header .hamburger .patty.cover, .header .hamburger .patty.cover:before, .header .hamburger .patty.cover:after, .header .header-logo {
+.header .hamburger, .header .hamburger .patty, .header .hamburger .patty.cover, .header .hamburger .patty.cover:before, .header .hamburger .patty.cover:after {
   -moz-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -o-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -951,6 +951,11 @@ form ul {
   -moz-transform: translate3d(0, -200%, 0);
   -webkit-transform: translate3d(0, -200%, 0);
   transform: translate3d(0, -200%, 0);
+  -moz-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 1.6s;
+  -o-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 1.6s;
+  -webkit-transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition-delay: 1.6s;
+  transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 1.6s;
 }
 @media only screen and (min-width: 768px) {
   /* line 121, src/components/_header.scss */

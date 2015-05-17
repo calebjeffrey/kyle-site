@@ -193,18 +193,18 @@
 @include keyframes(textSlide) {
     0% {
         opacity: 0;
-        @include translate3d(-50%, 100px, 0);
+        @include translate3d(-50%, 0%, 0);
     }
     30% {
         opacity: 1;
-        @include translate3d(-50%, 0px, 0);
+        @include translate3d(-50%, -50%, 0);
     }
     70% {
         opacity: 1;
-        @include translate3d(-50%, 0px, 0);
+        @include translate3d(-50%, -50%, 0);
     }
     100% {
         opacity: 0;
-        @include translate3d(-50%, -50px, 0);
+        @include translate3d(-50%, -50%, 0);
     }
 }

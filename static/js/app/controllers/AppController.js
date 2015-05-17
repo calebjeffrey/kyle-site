@@ -34,6 +34,8 @@ define(function(require, exports, module) {
         initialize: function() {
             this.initGlobals();
 
+            app.firstLoad = true;
+
             // Show main layout
             this.mainLayout = new MainLayout();
             app.regionMain.show(this.mainLayout);

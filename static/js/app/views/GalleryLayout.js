@@ -55,12 +55,14 @@ define(function(require, exports, module) {
             this.checkIntro();
             this.lazyLoadImages();
 
-            this.animateSlidesIn();
+            if (app.firstLoad) {
+                this.animateSlidesIn();
+            }
 
             app.vent.trigger('menu:showLogo');
             app.vent.trigger('hamburger:show');
 
-            app.vent.on('slides:animate', this.animateSlides, this);
+            app.vent.on('slides:animate', this.animateSlidesIn, this);
         },
 
         onClickGridLink: function(e) {
@@ -98,7 +100,7 @@ define(function(require, exports, module) {
             app.vent.trigger('titleCard:show', this.model.get('nextGallery'), 'next');
         },
 
-        animateSlidesIn: function() {
+        animateSlidesIn: function(delay) {
             var self = this;
             this.bindUIElements();
 
@@ -106,7 +108,19 @@ define(function(require, exports, module) {
                 $(item).css('animation-delay', '0.' + self.genRandomNum(100, 300) + 's');
             });
 
-            this.ui.gridItems.addClass('animate-in');
+            if (delay) {
+                setTimeout(function() {
+                    $('.item').removeClass('animate-in');
+                }, 1000);
+                setTimeout(function() {
+                    _.each($('.item'), function(item) {
+                        $(item).css('animation-delay', '0.' + self.genRandomNum(100, 300) + 's');
+                    });
+                    $('.item').addClass('animate-in');
+                }, delay);
+            } else {
+                this.ui.gridItems.addClass('animate-in');
+            }
         },
 
         onDestroy: function() {

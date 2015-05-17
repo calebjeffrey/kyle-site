@@ -33,7 +33,16 @@
         text-transform: capitalize;
         letter-spacing: 2px;
         opacity: 0;
-        @include animation(textSlide, 2s, 1s, $ease-in-out, 1, forwards);
+        @include translate3d(-50%, 50%, 0);
+        transition: opacity 1s linear, transform 1s $ease-out-quart;
 
+        &.is-showing {
+            opacity: 1;
+            @include translate3d(-50%, -50%, 0);
+        }
+
+        &.is-leaving {
+            opacity: 0;
+        }
     }
 }

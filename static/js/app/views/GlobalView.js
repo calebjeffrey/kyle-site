@@ -40,6 +40,7 @@ define(function(require, exports, module) {
                     var url = $(event.currentTarget).attr('href').replace(/^\//, "");
                     var previousUrl = window.location.pathname;
                     app.previousUrl = previousUrl;
+                    app.firstLoad = false;
 
                     if ($(event.currentTarget).data('nav')) {
                         setTimeout(function(){

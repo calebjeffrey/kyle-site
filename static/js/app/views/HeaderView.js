@@ -96,6 +96,7 @@ define(function(require, exports, module) {
 
         onClickMenuLink: function(e) {
             this.closeMenu();
+            app.vent.trigger('slides:animate', 2000);
         },
 
         adjustHeader: function() {

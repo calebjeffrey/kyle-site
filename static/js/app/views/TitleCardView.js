@@ -10,6 +10,10 @@ define(function(require, exports, module) {
 
         template: template,
 
+        ui: {
+            title: 'h1'
+        },
+
         initialize: function(options) {
             BaseView.prototype.initialize.call(this);
             this.title = options.title;
@@ -27,16 +31,28 @@ define(function(require, exports, module) {
             }, 10);
 
             setTimeout(function(){
+                self.ui.title.addClass('is-showing');
+            }, 1000);
+
+            setTimeout(function(){
+                self.ui.title.addClass('is-leaving');
+            }, 3000);
+
+            console.log('setting slide animate timer');
+            app.vent.trigger('slides:animate', 5000);
+
+            setTimeout(function(){
                 self.$el.removeClass('is-showing').addClass('is-leaving');
                 $('.page').velocity('scroll', {
                     container: $('.app'),
                     duration: 10
                 });
-            }, 3000);
+            }, 4000);
 
             setTimeout(function(){
+
                 self.destroy();
-            }, 4000);
+            }, 5000);
         },
 
         serializeData: function() {

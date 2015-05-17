@@ -66,6 +66,10 @@ define(function(require, exports, module) {
 
             image.src = '/img/artwork/' + this.model.get('type') + '/' + this.model.get('image2x');
 
+            setTimeout(function() {
+                self.$el.addClass('animate-in');
+            }, 500);
+
         },
 
         onClickFigure: function(e) {
@@ -88,7 +92,7 @@ define(function(require, exports, module) {
 
         onClickWrapper: function(e) {
             var self = this;
-            this.ui.figure.addClass('is-animating-down');
+            this.$el.addClass('is-animating-down');
             app.vent.trigger('menu:toggle');
 
             setTimeout(function(){
@@ -97,7 +101,7 @@ define(function(require, exports, module) {
                 });
 
                 self.destroy();
-            }, 800);
+            }, 1500);
 
         },
 

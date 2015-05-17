@@ -11,6 +11,15 @@
     }
 }
 
+@include keyframes(fadeOut) {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @include keyframes(textFill) {
     0% {
         width: 0%;

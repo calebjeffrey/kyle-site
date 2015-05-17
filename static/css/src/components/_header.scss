@@ -56,10 +56,10 @@
             }
         }
         .menu-is-open & {
-            // @include rotate(90deg);
-            .no-touch &:hover {
-                @include rotate(90deg);
-            }
+            @include rotate(90deg);
+            // .no-touch &:hover {
+            //     @include rotate(90deg);
+            // }
 
             .patty, .cover {
                 background: none !important;

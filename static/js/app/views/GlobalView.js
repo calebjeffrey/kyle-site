@@ -35,6 +35,7 @@ define(function(require, exports, module) {
 
         onClickNavigate: function(e) {
             this.ui.$app.on('click', 'a[href^="/"]', function(event) {
+                console.log('click');
                 if (!event.altKey && !event.ctrlKey && !event.metaKey && !event.shiftKey) {
                     event.preventDefault();
                     var url = $(event.currentTarget).attr('href').replace(/^\//, "");

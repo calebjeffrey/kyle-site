@@ -1,5 +1,28 @@
 <figure>
-    <a href="/art/{{slug}}">
+    <a class="detail-link" href="/art/{{slug}}">
+    <div class="overlay"></div>
     <img data-original="/img/artwork/{{type}}/{{image}}" class="lazy" alt="{{type}} painting by Chris Petersen">
+    <div class="meta">
+
+    {{#if isVisible}}
+    <h4>{{width}} x {{height}}</h4>
+    <h1>{{title}}</h1>
+    <h4>{{material}} <span>x</span> {{date}} <span>x</span>
+
+    {{#if hasExternalUrl}}
+    <a class="inquire" href="{{externalUrl}}" target="_blank">{{linkText}}</a>
+    {{else}}
+    <a class="inquire" href="{{mailto}}">{{linkText}}</a>
+    {{/if}}
+
+    </h4>
+
+    {{else}}
+    <h4>{{width}} x {{height}}</h4>
+    <h1>{{title}}</h1>
+    <h4>{{material}} <span>x</span> {{date}}</h4>
+    {{/if}}
+
+</div>
     </a>
 </figure>

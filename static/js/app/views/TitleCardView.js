@@ -38,7 +38,6 @@ define(function(require, exports, module) {
                 self.ui.title.addClass('is-leaving');
             }, 3000);
 
-            console.log('setting slide animate timer');
             app.vent.trigger('slides:animate', 5000);
 
             setTimeout(function(){

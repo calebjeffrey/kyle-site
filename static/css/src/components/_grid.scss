@@ -66,6 +66,83 @@
         &:hover img {
             outline: rgb(217, 217, 217) solid 20px;
         }
+
+        &.show-meta {
+
+            .overlay, .meta {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            h4 {
+                opacity: 1;
+                @include transition(opacity 1.0s 0.4s $ease-in-out);
+            }
+
+            h1 {
+                @include animation(detailTitle, 1s, 0s, $ease-out-cubic, 1, forwards);
+                @include transition(opacity 0.5s 0s $ease-in-out);
+            }
+
+            figure {
+                .no-touch &:hover {
+                    cursor: url(../img/cursor/minimize-cursor.svg), auto;
+                }
+            }
+        }
+
+        .overlay {
+            @extend %spread;
+            background-color: rgba($black, 0.6);
+            opacity: 0;
+            @include transition(opacity 0.5s 0s $ease-in-out);
+            pointer-events: none;
+        }
+
+        .meta {
+            @extend %absolute-center;
+            width: 200%;
+            text-align: center;
+            opacity: 0;
+            pointer-events: none;
+            @include transition(opacity 1s 0s $ease-in-out);
+        }
+
+        h1 {
+            margin: 20px 0;
+            text-transform: uppercase;
+            pointer-events: none;
+            // opacity: 0;
+            @include transition(opacity 1s 0s $ease-in-out);
+            // @include transition(opacity 0.5s 0s $ease-in-out);
+        }
+
+        h4 {
+            color: $grayDark;
+            opacity: 0;
+            @include transition(opacity 1s 0s $ease-in-out);
+            // @include transition(opacity 0.5s 0s $ease-in-out);
+        }
+
+        .inquire {
+            @extend .h4;
+            color: $red;
+            font-size: 19px;
+            text-transform: uppercase;
+            text-decoration: underline;
+            @include transition(color 0.3s 0s linear);
+
+            .no-touch &:hover {
+                color: $white;
+            }
+        }
+
+        span {
+            position: relative;
+            top: -2px;
+            font-size: 0.9em;
+            color: #5a5e60;
+        }
     }
 
     figure {

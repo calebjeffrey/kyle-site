@@ -28,7 +28,8 @@ define(function(require, exports, module) {
 
         events: {
             'click @ui.hamburger': 'toggleMenu',
-            'click @ui.menuLink': 'onClickMenuLink'
+            'click @ui.menuLink': 'onClickMenuLink',
+            'click @ui.logo': 'onClickLogo'
         },
 
         initialize: function(e) {
@@ -125,6 +126,20 @@ define(function(require, exports, module) {
 
         hideHamburger: function() {
             this.ui.hamburger.addClass('hide');
+        },
+
+        onClickLogo: function(e) {
+
+            if (window.location.pathname === '/') {
+                e.preventDefault();
+                e.stopPropagation();
+                app.vent.trigger('change:bg');
+                this.closeMenu();
+                setTimeout(function() {
+                    app.vent.trigger('show:intro');
+                }, 2000);
+
+            }
         },
 
         onKeyUp: function(e) {

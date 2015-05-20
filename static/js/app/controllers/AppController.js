@@ -49,11 +49,16 @@ define(function(require, exports, module) {
 
             // Set listeners
             this.listenTo(app.vent, 'titleCard:show', this.showTitleCardView);
+            app.vent.on('show:intro', this.index, this);
         },
 
         initGlobals: function() {
             var baseView = new BaseView(),
                 globalView = new GlobalView();
+
+            window.isTouch = function is_touch_device() {
+                return !!('ontouchstart' in window);
+            }();
         },
 
         /* Pages

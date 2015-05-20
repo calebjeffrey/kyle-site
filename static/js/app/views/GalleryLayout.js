@@ -27,7 +27,7 @@ define(function(require, exports, module) {
             previousGalleryLink: '.grid-header a',
             nextGalleryLink: 'footer a',
             gridItems: '.item',
-            gridLinks: '.item a'
+            gridLinks: '.item .detail-link'
         },
 
         events: {
@@ -66,9 +66,24 @@ define(function(require, exports, module) {
         },
 
         onClickGridLink: function(e) {
-            this.ui.gridItems.css('opacity', 1);
-            this.ui.gridItems.removeClass('animate-in is-animating-down');
-            this.ui.gridItems.addClass('is-animating-down');
+
+            if ($(window).width() < 480) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                var parent = $(e.currentTarget).closest('.item');
+
+                if (parent.hasClass('show-meta')) {
+                    parent.removeClass('show-meta');
+                } else {
+                    parent.addClass('show-meta');
+                }
+
+            } else {
+                this.ui.gridItems.css('opacity', 1);
+                this.ui.gridItems.removeClass('animate-in is-animating-down');
+                this.ui.gridItems.addClass('is-animating-down');
+            }
         },
 
         checkIntro: function() {

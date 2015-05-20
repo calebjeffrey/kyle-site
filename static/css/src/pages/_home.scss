@@ -1,4 +1,6 @@
 .home {
+    opacity: 0;
+    @include animation(fadeIn, 0.3s, 0s, $ease-in-quart, 1, forwards);
 
     .panel.fg {
 

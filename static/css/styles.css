@@ -511,7 +511,7 @@ th {
 }
 
 /* line 47, src/_extends.scss */
-.full-bleed, .header .hamburger:after, .info, .art-detail .wrapper, .art-detail .overlay {
+.full-bleed, .header .hamburger:after, .column .item .overlay, .info, .art-detail .wrapper, .art-detail .overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -544,7 +544,7 @@ th {
 }
 
 /* line 98, src/_extends.scss */
-.menu-overlay .menu, .title-card h1, .info .headlines, .art-detail .content, .art-detail figure, .art-detail .meta {
+.menu-overlay .menu, .column .item .meta, .title-card h1, .info .headlines, .art-detail .content, .art-detail figure, .art-detail .meta {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -679,7 +679,7 @@ p, .p {
 h1, .h1,
 h2, .h2, .menu-overlay .menu a,
 h3, .h3,
-h4, .h4, .art-detail a,
+h4, .h4, .column .item .inquire, .art-detail a,
 h5, .h5,
 h6, .h6 {
   margin: 11px 0;
@@ -715,7 +715,7 @@ h3, .h3 {
 }
 
 /* line 66, src/_typography.scss */
-h4, .h4, .art-detail a {
+h4, .h4, .column .item .inquire, .art-detail a {
   font-family: "Montserrat-Regular", sans-serif;
   font-size: 1.9em;
   color: #e2e2e2;
@@ -943,7 +943,7 @@ form ul {
 }
 /* line 121, src/components/_header.scss */
 .header .header-logo {
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
   z-index: 10;
@@ -957,6 +957,12 @@ form ul {
   -webkit-transition-delay: 1.6s;
   transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 1.6s;
 }
+@media only screen and (min-width: 480) {
+  /* line 121, src/components/_header.scss */
+  .header .header-logo {
+    position: fixed;
+  }
+}
 @media only screen and (min-width: 768px) {
   /* line 121, src/components/_header.scss */
   .header .header-logo {
@@ -964,14 +970,14 @@ form ul {
     left: 40px;
   }
 }
-/* line 134, src/components/_header.scss */
+/* line 137, src/components/_header.scss */
 .header .header-logo.is-showing {
   opacity: 1;
   -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 139, src/components/_header.scss */
+/* line 142, src/components/_header.scss */
 .header .header-logo.gallery-header-showing {
   -moz-transition: -moz-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
   -o-transition: -o-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
@@ -982,10 +988,10 @@ form ul {
   -webkit-transform: translate3d(0, 42px, 0);
   transform: translate3d(0, 42px, 0);
 }
-/* line 144, src/components/_header.scss */
+/* line 147, src/components/_header.scss */
 .header .header-logo a {
   display: block;
-  width: 115px;
+  width: 118px;
   height: 14px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -993,10 +999,10 @@ form ul {
   background-image: url(../img/logo/logo-mobile.svg);
 }
 @media only screen and (min-width: 768px) {
-  /* line 144, src/components/_header.scss */
+  /* line 147, src/components/_header.scss */
   .header .header-logo a {
     background-image: url(../img/logo/logo.svg);
-    width: 44px;
+    width: 47px;
     height: 46px;
   }
 }
@@ -1278,30 +1284,30 @@ footer a {
 /* line 26, src/components/_logo.scss */
 .logo .bg h1 {
   opacity: 0;
-  -webkit-animation: fadeInLeft 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
-  -moz-animation: fadeInLeft 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
-  -ms-animation: fadeInLeft 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
-  -o-animation: fadeInLeft 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
-  animation: fadeInLeft 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
-}
-/* line 32, src/components/_logo.scss */
-.logo .bg h1:nth-child(2) {
   -webkit-animation: fadeInLeft 1s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   -moz-animation: fadeInLeft 1s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   -ms-animation: fadeInLeft 1s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   -o-animation: fadeInLeft 1s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   animation: fadeInLeft 1s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+}
+/* line 32, src/components/_logo.scss */
+.logo .bg h1:nth-child(2) {
+  -webkit-animation: fadeInLeft 1s 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+  -moz-animation: fadeInLeft 1s 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+  -ms-animation: fadeInLeft 1s 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+  -o-animation: fadeInLeft 1s 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+  animation: fadeInLeft 1s 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   position: relative;
   top: 10px;
   left: -10px;
 }
 /* line 40, src/components/_logo.scss */
 .logo .bg h1:nth-child(3) {
-  -webkit-animation: fadeInLeft 1s 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
-  -moz-animation: fadeInLeft 1s 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
-  -ms-animation: fadeInLeft 1s 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
-  -o-animation: fadeInLeft 1s 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
-  animation: fadeInLeft 1s 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+  -webkit-animation: fadeInLeft 1s 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+  -moz-animation: fadeInLeft 1s 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+  -ms-animation: fadeInLeft 1s 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+  -o-animation: fadeInLeft 1s 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+  animation: fadeInLeft 1s 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   position: relative;
   top: 18px;
 }
@@ -1311,11 +1317,11 @@ footer a {
   top: 0;
   width: 0px;
   overflow: hidden;
-  -webkit-animation: textFill 2s 2s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 forwards;
-  -moz-animation: textFill 2s 2s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 forwards;
-  -ms-animation: textFill 2s 2s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 forwards;
-  -o-animation: textFill 2s 2s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 forwards;
-  animation: textFill 2s 2s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 forwards;
+  -webkit-animation: textFill 2s 2.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 forwards;
+  -moz-animation: textFill 2s 2.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 forwards;
+  -ms-animation: textFill 2s 2.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 forwards;
+  -o-animation: textFill 2s 2.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 forwards;
+  animation: textFill 2s 2.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1 forwards;
 }
 /* line 62, src/components/_logo.scss */
 .logo .fg h1:nth-child(2) {
@@ -1422,7 +1428,105 @@ footer a {
 .column .item:hover img {
   outline: #d9d9d9 solid 20px;
 }
-/* line 74, src/components/_grid.scss */
+/* line 72, src/components/_grid.scss */
+.column .item.show-meta .overlay, .column .item.show-meta .meta {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* line 77, src/components/_grid.scss */
+.column .item.show-meta h4 {
+  opacity: 1;
+  -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
+  -o-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
+  -webkit-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition-delay: 0.4s;
+  transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
+}
+/* line 82, src/components/_grid.scss */
+.column .item.show-meta h1 {
+  -webkit-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+  -moz-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+  -ms-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+  -o-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+  animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
+  -moz-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -o-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition-delay: 0s;
+  transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+}
+/* line 88, src/components/_grid.scss */
+.no-touch .column .item.show-meta figure:hover {
+  cursor: url(../img/cursor/minimize-cursor.svg), auto;
+}
+/* line 94, src/components/_grid.scss */
+.column .item .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  -moz-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -o-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -webkit-transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition-delay: 0s;
+  transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  pointer-events: none;
+}
+/* line 102, src/components/_grid.scss */
+.column .item .meta {
+  width: 200%;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -o-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -webkit-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition-delay: 0s;
+  transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+}
+/* line 111, src/components/_grid.scss */
+.column .item h1 {
+  margin: 20px 0;
+  text-transform: uppercase;
+  pointer-events: none;
+  -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -o-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -webkit-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition-delay: 0s;
+  transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+}
+/* line 120, src/components/_grid.scss */
+.column .item h4 {
+  color: #8c9397;
+  opacity: 0;
+  -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -o-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+  -webkit-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition-delay: 0s;
+  transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+}
+/* line 127, src/components/_grid.scss */
+.column .item .inquire {
+  color: #fb2323;
+  font-size: 19px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  -moz-transition: color 0.3s linear 0s;
+  -o-transition: color 0.3s linear 0s;
+  -webkit-transition: color 0.3s linear;
+  -webkit-transition-delay: 0s;
+  transition: color 0.3s linear 0s;
+}
+/* line 135, src/components/_grid.scss */
+.no-touch .column .item .inquire:hover {
+  color: #ffffff;
+}
+/* line 140, src/components/_grid.scss */
+.column .item span {
+  position: relative;
+  top: -2px;
+  font-size: 0.9em;
+  color: #5a5e60;
+}
+/* line 151, src/components/_grid.scss */
 .column img {
   width: 100%;
   outline: #d9d9d9 solid 0px;
@@ -1504,11 +1608,20 @@ footer a {
   opacity: 0;
 }
 
-/* line 3, src/pages/_home.scss */
+/* line 1, src/pages/_home.scss */
+.home {
+  opacity: 0;
+  -webkit-animation: fadeIn 0.3s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
+  -moz-animation: fadeIn 0.3s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
+  -ms-animation: fadeIn 0.3s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
+  -o-animation: fadeIn 0.3s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
+  animation: fadeIn 0.3s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
+}
+/* line 5, src/pages/_home.scss */
 .home .panel.fg {
   background-color: #ffffff;
 }
-/* line 7, src/pages/_home.scss */
+/* line 9, src/pages/_home.scss */
 .home .panel.fg.is-leaving {
   -webkit-animation: slideUp 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
   -moz-animation: slideUp 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;

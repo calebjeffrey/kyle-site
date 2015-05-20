@@ -1,5 +1,6 @@
 define(function(require, exports, module) {
     var BaseView = require('app/views/BaseView'),
+        app = require('app/app'),
         helpers = require('app/utils/helpers'),
         siteBackgrounds = require('app/data/siteBackgrounds');
         template = require('hbs!templates/background');
@@ -17,6 +18,7 @@ define(function(require, exports, module) {
         initialize: function(e) {
             BaseView.prototype.initialize.call(this);
             this.siteBackgrounds = (Modernizr.touch) ? siteBackgrounds.mobile : siteBackgrounds.desktop;
+            app.vent.on('change:bg', this.loadRandomBackground, this);
         },
 
         onShow: function() {
@@ -24,6 +26,8 @@ define(function(require, exports, module) {
         },
 
         loadRandomBackground: function() {
+            console.log('bg change');
+            this.ui.bg.css('background-image', '');
             var background = this.siteBackgrounds[_.random(0, this.siteBackgrounds.length)];
 
             var image = new Image();

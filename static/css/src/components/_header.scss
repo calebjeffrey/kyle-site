@@ -119,13 +119,16 @@
     }
 
     .header-logo {
-        position: fixed;
+        position: absolute;
         top: 20px;
         left: 20px;
         z-index: 10;
         opacity: 0;
         @include translate3d(0, -200%, 0);
         @include transition(all 0.6s 1.6s $ease-out-cubic);
+        @media only screen and (min-width: 480) {
+            position: fixed;
+        }
         @media only screen and (min-width: 768px) {
             top: 40px;
             left: 40px;
@@ -144,7 +147,7 @@
         a {
             @extend %text-replacement;
             display: block;
-            width: 115px;
+            width: 118px;
             height: 14px;
             background-size: cover;
             background-repeat: no-repeat;
@@ -153,7 +156,7 @@
 
             @media only screen and (min-width: 768px) {
                 background-image: url(../img/logo/logo.svg);
-                width: 44px;
+                width: 47px;
                 height: 46px;
             }
 

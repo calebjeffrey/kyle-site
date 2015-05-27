@@ -24,6 +24,7 @@ requirejs.config({
         'phosphor': 'libs/phosphorframework',
         'lazyLoad': 'libs/lazyLoad',
         'viewport': 'libs/viewport',
+        'masonry': 'libs/masonry',
 
         // shortcut to templates
         templates: './templates'

@@ -21,12 +21,16 @@
     .hamburger {
         @extend %transition-all-slow;
         position: fixed;
-        top: 40px;
-        right: 40px;
+        top: 10px;
+        right: 15px;
         width: 36px;
         height: 36px;
         cursor: pointer;
         z-index: 10;
+        @media only screen and (min-width: 768px) {
+            top: 40px;
+            right: 40px;
+        }
         &:after {
             @extend %spread;
             top: -10px;
@@ -120,8 +124,8 @@
 
     .header-logo {
         position: absolute;
-        top: 20px;
-        left: 20px;
+        top: 25px;
+        left: 25px;
         z-index: 10;
         opacity: 0;
         @include translate3d(0, -200%, 0);

@@ -1,7 +1,7 @@
 .info {
     @extend %spread;
     position: absolute;
-    background-image: url(../img/backgrounds/bg-info.jpg);
+    background-image: url(../img/backgrounds/bg-info-mobile.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -10,6 +10,10 @@
 
     @media only screen and (min-width: 600px) {
         font-size: 7px;
+    }
+
+    @media only screen and (min-width: 768px) {
+        background-image: url(../img/backgrounds/bg-info.jpg);
     }
 
     @media only screen and (min-width: 1000px) {
@@ -36,36 +40,43 @@
 
         h4 {
             font-family: $Montserrat;
-            font-size: 1.9em;
-            line-height: 1.8em;
+            font-size: 2.7em;
+            line-height: 1.2;
             color: #8c9397;
             opacity: 0.65;
             text-transform: uppercase;
             margin: 0;
+
+            @media only screen and (min-width: 600px) {
+                font-size: 1.9em;
+                line-height: 1.8em;
+            }
         }
 
         a {
             display: inline-block;
-            margin-top: 1em;
-            padding: 0 0.5em;
+            margin-top: 0.5em;
+            padding: 0 0.2em;
             font-family: $LincolnSemiBoldItalic;
-            font-size: 3.7em;
-            line-height: 1.8;
+            font-size: 3.2em;
+            line-height: 1.5;
             color: $white;
             text-decoration: underline;
             opacity: 0.9;
             @include transition(color 0.3s 0s $ease-in-out);
 
             @media only screen and (min-width: 600px) {
-                padding: 0 0.8em;
+                margin-top: 1em;
+                font-size: 3.7em;
+                padding: 0 0.5em;
             }
 
             @media only screen and (min-width: 1000px) {
-                padding: 0 1em;
+                padding: 0 7em;
             }
 
             @media only screen and (min-width: 1200px) {
-                padding: 0 1.5em;
+                padding: 0 0.8em;
             }
 
             &:hover {

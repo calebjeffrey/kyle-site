@@ -48,7 +48,7 @@ define(function(require, exports, module) {
 
         introMenu: function() {
             var self = this;
-            this.ui.hamburger.addClass('hide');
+            this.ui.hamburger.addClass('is-hiding');
             this.resetHeader();
             app.vent.trigger('header:resetHeader');
             this.ui.menuOverlay.addClass('menu-open-first');
@@ -56,9 +56,9 @@ define(function(require, exports, module) {
 
         toggleMenu: function(options) {
             if (options === 'hideHamburger') {
-                this.ui.hamburger.addClass('hide');
+                this.ui.hamburger.addClass('is-hiding');
             } else {
-                this.ui.hamburger.removeClass('hide');
+                this.ui.hamburger.removeClass('is-hiding');
             }
             if ($('body').hasClass(constants.MENU_OPEN_CLASS)) {
                 this.closeMenu();
@@ -73,7 +73,7 @@ define(function(require, exports, module) {
             var self = this;
             this.ui.menuOverlay.removeClass('menu-open-first');
             helpers.addBodyClass(constants.MENU_OPEN_CLASS);
-            this.ui.hamburger.addClass('hide');
+            this.ui.hamburger.addClass('is-hiding');
             this.ui.menuOverlay.removeClass('menu-open-first');
             this.ui.menuOverlay.addClass('transition-down-out');
 
@@ -88,7 +88,7 @@ define(function(require, exports, module) {
             }, 1500);
 
             setTimeout(function() {
-                self.ui.hamburger.removeClass('hide');
+                self.ui.hamburger.removeClass('is-hiding');
             }, 2500);
         },
 
@@ -118,11 +118,11 @@ define(function(require, exports, module) {
         },
 
         showHamburger: function() {
-            this.ui.hamburger.removeClass('hide');
+            this.ui.hamburger.removeClass('is-hiding');
         },
 
         hideHamburger: function() {
-            this.ui.hamburger.addClass('hide');
+            this.ui.hamburger.addClass('is-hiding');
         },
 
         onClickLogo: function(e) {

@@ -858,7 +858,12 @@ form ul {
     right: 40px;
   }
 }
-/* line 34, src/components/_header.scss */
+/* line 35, src/components/_header.scss */
+.header .hamburger.is-hiding {
+  opacity: 0;
+  visibility: hidden;
+}
+/* line 39, src/components/_header.scss */
 .header .hamburger:after {
   top: -10px;
   right: -10px;
@@ -866,48 +871,48 @@ form ul {
   left: -10px;
   padding: 10px;
 }
-/* line 52, src/components/_header.scss */
+/* line 57, src/components/_header.scss */
 .no-touch .header .hamburger:hover .cover {
   width: 23px;
   opacity: 1;
 }
-/* line 56, src/components/_header.scss */
+/* line 61, src/components/_header.scss */
 .no-touch .header .hamburger:hover .cover:before, .no-touch .header .hamburger:hover .cover:after {
   opacity: 1;
   width: 23px;
 }
-/* line 62, src/components/_header.scss */
+/* line 67, src/components/_header.scss */
 .menu-is-open .header .hamburger {
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-/* line 68, src/components/_header.scss */
+/* line 73, src/components/_header.scss */
 .menu-is-open .header .hamburger .patty, .menu-is-open .header .hamburger .cover {
   background: none !important;
   opacity: 1;
 }
-/* line 71, src/components/_header.scss */
+/* line 76, src/components/_header.scss */
 .menu-is-open .header .hamburger .patty:before, .menu-is-open .header .hamburger .patty:after, .menu-is-open .header .hamburger .cover:before, .menu-is-open .header .hamburger .cover:after {
   top: 0 !important;
   opacity: 1;
 }
-/* line 75, src/components/_header.scss */
+/* line 80, src/components/_header.scss */
 .menu-is-open .header .hamburger .patty:before, .menu-is-open .header .hamburger .cover:before {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-/* line 78, src/components/_header.scss */
+/* line 83, src/components/_header.scss */
 .menu-is-open .header .hamburger .patty:after, .menu-is-open .header .hamburger .cover:after {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 84, src/components/_header.scss */
+/* line 89, src/components/_header.scss */
 .header .hamburger .patty {
   position: absolute;
   top: 16px;
@@ -915,40 +920,45 @@ form ul {
   width: 23px;
   height: 4px;
   margin: 0;
-  background: #e2e2e2;
+  background: #c7c7c7;
   cursor: pointer;
 }
-/* line 94, src/components/_header.scss */
+/* line 99, src/components/_header.scss */
 .header .hamburger .patty:before, .header .hamburger .patty:after {
   content: '';
   position: absolute;
   width: 23px;
   height: 4px;
   display: block;
-  background: #e2e2e2;
+  background: #c7c7c7;
 }
-/* line 102, src/components/_header.scss */
+/* line 107, src/components/_header.scss */
 .header .hamburger .patty:before {
   top: -8px;
 }
-/* line 105, src/components/_header.scss */
+/* line 110, src/components/_header.scss */
 .header .hamburger .patty:after {
   top: 8px;
 }
-/* line 108, src/components/_header.scss */
+/* line 113, src/components/_header.scss */
 .header .hamburger .patty.cover {
+  top: 50%;
+  left: 50%;
   background: #fb2323;
   width: 0;
   opacity: 0;
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
 }
-/* line 114, src/components/_header.scss */
+/* line 122, src/components/_header.scss */
 .header .hamburger .patty.cover:before, .header .hamburger .patty.cover:after {
   background: #fb2323;
   overflow: hidden;
   opacity: 0;
   width: 0;
 }
-/* line 125, src/components/_header.scss */
+/* line 133, src/components/_header.scss */
 .header .header-logo {
   position: absolute;
   top: 25px;
@@ -965,26 +975,26 @@ form ul {
   transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 1.6s;
 }
 @media only screen and (min-width: 480) {
-  /* line 125, src/components/_header.scss */
+  /* line 133, src/components/_header.scss */
   .header .header-logo {
     position: fixed;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 125, src/components/_header.scss */
+  /* line 133, src/components/_header.scss */
   .header .header-logo {
     top: 40px;
     left: 40px;
   }
 }
-/* line 141, src/components/_header.scss */
+/* line 149, src/components/_header.scss */
 .header .header-logo.is-showing {
   opacity: 1;
   -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 146, src/components/_header.scss */
+/* line 154, src/components/_header.scss */
 .header .header-logo.gallery-header-showing {
   -moz-transition: -moz-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
   -o-transition: -o-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
@@ -995,7 +1005,7 @@ form ul {
   -webkit-transform: translate3d(0, 42px, 0);
   transform: translate3d(0, 42px, 0);
 }
-/* line 151, src/components/_header.scss */
+/* line 159, src/components/_header.scss */
 .header .header-logo a {
   display: block;
   width: 118px;
@@ -1006,7 +1016,7 @@ form ul {
   background-image: url(../img/logo/logo-mobile.svg);
 }
 @media only screen and (min-width: 768px) {
-  /* line 151, src/components/_header.scss */
+  /* line 159, src/components/_header.scss */
   .header .header-logo a {
     background-image: url(../img/logo/logo.svg);
     width: 47px;

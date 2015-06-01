@@ -846,7 +846,7 @@ form ul {
 .header .hamburger {
   position: fixed;
   top: 35px;
-  right: 30px;
+  right: 15px;
   width: 36px;
   height: 36px;
   cursor: pointer;
@@ -1754,16 +1754,33 @@ footer a {
 .info .headlines {
   width: 90%;
   max-width: 900px;
+  margin-top: 30px;
 }
-/* line 33, src/pages/_info.scss */
+@media only screen and (min-width: 768px) {
+  /* line 27, src/pages/_info.scss */
+  .info .headlines {
+    margin-top: 0;
+  }
+}
+/* line 38, src/pages/_info.scss */
 .info .headline {
-  padding-bottom: 4.5em;
+  margin-bottom: 30px;
 }
-/* line 37, src/pages/_info.scss */
+/* line 41, src/pages/_info.scss */
+.info .headline:last-child {
+  margin-bottom: 0;
+}
+/* line 45, src/pages/_info.scss */
 .info .headline:last-child {
   padding-bottom: 0;
 }
-/* line 41, src/pages/_info.scss */
+@media only screen and (min-width: 768px) {
+  /* line 38, src/pages/_info.scss */
+  .info .headline {
+    margin-bottom: 60px;
+  }
+}
+/* line 53, src/pages/_info.scss */
 .info .headline h4 {
   font-family: "Montserrat-Regular", sans-serif;
   font-size: 2.7em;
@@ -1771,26 +1788,32 @@ footer a {
   color: #8c9397;
   opacity: 0.65;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 0 15px 0;
 }
 @media only screen and (min-width: 600px) {
-  /* line 41, src/pages/_info.scss */
+  /* line 53, src/pages/_info.scss */
   .info .headline h4 {
     font-size: 1.9em;
     line-height: 1.8em;
   }
 }
-/* line 56, src/pages/_info.scss */
+@media only screen and (min-width: 768px) {
+  /* line 53, src/pages/_info.scss */
+  .info .headline h4 {
+    margin: 0 0 25px 0;
+  }
+}
+/* line 72, src/pages/_info.scss */
 .info .headline a {
   display: inline-block;
-  margin-top: 0.5em;
-  padding: 0 0.2em;
   font-family: "LincolnMillerBSemiBoldItalic", sans-serif;
   font-size: 3.2em;
   line-height: 1.5;
   color: #ffffff;
   text-decoration: underline;
   opacity: 0.9;
+  margin: 0 8px;
+  max-width: 580px;
   -moz-transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1) 0s;
   -o-transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1) 0s;
   -webkit-transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
@@ -1798,26 +1821,18 @@ footer a {
   transition: color 0.3s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
 @media only screen and (min-width: 600px) {
-  /* line 56, src/pages/_info.scss */
+  /* line 72, src/pages/_info.scss */
   .info .headline a {
-    margin-top: 1em;
     font-size: 3.7em;
-    padding: 0 0.5em;
   }
 }
-@media only screen and (min-width: 1000px) {
-  /* line 56, src/pages/_info.scss */
+@media only screen and (min-width: 768px) {
+  /* line 72, src/pages/_info.scss */
   .info .headline a {
-    padding: 0 7em;
+    margin: 0 15px;
   }
 }
-@media only screen and (min-width: 1200px) {
-  /* line 56, src/pages/_info.scss */
-  .info .headline a {
-    padding: 0 0.8em;
-  }
-}
-/* line 82, src/pages/_info.scss */
+/* line 98, src/pages/_info.scss */
 .info .headline a:hover {
   color: #fb2323;
 }

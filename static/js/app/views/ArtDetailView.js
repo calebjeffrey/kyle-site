@@ -41,6 +41,8 @@ define(function(require, exports, module) {
             this.linkText = this.model.get('inquire').linkText;
             this.mailTo = this.model.get('inquire').mailto;
             this.externalUrl = this.model.get('inquire').externalUrl;
+
+            $(window).on('resize.detail', _.bind(this.handleImageSize, this));
         },
 
         handleImage: function() {
@@ -52,6 +54,12 @@ define(function(require, exports, module) {
             image.onload = function() {
                 var img = $(this);
                 if (this.naturalHeight > (windowHeight * offset) && windowHeight < 1000) {
+                    self.ui.img.css({
+                        height: windowHeight * 0.8
+                    });
+                }
+
+                if (this.naturalHeight > (windowHeight * offset) && windowHeight > 1000) {
                     self.ui.img.css({
                         height: windowHeight * 0.8
                     });
@@ -95,6 +103,10 @@ define(function(require, exports, module) {
             this.$el.addClass('is-animating-down');
             app.vent.trigger('menu:toggle');
 
+            _.delay(function() {
+                app.vent.trigger('slides:animate', 1000);
+            }, 1000);
+
             setTimeout(function(){
                 app.appRouter.navigate(self.returnUrl, {
                     trigger: true
@@ -105,7 +117,26 @@ define(function(require, exports, module) {
 
         },
 
+        handleImageSize: function() {
+            var windowHeight = $(window).height();
+            var windowWidth = $(window).width();
+            var offset = 0.8;
+            if (this.ui.img.height() > (windowHeight * offset) && windowHeight < 1000) {
+                this.ui.img.css({
+                    height: windowHeight * 0.8
+                });
+            }
+
+            if (windowWidth < 1000) {
+                this.ui.img.css({
+                    height: 'auto'
+                });
+            }
+
+        },
+
         onDestroy: function() {
+            $(window).off('resize.detail');
             app.vent.trigger('hamburger:show');
             app.vent.trigger('menu:showLogo');
         },

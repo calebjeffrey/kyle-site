@@ -49,7 +49,6 @@ define(function(require, exports, module) {
         },
 
         onShow: function() {
-            console.log('GALLERY LAYOUT => show');
             var self = this;
             this.delegateEvents();
             this.regionCollection.show(this.collectionView);
@@ -117,7 +116,6 @@ define(function(require, exports, module) {
         },
 
         animateSlidesIn: function(delay) {
-            console.log('animateSlidesIn');
             var self = this;
             this.bindUIElements();
 

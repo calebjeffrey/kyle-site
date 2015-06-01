@@ -34,7 +34,10 @@
         letter-spacing: 2px;
         opacity: 0;
         @include translate3d(-50%, 50%, 0);
-        transition: opacity 1s linear, transform 1s $ease-out-quart;
+        @include transition(opacity 1s linear, transform 1s $ease-out-quart);
+        // -webkit-transition: opacity 1s linear, transform 1s $ease-out-quart;
+        // -moz-transition: opacity 1s linear, transform 1s $ease-out-quart;
+        // transition: opacity 1s linear, transform 1s $ease-out-quart;
 
         &.is-showing {
             opacity: 1;

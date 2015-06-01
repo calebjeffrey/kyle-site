@@ -1,6 +1,6 @@
 .grid {
     margin: 0 auto;
-    padding: 15px 10px 0 10px;
+    padding: 65px 15px 0 15px;
     width: 100%;
     @include transition(transform 0.6s 0.6s $ease-out-cubic);
 
@@ -33,8 +33,12 @@
 
     .item {
         width: 100%;
-        padding: 10px 0;
+        padding: 8px 0;
         opacity: 0;
+
+        &:last-child {
+            padding-bottom: 15px;
+        }
 
         @include transform-style(preserve-3d);
         @include transition(opacity 0.6s $ease-in-out);
@@ -45,14 +49,13 @@
 
         @media only screen and (min-width: 768px) {
             padding: 10%;
+            &:last-child {
+                padding-bottom: 0;
+            }
         }
 
         &:first-child {
             padding-top: 0;
-        }
-
-        &:last-child {
-            padding-bottom: 0;
         }
 
         .title-card-showing & {

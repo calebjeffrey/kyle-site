@@ -1,4 +1,9 @@
 .footer-wrapper {
+    display: none;
+
+    @media only screen and (min-width: 768px) {
+        display: block;
+    }
     .no-touch &:hover {
         footer {
             @include translate3d(0, 0, 0);

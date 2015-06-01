@@ -1539,7 +1539,11 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 133, src/components/_grid.scss */
+/* line 131, src/components/_grid.scss */
+.column .item h4 a {
+  color: #8c9397;
+}
+/* line 136, src/components/_grid.scss */
 .column .item .inquire {
   color: #fb2323;
   font-size: 14px;
@@ -1551,33 +1555,33 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: color 0.3s linear 0s;
 }
-/* line 141, src/components/_grid.scss */
+/* line 144, src/components/_grid.scss */
 .no-touch .column .item .inquire:hover {
   color: #ffffff;
 }
 @media only screen and (min-width: 480px) {
-  /* line 147, src/components/_grid.scss */
+  /* line 150, src/components/_grid.scss */
   .column .item h4 {
     font-size: 1.9em;
     margin: 11px 0;
   }
-  /* line 151, src/components/_grid.scss */
+  /* line 154, src/components/_grid.scss */
   .column .item h4 .inquire {
     font-size: 19px;
   }
-  /* line 156, src/components/_grid.scss */
+  /* line 159, src/components/_grid.scss */
   .column .item h1 {
     font-size: 10em;
   }
 }
-/* line 162, src/components/_grid.scss */
+/* line 165, src/components/_grid.scss */
 .column .item span {
   position: relative;
   top: -2px;
   font-size: 0.9em;
   color: #5a5e60;
 }
-/* line 173, src/components/_grid.scss */
+/* line 176, src/components/_grid.scss */
 .column img {
   width: 100%;
   outline: #d9d9d9 solid 0px;
@@ -1587,9 +1591,9 @@ footer a {
   transition: outline 0.6s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-/* line 182, src/components/_grid.scss */
+/* line 185, src/components/_grid.scss */
 .no-touch .column .item:hover img {
-  outline: #d9d9d9 solid 20px;
+  outline: #fb2323 solid 20px;
 }
 
 /* line 1, src/components/_title-card.scss */

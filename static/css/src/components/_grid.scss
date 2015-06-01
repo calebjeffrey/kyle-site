@@ -128,6 +128,9 @@
             font-size: 14px;
             @include transition(opacity 1s 0s $ease-in-out);
             // @include transition(opacity 0.5s 0s $ease-in-out);
+            a {
+                color: $grayDark;
+            }
         }
 
         .inquire {
@@ -180,6 +183,6 @@
 
 .no-touch .column .item {
     &:hover img {
-        outline: rgb(217, 217, 217) solid 20px;
+        outline: $red solid 20px;
     }
 }

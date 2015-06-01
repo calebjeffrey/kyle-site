@@ -52,11 +52,6 @@ define(function(require, exports, module) {
             this.resetHeader();
             app.vent.trigger('header:resetHeader');
             this.ui.menuOverlay.addClass('menu-open-first');
-
-            setTimeout(function() {
-                self.ui.menuOverlay.removeClass('menu-open-first');
-                helpers.addBodyClass(constants.MENU_OPEN_CLASS);
-            }, 2000);
         },
 
         toggleMenu: function(options) {
@@ -76,6 +71,8 @@ define(function(require, exports, module) {
 
         closeMenu: function() {
             var self = this;
+            this.ui.menuOverlay.removeClass('menu-open-first');
+            helpers.addBodyClass(constants.MENU_OPEN_CLASS);
             this.ui.hamburger.addClass('hide');
             this.ui.menuOverlay.removeClass('menu-open-first');
             this.ui.menuOverlay.addClass('transition-down-out');
@@ -141,6 +138,8 @@ define(function(require, exports, module) {
 
             }
         },
+
+
 
         onKeyUp: function(e) {
             if (e.keyCode == 27) {

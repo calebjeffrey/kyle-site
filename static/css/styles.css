@@ -1448,16 +1448,12 @@ footer a {
   -o-animation: slideUpIn 0.8s 0s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
   animation: slideUpIn 0.8s 0s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
 }
-/* line 70, src/components/_grid.scss */
-.column .item:hover img {
-  outline: #d9d9d9 solid 20px;
-}
-/* line 76, src/components/_grid.scss */
+/* line 72, src/components/_grid.scss */
 .column .item.show-meta .overlay, .column .item.show-meta .meta {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 81, src/components/_grid.scss */
+/* line 77, src/components/_grid.scss */
 .column .item.show-meta h4 {
   opacity: 1;
   -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
@@ -1466,7 +1462,7 @@ footer a {
   -webkit-transition-delay: 0.4s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
 }
-/* line 86, src/components/_grid.scss */
+/* line 82, src/components/_grid.scss */
 .column .item.show-meta h1 {
   -webkit-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   -moz-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
@@ -1479,11 +1475,11 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 92, src/components/_grid.scss */
+/* line 88, src/components/_grid.scss */
 .no-touch .column .item.show-meta figure:hover {
   cursor: url(../img/cursor/minimize-cursor.svg), auto;
 }
-/* line 98, src/components/_grid.scss */
+/* line 94, src/components/_grid.scss */
 .column .item .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
@@ -1494,7 +1490,7 @@ footer a {
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
   pointer-events: none;
 }
-/* line 106, src/components/_grid.scss */
+/* line 102, src/components/_grid.scss */
 .column .item .meta {
   width: 100%;
   text-align: center;
@@ -1507,12 +1503,12 @@ footer a {
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
 @media only screen and (min-width: 480px) {
-  /* line 106, src/components/_grid.scss */
+  /* line 102, src/components/_grid.scss */
   .column .item .meta {
     width: 200%;
   }
 }
-/* line 119, src/components/_grid.scss */
+/* line 115, src/components/_grid.scss */
 .column .item h1 {
   margin: 20px 0;
   text-transform: uppercase;
@@ -1524,7 +1520,7 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 129, src/components/_grid.scss */
+/* line 125, src/components/_grid.scss */
 .column .item h4 {
   color: #8c9397;
   opacity: 0;
@@ -1535,7 +1531,7 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 137, src/components/_grid.scss */
+/* line 133, src/components/_grid.scss */
 .column .item .inquire {
   color: #fb2323;
   font-size: 14px;
@@ -1547,33 +1543,33 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: color 0.3s linear 0s;
 }
-/* line 145, src/components/_grid.scss */
+/* line 141, src/components/_grid.scss */
 .no-touch .column .item .inquire:hover {
   color: #ffffff;
 }
 @media only screen and (min-width: 480px) {
-  /* line 151, src/components/_grid.scss */
+  /* line 147, src/components/_grid.scss */
   .column .item h4 {
     font-size: 1.9em;
     margin: 11px 0;
   }
-  /* line 155, src/components/_grid.scss */
+  /* line 151, src/components/_grid.scss */
   .column .item h4 .inquire {
     font-size: 19px;
   }
-  /* line 160, src/components/_grid.scss */
+  /* line 156, src/components/_grid.scss */
   .column .item h1 {
     font-size: 10em;
   }
 }
-/* line 166, src/components/_grid.scss */
+/* line 162, src/components/_grid.scss */
 .column .item span {
   position: relative;
   top: -2px;
   font-size: 0.9em;
   color: #5a5e60;
 }
-/* line 177, src/components/_grid.scss */
+/* line 173, src/components/_grid.scss */
 .column img {
   width: 100%;
   outline: #d9d9d9 solid 0px;
@@ -1581,6 +1577,11 @@ footer a {
   -o-transition: outline 0.6s cubic-bezier(0.77, 0, 0.175, 1);
   -webkit-transition: outline 0.6s cubic-bezier(0.77, 0, 0.175, 1);
   transition: outline 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* line 182, src/components/_grid.scss */
+.no-touch .column .item:hover img {
+  outline: #d9d9d9 solid 20px;
 }
 
 /* line 1, src/components/_title-card.scss */

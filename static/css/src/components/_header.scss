@@ -138,13 +138,7 @@
         opacity: 0;
         @include translate3d(0, -200%, 0);
         @include transition(all 0.6s 1.6s $ease-out-cubic);
-        @media only screen and (min-width: 480) {
-            position: fixed;
-        }
-        @media only screen and (min-width: 768px) {
-            top: 40px;
-            left: 40px;
-        }
+
 
         &.is-showing {
             opacity: 1;
@@ -154,6 +148,21 @@
         &.gallery-header-showing {
             @include transition(transform 0.6s 0.6s $ease-out-cubic);
             @include translate3d(0, 42px, 0);
+        }
+
+        .menu-is-open & {
+            opacity: 0;
+        }
+        @media only screen and (min-width: 480) {
+            position: fixed;
+        }
+        @media only screen and (min-width: 768px) {
+            top: 40px;
+            left: 40px;
+
+            .menu-is-open & {
+                opacity: 1;
+            }
         }
 
         a {

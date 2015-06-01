@@ -975,6 +975,28 @@ form ul {
   -webkit-transition-delay: 1.6s;
   transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 1.6s;
 }
+/* line 143, src/components/_header.scss */
+.header .header-logo.is-showing {
+  opacity: 1;
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/* line 148, src/components/_header.scss */
+.header .header-logo.gallery-header-showing {
+  -moz-transition: -moz-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
+  -o-transition: -o-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition-delay: 0.6s;
+  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
+  -moz-transform: translate3d(0, 42px, 0);
+  -webkit-transform: translate3d(0, 42px, 0);
+  transform: translate3d(0, 42px, 0);
+}
+/* line 153, src/components/_header.scss */
+.menu-is-open .header .header-logo {
+  opacity: 0;
+}
 @media only screen and (min-width: 480) {
   /* line 133, src/components/_header.scss */
   .header .header-logo {
@@ -987,26 +1009,12 @@ form ul {
     top: 40px;
     left: 40px;
   }
+  /* line 163, src/components/_header.scss */
+  .menu-is-open .header .header-logo {
+    opacity: 1;
+  }
 }
-/* line 149, src/components/_header.scss */
-.header .header-logo.is-showing {
-  opacity: 1;
-  -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-/* line 154, src/components/_header.scss */
-.header .header-logo.gallery-header-showing {
-  -moz-transition: -moz-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
-  -o-transition: -o-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -webkit-transition-delay: 0.6s;
-  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
-  -moz-transform: translate3d(0, 42px, 0);
-  -webkit-transform: translate3d(0, 42px, 0);
-  transform: translate3d(0, 42px, 0);
-}
-/* line 159, src/components/_header.scss */
+/* line 168, src/components/_header.scss */
 .header .header-logo a {
   display: block;
   width: 118px;
@@ -1017,7 +1025,7 @@ form ul {
   background-image: url(../img/logo/logo-mobile.svg);
 }
 @media only screen and (min-width: 768px) {
-  /* line 159, src/components/_header.scss */
+  /* line 168, src/components/_header.scss */
   .header .header-logo a {
     background-image: url(../img/logo/logo.svg);
     width: 47px;

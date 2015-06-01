@@ -43,10 +43,13 @@ define(function(require, exports, module) {
                 collection: this.collection
             });
 
+            app.vent.on('slides:animate', this.animateSlidesIn, this);
+
             this.$el.addClass('gallery-before-transition');
         },
 
         onShow: function() {
+            console.log('GALLERY LAYOUT => show');
             var self = this;
             this.delegateEvents();
             this.regionCollection.show(this.collectionView);
@@ -61,8 +64,6 @@ define(function(require, exports, module) {
 
             app.vent.trigger('menu:showLogo');
             app.vent.trigger('hamburger:show');
-
-            app.vent.on('slides:animate', this.animateSlidesIn, this);
         },
 
         onClickGridLink: function(e) {
@@ -116,6 +117,7 @@ define(function(require, exports, module) {
         },
 
         animateSlidesIn: function(delay) {
+            console.log('animateSlidesIn');
             var self = this;
             this.bindUIElements();
 

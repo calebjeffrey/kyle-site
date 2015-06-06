@@ -70,6 +70,12 @@ define(function(require, exports, module) {
                         height: 'auto'
                     });
                 }
+
+                if (this.naturalWidth > this.naturalHeight) {
+                    self.ui.img.css({
+                        height: 'auto'
+                    });
+                }
             };
 
             image.src = '/img/artwork/' + this.model.get('type') + '/' + this.model.get('image2x');

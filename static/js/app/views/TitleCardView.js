@@ -34,6 +34,8 @@ define(function(require, exports, module) {
                 self.ui.title.addClass('is-showing');
             }, 1000);
 
+            window.scrollTo(0, 0);
+
             setTimeout(function(){
                 self.ui.title.addClass('is-leaving');
             }, 3000);

@@ -1135,15 +1135,8 @@ footer a {
   top: 0;
   left: 0;
   background-color: #ffffff;
-  visibility: hidden;
-  -moz-transform: translate3d(0, -100%, 0);
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
-  -moz-transition: -moz-transform 1s cubic-bezier(0.77, 0, 0.175, 1);
-  -o-transition: -o-transform 1s cubic-bezier(0.77, 0, 0.175, 1);
-  -webkit-transition: -webkit-transform 1s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
   font-size: 6px;
+  display: none;
 }
 @media only screen and (min-width: 600px) {
   /* line 1, src/components/_menu.scss */
@@ -1163,62 +1156,12 @@ footer a {
     font-size: 10px;
   }
 }
-/* line 25, src/components/_menu.scss */
-.menu-is-open .menu-overlay {
-  visibility: visible;
-  -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-/* line 29, src/components/_menu.scss */
-.menu-is-open .menu-overlay .menu {
-  -webkit-animation: fadeInUp 1s 1s cubic-bezier(0, 0, 0.58, 1) 1 forwards;
-  -moz-animation: fadeInUp 1s 1s cubic-bezier(0, 0, 0.58, 1) 1 forwards;
-  -ms-animation: fadeInUp 1s 1s cubic-bezier(0, 0, 0.58, 1) 1 forwards;
-  -o-animation: fadeInUp 1s 1s cubic-bezier(0, 0, 0.58, 1) 1 forwards;
-  animation: fadeInUp 1s 1s cubic-bezier(0, 0, 0.58, 1) 1 forwards;
-}
-/* line 34, src/components/_menu.scss */
-.menu-overlay.menu-open-first {
-  -moz-transform: translate3d(0, 100%, 0);
-  -webkit-transform: translate3d(0, 100%, 0);
-  transform: translate3d(0, 100%, 0);
-  -webkit-animation: menuSlideUp 1s 0s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
-  -moz-animation: menuSlideUp 1s 0s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
-  -ms-animation: menuSlideUp 1s 0s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
-  -o-animation: menuSlideUp 1s 0s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
-  animation: menuSlideUp 1s 0s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
-}
-/* line 37, src/components/_menu.scss */
-.menu-overlay.menu-open-first .menu {
-  -webkit-animation: fadeInUp 1s 1s cubic-bezier(0, 0, 0.58, 1) 1 forwards;
-  -moz-animation: fadeInUp 1s 1s cubic-bezier(0, 0, 0.58, 1) 1 forwards;
-  -ms-animation: fadeInUp 1s 1s cubic-bezier(0, 0, 0.58, 1) 1 forwards;
-  -o-animation: fadeInUp 1s 1s cubic-bezier(0, 0, 0.58, 1) 1 forwards;
-  animation: fadeInUp 1s 1s cubic-bezier(0, 0, 0.58, 1) 1 forwards;
-}
-/* line 42, src/components/_menu.scss */
-.menu-overlay.transition-down-out {
-  -webkit-animation: slideDown 1s 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -moz-animation: slideDown 1s 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -ms-animation: slideDown 1s 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -o-animation: slideDown 1s 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  animation: slideDown 1s 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-}
-/* line 45, src/components/_menu.scss */
-.menu-overlay.transition-down-out .menu {
-  -webkit-animation: fadeOut 0.5s 0s linear 1 forwards;
-  -moz-animation: fadeOut 0.5s 0s linear 1 forwards;
-  -ms-animation: fadeOut 0.5s 0s linear 1 forwards;
-  -o-animation: fadeOut 0.5s 0s linear 1 forwards;
-  animation: fadeOut 0.5s 0s linear 1 forwards;
-}
-/* line 50, src/components/_menu.scss */
+/* line 23, src/components/_menu.scss */
 .menu-overlay .menu {
   opacity: 0;
   text-align: center;
 }
-/* line 55, src/components/_menu.scss */
+/* line 28, src/components/_menu.scss */
 .menu-overlay .menu ul {
   width: 100%;
   height: 100%;
@@ -1226,22 +1169,22 @@ footer a {
   position: relative;
   margin: 0 auto;
 }
-/* line 63, src/components/_menu.scss */
+/* line 36, src/components/_menu.scss */
 .menu-overlay .menu li {
   display: block;
   padding: 1.5em 0;
 }
-/* line 69, src/components/_menu.scss */
+/* line 42, src/components/_menu.scss */
 .no-touch .menu-overlay .menu li:hover a:after, .no-touch .menu-overlay .menu li:hover span:after {
   width: 100%;
 }
-/* line 75, src/components/_menu.scss */
+/* line 48, src/components/_menu.scss */
 .menu-overlay .menu a {
   position: relative;
   letter-spacing: 1px;
   color: #c7c7c7;
 }
-/* line 82, src/components/_menu.scss */
+/* line 55, src/components/_menu.scss */
 .menu-overlay .menu a:after {
   color: #fb2323;
   content: attr(data-text);
@@ -1257,11 +1200,11 @@ footer a {
   -webkit-transition: width 0.6s cubic-bezier(0.77, 0, 0.175, 1);
   transition: width 0.6s cubic-bezier(0.77, 0, 0.175, 1);
 }
-/* line 96, src/components/_menu.scss */
+/* line 69, src/components/_menu.scss */
 .menu-overlay .menu a.multi span {
   position: relative;
 }
-/* line 98, src/components/_menu.scss */
+/* line 71, src/components/_menu.scss */
 .menu-overlay .menu a.multi span:after {
   color: #fb2323;
   content: attr(data-text);
@@ -1687,17 +1630,9 @@ footer a {
   opacity: 0;
 }
 
-/* line 5, src/pages/_home.scss */
+/* line 2, src/pages/_home.scss */
 .home .panel.fg {
   background-color: #ffffff;
-}
-/* line 9, src/pages/_home.scss */
-.home .panel.fg.is-leaving {
-  -webkit-animation: slideUp 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -moz-animation: slideUp 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -ms-animation: slideUp 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -o-animation: slideUp 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  animation: slideUp 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
 }
 
 /* line 1, src/pages/_gallery.scss */

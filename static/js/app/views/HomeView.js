@@ -25,18 +25,19 @@ define(function(require, exports, module) {
         },
 
         onShow: function() {
-            var self = this;
+            _.delay(_.bind(this.animateUpAndOut, this), 4200);
+        },
 
-            this.delegateEvents();
-
-            setTimeout(function(){
-                self.ui.panel.addClass('is-leaving');
-            }, 4000);
-
-            setTimeout(function(){
-                app.vent.trigger('menu:openFirst');
-                app.vent.trigger('menu:showLogo');
-            }, 5000);
+        animateUpAndOut: function() {
+            this.ui.panel.velocity({
+                translateY: ['-100%', [0.755, 0.05, 0.855, 0.06]]
+            }, {
+                duration: 1000,
+                complete: function() {
+                    app.vent.trigger('menu:openFirst');
+                    app.vent.trigger('menu:showLogo');
+                }
+            });
         }
 
     });

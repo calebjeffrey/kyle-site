@@ -5,10 +5,8 @@
     top: 0;
     left: 0;
     background-color: $white;
-    visibility: hidden;
-    @include translate3d(0, -100%, 0);
-    @include transition(transform 1s $ease-custom);
     font-size: 6px;
+    display: none;
 
     @media only screen and (min-width: 600px) {
         font-size: 7px;
@@ -20,31 +18,6 @@
 
     @media only screen and (min-width: 1200px) {
         font-size: 10px;
-    }
-
-    .menu-is-open & {
-        visibility: visible;
-        @include translate3d(0, 0, 0);
-
-        .menu {
-            @include animation(fadeInUp, 1s, 1s, $ease-out, 1, forwards);
-        }
-    }
-
-    &.menu-open-first {
-        @include translate3d(0, 100%, 0);
-        @include animation(menuSlideUp, 1s, 0s, $ease-out-quart, 1, forwards);
-        .menu {
-            @include animation(fadeInUp, 1s, 1s, $ease-out, 1, forwards);
-        }
-    }
-
-    &.transition-down-out {
-        @include animation(slideDown, 1s, 0.5s, $ease-in-quart, 1, forwards);
-
-        .menu {
-            @include animation(fadeOut, 0.5s, 0s, linear, 1, forwards);
-        }
     }
 
     .menu {

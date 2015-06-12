@@ -33,10 +33,11 @@ define(function(require, exports, module) {
         },
 
         initialize: function(e) {
+            this.menuOpen = false;
             this.bindUIElements();
             $(document).on('keyup', this.onKeyUp);
             this.listenTo(app.vent, 'menu:open', this.toggleMenu);
-            this.listenTo(app.vent, 'menu:openFirst', this.introMenu);
+            this.listenTo(app.vent, 'menu:openFirst', this.openMenuFirst);
             this.listenTo(app.vent, 'gallery:showHeader', this.adjustHeader);
             this.listenTo(app.vent, 'gallery:hideHeader', this.resetHeader);
             this.listenTo(app.vent, 'menu:showLogo', this.showLogo);
@@ -46,50 +47,77 @@ define(function(require, exports, module) {
             this.listenTo(app.vent, 'hamburger:hide', this.hideHamburger);
         },
 
-        introMenu: function() {
-            var self = this;
-            this.ui.hamburger.addClass('is-hiding');
-            this.resetHeader();
-            app.vent.trigger('header:resetHeader');
-            this.ui.menuOverlay.addClass('menu-open-first');
+        openMenuFirst: function() {
+            this.ui.menuOverlay.velocity({
+                translateY: '100%'
+            }, {
+                display: 'block',
+                duration: 10,
+                complete: _.bind(this.openMenu, this)
+            });
         },
 
-        toggleMenu: function(options) {
-            if (options === 'hideHamburger') {
-                this.ui.hamburger.addClass('is-hiding');
-            } else {
-                this.ui.hamburger.removeClass('is-hiding');
-            }
-            if ($('body').hasClass(constants.MENU_OPEN_CLASS)) {
+        openMenu: function() {
+            $('body').addClass(constants.MENU_OPEN_CLASS);
+
+            this.menuOpen = !this.menuOpen;
+
+            this.ui.menuOverlay.velocity({
+                translateY: ['0%', [0.77, 0, 0.175, 1]]
+            }, {
+                duration: 1000,
+                complete: _.bind(this.showMenuItems, this)
+            });
+        },
+
+        showMenuItems: function() {
+            this.ui.menu.velocity({
+                translateX: '-50%',
+                translateY: '-40%'
+            }, {
+                duration: 10
+            });
+
+            this.ui.menu.velocity({
+                opacity: 1,
+                translateX: '-50%',
+                translateY: '-50%'
+            }, {
+                duration: 1000
+            });
+        },
+
+        toggleMenu: function() {
+            if (this.menuOpen) {
                 this.closeMenu();
             } else {
-                this.resetHeader();
-                app.vent.trigger('header:resetHeader');
-                helpers.addBodyClass(constants.MENU_OPEN_CLASS);
+                this.openMenu();
             }
         },
 
         closeMenu: function() {
-            var self = this;
-            this.ui.menuOverlay.removeClass('menu-open-first');
-            helpers.addBodyClass(constants.MENU_OPEN_CLASS);
-            this.ui.hamburger.addClass('is-hiding');
-            this.ui.menuOverlay.removeClass('menu-open-first');
-            this.ui.menuOverlay.addClass('transition-down-out');
+            $('body').removeClass(constants.MENU_OPEN_CLASS);
+            this.menuOpen = !this.menuOpen;
 
             $('.page').velocity('scroll', {
                 container: $('.app'),
                 duration: 10
             });
 
-            setTimeout(function() {
-                helpers.removeBodyClass(constants.MENU_OPEN_CLASS);
-                self.ui.menuOverlay.removeClass('transition-down-out');
-            }, 1500);
+            this.ui.menu.velocity({
+                opacity: 0,
+            }, {
+                duration: 500,
+                complete: _.bind(this.closeMenuDown, this)
+            });
+        },
 
-            setTimeout(function() {
-                self.ui.hamburger.removeClass('is-hiding');
-            }, 2500);
+        closeMenuDown: function() {
+            this.ui.menuOverlay.velocity({
+                translateY: ['100%', [0.895, 0.03, 0.685, 0.22]]
+            }, {
+                duration: 1000
+            });
         },
 
         onClickMenuLink: function(e) {
@@ -98,14 +126,6 @@ define(function(require, exports, module) {
                 app.vent.trigger('slides:animate', 1000);
             }, 1000);
 
-        },
-
-        adjustHeader: function() {
-            // this.$el.add(this.ui.logo).addClass('gallery-header-showing');
-        },
-
-        resetHeader: function() {
-            // this.$el.add(this.ui.logo).removeClass('gallery-header-showing');
         },
 
         toggleHeader: function() {
@@ -129,7 +149,6 @@ define(function(require, exports, module) {
         },
 
         onClickLogo: function(e) {
-
             if (window.location.pathname === '/') {
                 e.preventDefault();
                 e.stopPropagation();
@@ -138,11 +157,8 @@ define(function(require, exports, module) {
                 setTimeout(function() {
                     app.vent.trigger('show:intro');
                 }, 2000);
-
             }
         },
-
-
 
         onKeyUp: function(e) {
             if (e.keyCode == 27) {

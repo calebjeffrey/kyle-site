@@ -98,7 +98,6 @@ define(function(require, exports, module) {
         onShow: function() {
             this.delegateEvents();
             this.handleImage();
-            // app.vent.trigger('header:resetHeader');
             app.vent.trigger('menu:toggle');
             app.vent.trigger('hamburger:hide');
             app.vent.trigger('menu:hideLogo');

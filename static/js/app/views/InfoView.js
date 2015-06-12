@@ -23,7 +23,6 @@ define(function(require, exports, module) {
         },
 
         initialize: function() {
-            console.log(JSON.stringify(infoData));
             BaseView.prototype.initialize.call(this);
         },
 

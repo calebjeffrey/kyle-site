@@ -5,8 +5,6 @@ define(function(require, exports, module) {
         ArtCollectionView = require('app/views/ArtCollectionView'),
         vent = require('app/vent'),
         helpers = require('app/utils/helpers'),
-        phosphor = require('phosphor'),
-        lazyLoad = require('lazyLoad'),
         template = require('hbs!templates/gallery-layout');
 
     require('jquery.velocity');
@@ -27,7 +25,8 @@ define(function(require, exports, module) {
             previousGalleryLink: '.grid-header a',
             nextGalleryLink: 'footer a',
             gridItems: '.item',
-            gridLinks: '.item .detail-link'
+            gridLinks: '.item .detail-link',
+            columns: '.column'
         },
 
         events: {
@@ -54,8 +53,6 @@ define(function(require, exports, module) {
             this.regionCollection.show(this.collectionView);
             this.$el.removeClass('gallery-before-transition title-card-showing').addClass('gallery-transitioning-in');
             this.bindUIElements();
-            this.checkIntro();
-            this.lazyLoadImages();
 
             if (app.firstLoad) {
                 this.animateSlidesIn();
@@ -80,25 +77,8 @@ define(function(require, exports, module) {
                 }
 
             } else {
-                this.ui.gridItems.css('opacity', 1);
-                this.ui.gridItems.removeClass('animate-in is-animating-down');
-                this.ui.gridItems.addClass('is-animating-down');
+                this.animateSlidesDown();
             }
-        },
-
-        checkIntro: function() {
-            this.ui.gridItems.removeClass('animate-in is-animating-down');
-        },
-
-        lazyLoadImages: function() {
-            this.bindUIElements();
-
-            $('.lazy').lazyload({
-                effect: 'fadeIn',
-                container: $('.app'),
-                failure_limit : 40,
-                skip_invisible: false
-            });
         },
 
         genRandomNum: function(min, max) {
@@ -108,34 +88,59 @@ define(function(require, exports, module) {
         onClickPreviousGallery: function(e) {
             this.$el.addClass('title-card-showing');
             app.vent.trigger('titleCard:show', this.model.get('previousGallery'), 'prev');
+            this.hideSlides();
         },
 
         onClickNextGallery: function(e) {
             this.$el.addClass('title-card-showing');
             app.vent.trigger('titleCard:show', this.model.get('nextGallery'), 'next');
+            this.hideSlides();
+        },
+
+        hideSlides: function() {
+            this.ui.gridItems.velocity({
+                opacity: 0
+            }, {
+                duration: 300
+            });
         },
 
         animateSlidesIn: function(delay) {
-            var self = this;
             this.bindUIElements();
 
-            _.each(this.ui.gridItems, function(item) {
-                $(item).css('animation-delay', '0.' + self.genRandomNum(100, 300) + 's');
+            this.ui.gridItems.velocity({
+                translateY: '30%',
+                opacity: 0
+            }, {
+                duration: 10,
+                complete: _.bind(this.animateSlidesUp, this)
             });
+        },
 
-            if (delay) {
-                setTimeout(function() {
-                    $('.item').removeClass('animate-in');
-                }, 1000);
-                setTimeout(function() {
-                    _.each($('.item'), function(item) {
-                        $(item).css('animation-delay', '0.' + self.genRandomNum(100, 300) + 's');
-                    });
-                    $('.item').addClass('animate-in');
-                }, delay);
-            } else {
-                this.ui.gridItems.addClass('animate-in');
-            }
+        animateSlidesUp: function() {
+            _.each(this.ui.gridItems, function(item, index) {
+                $(item).velocity({
+                    opacity: 1,
+                    translateY: '0%'
+                }, {
+                    ease: [0.895, 0.03, 0.685, 0.22],
+                    delay: _.random(100, 600),
+                    duration: 500
+                });
+            });
+        },
+
+        animateSlidesDown: function() {
+            _.each(this.ui.gridItems, function(item, index) {
+                $(item).velocity({
+                    opacity: 0,
+                    translateY: '30%'
+                }, {
+                    ease: [0.895, 0.03, 0.685, 0.22],
+                    delay: _.random(100, 600),
+                    duration: 500
+                });
+            });
         },
 
         onDestroy: function() {

@@ -57,7 +57,18 @@ define(function(require, exports, module) {
             });
         },
 
+        openMenuOther: function() {
+            this.ui.menuOverlay.velocity({
+                translateY: '-100%'
+            }, {
+                display: 'block',
+                duration: 10,
+                complete: _.bind(this.openMenu, this)
+            });
+        },
+
         openMenu: function() {
+            console.log('open menu')
             $('body').addClass(constants.MENU_OPEN_CLASS);
 
             this.menuOpen = !this.menuOpen;
@@ -72,6 +83,7 @@ define(function(require, exports, module) {
 
         showMenuItems: function() {
             this.ui.menu.velocity({
+                opacity: 0,
                 translateX: '-50%',
                 translateY: '-40%'
             }, {
@@ -91,7 +103,7 @@ define(function(require, exports, module) {
             if (this.menuOpen) {
                 this.closeMenu();
             } else {
-                this.openMenu();
+                this.openMenuOther();
             }
         },
 

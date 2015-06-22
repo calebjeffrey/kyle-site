@@ -4,49 +4,49 @@
   background-repeat: no-repeat;
 }
 
-/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .ui-chris-large-red, .logo .fg h1 {
   background-position: 0 0;
   height: 124px;
   width: 481px;
 }
 
-/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .ui-chris-large, .logo .bg h1 {
   background-position: 0 -129px;
   height: 124px;
   width: 481px;
 }
 
-/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .ui-logo-small {
   background-position: 0 -258px;
   height: 46px;
   width: 44px;
 }
 
-/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .ui-peter-large-red, .logo .fg h1:nth-child(2) {
   background-position: 0 -309px;
   height: 122px;
   width: 563px;
 }
 
-/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .ui-peter-large, .logo .bg h1:nth-child(2) {
   background-position: 0 -436px;
   height: 122px;
   width: 563px;
 }
 
-/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .ui-sen-large-red, .logo .fg h1:nth-child(3) {
   background-position: 0 -563px;
   height: 123px;
   width: 309px;
 }
 
-/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .ui-sen-large, .logo .bg h1:nth-child(3) {
   background-position: 0 -691px;
   height: 123px;
@@ -1322,105 +1322,71 @@ footer a {
   margin: 0 auto;
   padding: 65px 15px 0 15px;
   width: 100%;
-  -moz-transition: -moz-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
-  -o-transition: -o-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
-  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-  -webkit-transition-delay: 0.6s;
-  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
 }
-/* line 7, src/components/_grid.scss */
-.header-nav-showing .grid {
-  -moz-transform: translate3d(0, 42px, 0);
-  -webkit-transform: translate3d(0, 42px, 0);
-  transform: translate3d(0, 42px, 0);
-}
-/* line 11, src/components/_grid.scss */
+/* line 6, src/components/_grid.scss */
 .grid:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 18, src/components/_grid.scss */
+/* line 13, src/components/_grid.scss */
 .column {
   float: left;
   width: 100%;
 }
-/* line 22, src/components/_grid.scss */
+/* line 17, src/components/_grid.scss */
 .grid .column:last-of-type {
   padding-right: 0;
 }
-/* line 26, src/components/_grid.scss */
+/* line 21, src/components/_grid.scss */
 .column:first-child {
   padding-left: 0;
 }
-/* line 30, src/components/_grid.scss */
+/* line 25, src/components/_grid.scss */
 .column:last-child {
   padding-right: 0;
 }
-/* line 34, src/components/_grid.scss */
+/* line 29, src/components/_grid.scss */
 .column .item {
   width: 100%;
   padding: 8px 0;
   opacity: 0;
-  -moz-transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -moz-transition: opacity 0.6s cubic-bezier(0.42, 0, 0.58, 1);
-  -o-transition: opacity 0.6s cubic-bezier(0.42, 0, 0.58, 1);
-  -webkit-transition: opacity 0.6s cubic-bezier(0.42, 0, 0.58, 1);
-  transition: opacity 0.6s cubic-bezier(0.42, 0, 0.58, 1);
 }
-/* line 39, src/components/_grid.scss */
+/* line 34, src/components/_grid.scss */
 .column .item:last-child {
   padding-bottom: 15px;
 }
 @media only screen and (min-width: 480px) {
-  /* line 34, src/components/_grid.scss */
+  /* line 29, src/components/_grid.scss */
   .column .item {
     padding: 10px;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 34, src/components/_grid.scss */
+  /* line 29, src/components/_grid.scss */
   .column .item {
     padding: 10%;
   }
-  /* line 52, src/components/_grid.scss */
+  /* line 44, src/components/_grid.scss */
   .column .item:last-child {
     padding-bottom: 0;
   }
 }
-/* line 57, src/components/_grid.scss */
+/* line 49, src/components/_grid.scss */
 .column .item:first-child {
   padding-top: 0;
 }
-/* line 61, src/components/_grid.scss */
+/* line 53, src/components/_grid.scss */
 .title-card-showing .column .item {
   opacity: 0;
 }
-/* line 65, src/components/_grid.scss */
-.column .item.is-animating-down {
-  -webkit-animation: slideDownOutGrid 0.8s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -moz-animation: slideDownOutGrid 0.8s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -ms-animation: slideDownOutGrid 0.8s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -o-animation: slideDownOutGrid 0.8s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  animation: slideDownOutGrid 0.8s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-}
-/* line 69, src/components/_grid.scss */
-.column .item.animate-in {
-  -webkit-animation: slideUpIn 0.8s 0s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
-  -moz-animation: slideUpIn 0.8s 0s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
-  -ms-animation: slideUpIn 0.8s 0s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
-  -o-animation: slideUpIn 0.8s 0s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
-  animation: slideUpIn 0.8s 0s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
-}
-/* line 75, src/components/_grid.scss */
+/* line 67, src/components/_grid.scss */
 .column .item.show-meta .overlay, .column .item.show-meta .meta {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 80, src/components/_grid.scss */
+/* line 72, src/components/_grid.scss */
 .column .item.show-meta h4 {
   opacity: 1;
   -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
@@ -1429,7 +1395,7 @@ footer a {
   -webkit-transition-delay: 0.4s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
 }
-/* line 85, src/components/_grid.scss */
+/* line 77, src/components/_grid.scss */
 .column .item.show-meta h1 {
   -webkit-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   -moz-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
@@ -1442,11 +1408,11 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 91, src/components/_grid.scss */
+/* line 83, src/components/_grid.scss */
 .no-touch .column .item.show-meta figure:hover {
   cursor: url(../img/cursor/minimize-cursor.svg), auto;
 }
-/* line 97, src/components/_grid.scss */
+/* line 89, src/components/_grid.scss */
 .column .item .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
@@ -1457,7 +1423,7 @@ footer a {
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
   pointer-events: none;
 }
-/* line 105, src/components/_grid.scss */
+/* line 97, src/components/_grid.scss */
 .column .item .meta {
   width: 100%;
   text-align: center;
@@ -1470,12 +1436,12 @@ footer a {
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
 @media only screen and (min-width: 480px) {
-  /* line 105, src/components/_grid.scss */
+  /* line 97, src/components/_grid.scss */
   .column .item .meta {
     width: 200%;
   }
 }
-/* line 118, src/components/_grid.scss */
+/* line 110, src/components/_grid.scss */
 .column .item h1 {
   margin: 20px 0;
   text-transform: uppercase;
@@ -1487,7 +1453,7 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 128, src/components/_grid.scss */
+/* line 118, src/components/_grid.scss */
 .column .item h4 {
   color: #8c9397;
   opacity: 0;
@@ -1498,11 +1464,11 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 134, src/components/_grid.scss */
+/* line 123, src/components/_grid.scss */
 .column .item h4 a {
   color: #8c9397;
 }
-/* line 139, src/components/_grid.scss */
+/* line 128, src/components/_grid.scss */
 .column .item .inquire {
   color: #fb2323;
   font-size: 14px;
@@ -1514,33 +1480,33 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: color 0.3s linear 0s;
 }
-/* line 147, src/components/_grid.scss */
+/* line 136, src/components/_grid.scss */
 .no-touch .column .item .inquire:hover {
   color: #ffffff;
 }
 @media only screen and (min-width: 480px) {
-  /* line 153, src/components/_grid.scss */
+  /* line 142, src/components/_grid.scss */
   .column .item h4 {
     font-size: 1.9em;
     margin: 11px 0;
   }
-  /* line 157, src/components/_grid.scss */
+  /* line 146, src/components/_grid.scss */
   .column .item h4 .inquire {
     font-size: 19px;
   }
-  /* line 162, src/components/_grid.scss */
+  /* line 151, src/components/_grid.scss */
   .column .item h1 {
     font-size: 10em;
   }
 }
-/* line 168, src/components/_grid.scss */
+/* line 157, src/components/_grid.scss */
 .column .item span {
   position: relative;
   top: -2px;
   font-size: 0.9em;
   color: #5a5e60;
 }
-/* line 179, src/components/_grid.scss */
+/* line 168, src/components/_grid.scss */
 .column img {
   width: 100%;
   outline: #d9d9d9 solid 0px;
@@ -1550,7 +1516,7 @@ footer a {
   transition: outline 0.6s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-/* line 188, src/components/_grid.scss */
+/* line 177, src/components/_grid.scss */
 .no-touch .column .item:hover img {
   outline: #fb2323 solid 20px;
 }
@@ -1559,74 +1525,13 @@ footer a {
 .title-card {
   background-color: #fb2323;
   z-index: 20;
-  -moz-transition: -moz-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: -o-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition: -webkit-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: none;
 }
-/* line 6, src/components/_title-card.scss */
-.title-card.prev {
-  -moz-transform: translate3d(0, -100%, 0);
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
-}
-/* line 9, src/components/_title-card.scss */
-.title-card.prev.is-showing {
-  -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-/* line 13, src/components/_title-card.scss */
-.title-card.prev.is-leaving {
-  -webkit-animation: slideDown 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -moz-animation: slideDown 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -ms-animation: slideDown 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -o-animation: slideDown 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  animation: slideDown 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-}
-/* line 18, src/components/_title-card.scss */
-.title-card.next {
-  -moz-transform: translate3d(0, 100%, 0);
-  -webkit-transform: translate3d(0, 100%, 0);
-  transform: translate3d(0, 100%, 0);
-}
-/* line 21, src/components/_title-card.scss */
-.title-card.next.is-showing {
-  -moz-transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-/* line 25, src/components/_title-card.scss */
-.title-card.next.is-leaving {
-  -webkit-animation: slideUp 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -moz-animation: slideUp 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -ms-animation: slideUp 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -o-animation: slideUp 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  animation: slideUp 1s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-}
-/* line 30, src/components/_title-card.scss */
+/* line 31, src/components/_title-card.scss */
 .title-card h1 {
   color: #ffffff;
   text-transform: capitalize;
   letter-spacing: 2px;
-  opacity: 0;
-  -moz-transform: translate3d(-50%, 50%, 0);
-  -webkit-transform: translate3d(-50%, 50%, 0);
-  transform: translate3d(-50%, 50%, 0);
-  -moz-transition: opacity 1s linear, -moz-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -o-transition: opacity 1s linear, -o-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition: opacity 1s linear, -webkit-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: opacity 1s linear, transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-/* line 42, src/components/_title-card.scss */
-.title-card h1.is-showing {
-  opacity: 1;
-  -moz-transform: translate3d(-50%, -50%, 0);
-  -webkit-transform: translate3d(-50%, -50%, 0);
-  transform: translate3d(-50%, -50%, 0);
-}
-/* line 47, src/components/_title-card.scss */
-.title-card h1.is-leaving {
   opacity: 0;
 }
 
@@ -1641,7 +1546,7 @@ footer a {
   overflow: hidden;
   background-image: url(../img/backgrounds/noise.png);
 }
-/* line 7, src/pages/_gallery.scss */
+/* line 6, src/pages/_gallery.scss */
 .gallery footer {
   opacity: 0;
   -webkit-animation: fadeIn 0.6s 1s cubic-bezier(0, 0, 0.58, 1) 1 forwards;

@@ -18,42 +18,73 @@ define(function(require, exports, module) {
             BaseView.prototype.initialize.call(this);
             this.title = options.title;
             this.direction = options.direction;
+            console.log(this.direction)
             this.$el.addClass(this.direction);
         },
 
         onShow: function() {
             var self = this;
+            var transY = (this.direction === 'next') ? '100%' : '-100%';
 
-            this.delegateEvents();
+            this.$el.velocity({
+                translateY: transY
+            }, {
+                display: 'block',
+                duration: 10,
+                complete: _.bind(this.showTitleCard, this)
+            });
+        },
 
-            setTimeout(function(){
-                self.$el.addClass('is-showing');
-            }, 10);
+        showTitleCard: function() {
+            this.$el.velocity({
+                translateY: ['0%', [0.165, 0.84, 0.44, 1]]
+            }, {
+                duration: 1000,
+                complete: _.bind(this.showTitle, this)
+            });
+        },
 
-            setTimeout(function(){
-                self.ui.title.addClass('is-showing');
-            }, 1000);
-
+        showTitle: function() {
             window.scrollTo(0, 0);
 
-            setTimeout(function(){
-                self.ui.title.addClass('is-leaving');
-            }, 3000);
+            this.ui.title.velocity({
+                translateX: '-50%',
+                translateY: '0%'
+            }, {
+                duration: 10
+            });
 
-            app.vent.trigger('slides:animate', 5000);
+            this.ui.title.velocity({
+                opacity: 1,
+                translateX: '-50%',
+                translateY: '-50%'
+            }, {
+                duration: 1000
+            });
 
-            setTimeout(function(){
-                self.$el.removeClass('is-showing').addClass('is-leaving');
-                $('.page').velocity('scroll', {
-                    container: $('.app'),
-                    duration: 10
-                });
-            }, 4000);
+            this.ui.title.velocity({
+                opacity: 0
+            }, {
+                delay: 500,
+                duration: 1000,
+                complete: _.bind(this.hideTitleCard, this)
+            });
+        },
 
-            setTimeout(function(){
+        hideTitleCard: function() {
+            var transY = (this.direction === 'next') ? '-100%' : '100%';
 
-                self.destroy();
-            }, 5000);
+            this.$el.velocity({
+                translateY: [transY, [0.895, 0.03, 0.685, 0.22]]
+            }, {
+                duration: 1000,
+                complete: _.bind(this.closeView, this)
+            });
+        },
+
+        closeView: function() {
+            app.vent.trigger('slides:animate');
+            this.destroy();
         },
 
         serializeData: function() {

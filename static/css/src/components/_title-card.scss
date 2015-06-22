@@ -1,31 +1,32 @@
 .title-card {
     background-color: $red;
     z-index: 20;
-    @include transition(transform 1s $ease-out-quart);
+    display: none;
+    // @include transition(transform 1s $ease-out-quart);
 
-    &.prev {
-        @include translate3d(0, -100%, 0);
+    // &.prev {
+    //     @include translate3d(0, -100%, 0);
 
-        &.is-showing {
-            @include translate3d(0, 0, 0);
-        }
+    //     &.is-showing {
+    //         @include translate3d(0, 0, 0);
+    //     }
 
-        &.is-leaving {
-            @include animation(slideDown, 1s, 0s, $ease-in-quart, 1, forwards);
-        }
-    }
+    //     &.is-leaving {
+    //         @include animation(slideDown, 1s, 0s, $ease-in-quart, 1, forwards);
+    //     }
+    // }
 
-    &.next {
-        @include translate3d(0, 100%, 0);
+    // &.next {
+    //     @include translate3d(0, 100%, 0);
 
-        &.is-showing {
-            @include translate3d(0, 0, 0);
-        }
+    //     &.is-showing {
+    //         @include translate3d(0, 0, 0);
+    //     }
 
-        &.is-leaving {
-            @include animation(slideUp, 1s, 0s, $ease-in-quart, 1, forwards);
-        }
-    }
+    //     &.is-leaving {
+    //         @include animation(slideUp, 1s, 0s, $ease-in-quart, 1, forwards);
+    //     }
+    // }
 
     h1 {
         @extend %absolute-center;
@@ -33,19 +34,19 @@
         text-transform: capitalize;
         letter-spacing: 2px;
         opacity: 0;
-        @include translate3d(-50%, 50%, 0);
-        @include transition(opacity 1s linear, transform 1s $ease-out-quart);
+        // @include translate3d(-50%, 50%, 0);
+        // @include transition(opacity 1s linear, transform 1s $ease-out-quart);
         // -webkit-transition: opacity 1s linear, transform 1s $ease-out-quart;
         // -moz-transition: opacity 1s linear, transform 1s $ease-out-quart;
         // transition: opacity 1s linear, transform 1s $ease-out-quart;
 
-        &.is-showing {
-            opacity: 1;
-            @include translate3d(-50%, -50%, 0);
-        }
+        // &.is-showing {
+        //     opacity: 1;
+        //     @include translate3d(-50%, -50%, 0);
+        // }
 
-        &.is-leaving {
-            opacity: 0;
-        }
+        // &.is-leaving {
+        //     opacity: 0;
+        // }
     }
 }

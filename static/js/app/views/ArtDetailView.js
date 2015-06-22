@@ -80,10 +80,83 @@ define(function(require, exports, module) {
 
             image.src = '/img/artwork/' + this.model.get('type') + '/' + this.model.get('image2x');
 
-            setTimeout(function() {
-                self.$el.addClass('animate-in');
+            _.delay(function() {
+                self.showArtDetail();
             }, 500);
+        },
 
+        showArtDetail: function() {
+            this.$el.velocity({
+                translateY: '-100%'
+            }, {
+                display: 'block',
+                duration: 10,
+                complete: _.bind(this.animateArtIn, this)
+            });
+            
+        },
+
+        animateArtIn: function() {
+            this.$el.velocity({
+                translateY: ['0%', [0.77, 0, 0.175, 1]]
+            }, {
+                duration: 1000,
+                complete: _.bind(this.showDetailImage, this)
+            });
+        },
+
+        showDetailImage: function() {
+            this.ui.figure.velocity({
+                opacity: 0,
+                translateY: '-100%',
+                translateX: '-50%'
+            }, {
+                display: 'block',
+                duration: 10,
+                complete: _.bind(this.animateDetailIn, this)
+            });
+        },
+
+        animateDetailIn: function() {
+            this.ui.figure.velocity({
+                opacity: 1,
+                translateY: '-50%'
+            }, {
+                ease: [0.165, 0.84, 0.44, 1],
+                duration: 600
+            });
+        },
+
+        animateDetailOut: function() {
+            this.ui.figure.velocity({
+                opacity: 0,
+                translateY: '0%'
+            }, {
+                ease: [0.77, 0, 0.175, 1],
+                duration: 600,
+                complete: _.bind(this.hideArtDetail, this)
+            });
+        },
+
+        hideArtDetail: function() {
+            this.$el.velocity({
+                translateY: '100%'
+            }, {
+                ease: [0.77, 0, 0.175, 1],
+                duration: 1000,
+                complete: _.bind(this.onCloseComplete, this)
+            });
+        },
+
+        onCloseComplete: function() {
+            app.vent.trigger('menu:toggle');
+            app.vent.trigger('slides:animateAfterDetail');
+
+            app.appRouter.navigate(this.returnUrl, {
+                trigger: true
+            });
+
+            this.destroy();
         },
 
         onClickFigure: function(e) {
@@ -105,21 +178,7 @@ define(function(require, exports, module) {
 
         onClickWrapper: function(e) {
             var self = this;
-            this.$el.addClass('is-animating-down');
-            app.vent.trigger('menu:toggle');
-
-            _.delay(function() {
-                app.vent.trigger('slides:animate', 1000);
-            }, 1000);
-
-            setTimeout(function(){
-                app.appRouter.navigate(self.returnUrl, {
-                    trigger: true
-                });
-
-                self.destroy();
-            }, 1500);
-
+            this.animateDetailOut();
         },
 
         handleImageSize: function() {

@@ -50,18 +50,6 @@
             padding-top: 0;
         }
 
-        .title-card-showing & {
-            opacity: 0;
-        }
-
-        &.is-animating-down {
-            // @include animation(slideDownOutGrid, 0.8s, 0s, $ease-in-quart, 1, forwards);
-        }
-
-        &.animate-in {
-            // @include animation(slideUpIn, 0.8s, 0s, $ease-out-quart, 1, forwards);
-        }
-
         &.show-meta {
 
             .overlay, .meta {

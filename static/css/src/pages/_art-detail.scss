@@ -4,20 +4,7 @@
     background-color: $whiteDark;
     overflow: hidden;
     background-image: url(../img/backgrounds/noise.png);
-    @include translate3d(0, -100%, 0);
-    @include transition(transform 1s $ease-in-quart);
-
-    &.animate-in {
-        @include translate3d(0, 0%, 0);
-    }
-
-    &.is-animating-down {
-        @include translate3d(0, 100%, 0);
-        @include transition(transform 1s 1s $ease-out-quart);
-        figure {
-            @include animation(detailSlideDownOut, 0.6s, 0s, $ease-in-quart, 1, forwards);
-        }
-    }
+    display: none;
 
     &.show-meta {
 
@@ -63,18 +50,10 @@
     }
 
     figure {
-        @extend %absolute-center;
-        opacity: 0;
-        @include translate3d(-50%, -300%, 0);
-        @include animation(detailSlideDownIn, 0.6s, 1.6s, $ease-out-quart, 1, forwards);
-
-        &.is-animating-down {
-            @include animation(detailSlideDownOut, 0.6s, 0s, $ease-in-quart, 1, forwards);
-        }
-
-        &.animate-in {
-            opacity: 0;
-        }
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: none;
 
         .no-touch &:hover {
             cursor: url(../img/cursor/open-cursor.svg), auto;
@@ -94,16 +73,13 @@
         margin: 20px 0;
         text-transform: uppercase;
         pointer-events: none;
-        // opacity: 0;
         @include transition(opacity 1s 0s $ease-in-out);
-        // @include transition(opacity 0.5s 0s $ease-in-out);
     }
 
     h4 {
         color: $grayDark;
         opacity: 0;
         @include transition(opacity 1s 0s $ease-in-out);
-        // @include transition(opacity 0.5s 0s $ease-in-out);
     }
 
     a {

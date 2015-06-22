@@ -544,7 +544,7 @@ th {
 }
 
 /* line 98, src/_extends.scss */
-.menu-overlay .menu, .column .item .meta, .title-card h1, .info .headlines, .art-detail .content, .art-detail figure, .art-detail .meta {
+.menu-overlay .menu, .column .item .meta, .title-card h1, .info .headlines, .art-detail .content, .art-detail .meta {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1377,16 +1377,12 @@ footer a {
 .column .item:first-child {
   padding-top: 0;
 }
-/* line 53, src/components/_grid.scss */
-.title-card-showing .column .item {
-  opacity: 0;
-}
-/* line 67, src/components/_grid.scss */
+/* line 55, src/components/_grid.scss */
 .column .item.show-meta .overlay, .column .item.show-meta .meta {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 72, src/components/_grid.scss */
+/* line 60, src/components/_grid.scss */
 .column .item.show-meta h4 {
   opacity: 1;
   -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
@@ -1395,7 +1391,7 @@ footer a {
   -webkit-transition-delay: 0.4s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
 }
-/* line 77, src/components/_grid.scss */
+/* line 65, src/components/_grid.scss */
 .column .item.show-meta h1 {
   -webkit-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   -moz-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
@@ -1408,11 +1404,11 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 83, src/components/_grid.scss */
+/* line 71, src/components/_grid.scss */
 .no-touch .column .item.show-meta figure:hover {
   cursor: url(../img/cursor/minimize-cursor.svg), auto;
 }
-/* line 89, src/components/_grid.scss */
+/* line 77, src/components/_grid.scss */
 .column .item .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
@@ -1423,7 +1419,7 @@ footer a {
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
   pointer-events: none;
 }
-/* line 97, src/components/_grid.scss */
+/* line 85, src/components/_grid.scss */
 .column .item .meta {
   width: 100%;
   text-align: center;
@@ -1436,12 +1432,12 @@ footer a {
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
 @media only screen and (min-width: 480px) {
-  /* line 97, src/components/_grid.scss */
+  /* line 85, src/components/_grid.scss */
   .column .item .meta {
     width: 200%;
   }
 }
-/* line 110, src/components/_grid.scss */
+/* line 98, src/components/_grid.scss */
 .column .item h1 {
   margin: 20px 0;
   text-transform: uppercase;
@@ -1453,7 +1449,7 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 118, src/components/_grid.scss */
+/* line 106, src/components/_grid.scss */
 .column .item h4 {
   color: #8c9397;
   opacity: 0;
@@ -1464,11 +1460,11 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 123, src/components/_grid.scss */
+/* line 111, src/components/_grid.scss */
 .column .item h4 a {
   color: #8c9397;
 }
-/* line 128, src/components/_grid.scss */
+/* line 116, src/components/_grid.scss */
 .column .item .inquire {
   color: #fb2323;
   font-size: 14px;
@@ -1480,33 +1476,33 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: color 0.3s linear 0s;
 }
-/* line 136, src/components/_grid.scss */
+/* line 124, src/components/_grid.scss */
 .no-touch .column .item .inquire:hover {
   color: #ffffff;
 }
 @media only screen and (min-width: 480px) {
-  /* line 142, src/components/_grid.scss */
+  /* line 130, src/components/_grid.scss */
   .column .item h4 {
     font-size: 1.9em;
     margin: 11px 0;
   }
-  /* line 146, src/components/_grid.scss */
+  /* line 134, src/components/_grid.scss */
   .column .item h4 .inquire {
     font-size: 19px;
   }
-  /* line 151, src/components/_grid.scss */
+  /* line 139, src/components/_grid.scss */
   .column .item h1 {
     font-size: 10em;
   }
 }
-/* line 157, src/components/_grid.scss */
+/* line 145, src/components/_grid.scss */
 .column .item span {
   position: relative;
   top: -2px;
   font-size: 0.9em;
   color: #5a5e60;
 }
-/* line 168, src/components/_grid.scss */
+/* line 156, src/components/_grid.scss */
 .column img {
   width: 100%;
   outline: #d9d9d9 solid 0px;
@@ -1516,7 +1512,7 @@ footer a {
   transition: outline 0.6s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-/* line 177, src/components/_grid.scss */
+/* line 165, src/components/_grid.scss */
 .no-touch .column .item:hover img {
   outline: #fb2323 solid 20px;
 }
@@ -1684,45 +1680,14 @@ footer a {
   background-color: #efedee;
   overflow: hidden;
   background-image: url(../img/backgrounds/noise.png);
-  -moz-transform: translate3d(0, -100%, 0);
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
-  -moz-transition: -moz-transform 1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-  -o-transition: -o-transform 1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-  -webkit-transition: -webkit-transform 1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-  transition: transform 1s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  display: none;
 }
-/* line 10, src/pages/_art-detail.scss */
-.art-detail.animate-in {
-  -moz-transform: translate3d(0, 0%, 0);
-  -webkit-transform: translate3d(0, 0%, 0);
-  transform: translate3d(0, 0%, 0);
-}
-/* line 14, src/pages/_art-detail.scss */
-.art-detail.is-animating-down {
-  -moz-transform: translate3d(0, 100%, 0);
-  -webkit-transform: translate3d(0, 100%, 0);
-  transform: translate3d(0, 100%, 0);
-  -moz-transition: -moz-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
-  -o-transition: -o-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
-  -webkit-transition: -webkit-transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition-delay: 1s;
-  transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 1s;
-}
-/* line 17, src/pages/_art-detail.scss */
-.art-detail.is-animating-down figure {
-  -webkit-animation: detailSlideDownOut 0.6s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -moz-animation: detailSlideDownOut 0.6s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -ms-animation: detailSlideDownOut 0.6s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -o-animation: detailSlideDownOut 0.6s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  animation: detailSlideDownOut 0.6s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-}
-/* line 24, src/pages/_art-detail.scss */
+/* line 11, src/pages/_art-detail.scss */
 .art-detail.show-meta .overlay, .art-detail.show-meta .meta {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 29, src/pages/_art-detail.scss */
+/* line 16, src/pages/_art-detail.scss */
 .art-detail.show-meta h4 {
   opacity: 1;
   -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
@@ -1731,7 +1696,7 @@ footer a {
   -webkit-transition-delay: 0.4s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
 }
-/* line 34, src/pages/_art-detail.scss */
+/* line 21, src/pages/_art-detail.scss */
 .art-detail.show-meta h1 {
   -webkit-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   -moz-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
@@ -1744,17 +1709,17 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 40, src/pages/_art-detail.scss */
+/* line 27, src/pages/_art-detail.scss */
 .no-touch .art-detail.show-meta figure:hover {
   cursor: url(../img/cursor/minimize-cursor.svg), auto;
 }
-/* line 50, src/pages/_art-detail.scss */
+/* line 37, src/pages/_art-detail.scss */
 .art-detail .content {
   width: 100%;
   height: 100%;
   margin: 0;
 }
-/* line 57, src/pages/_art-detail.scss */
+/* line 44, src/pages/_art-detail.scss */
 .art-detail .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
@@ -1765,35 +1730,18 @@ footer a {
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
   pointer-events: none;
 }
-/* line 65, src/pages/_art-detail.scss */
+/* line 52, src/pages/_art-detail.scss */
 .art-detail figure {
-  opacity: 0;
-  -moz-transform: translate3d(-50%, -300%, 0);
-  -webkit-transform: translate3d(-50%, -300%, 0);
-  transform: translate3d(-50%, -300%, 0);
-  -webkit-animation: detailSlideDownIn 0.6s 1.6s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
-  -moz-animation: detailSlideDownIn 0.6s 1.6s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
-  -ms-animation: detailSlideDownIn 0.6s 1.6s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
-  -o-animation: detailSlideDownIn 0.6s 1.6s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
-  animation: detailSlideDownIn 0.6s 1.6s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
 }
-/* line 71, src/pages/_art-detail.scss */
-.art-detail figure.is-animating-down {
-  -webkit-animation: detailSlideDownOut 0.6s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -moz-animation: detailSlideDownOut 0.6s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -ms-animation: detailSlideDownOut 0.6s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  -o-animation: detailSlideDownOut 0.6s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-  animation: detailSlideDownOut 0.6s 0s cubic-bezier(0.895, 0.03, 0.685, 0.22) 1 forwards;
-}
-/* line 75, src/pages/_art-detail.scss */
-.art-detail figure.animate-in {
-  opacity: 0;
-}
-/* line 79, src/pages/_art-detail.scss */
+/* line 58, src/pages/_art-detail.scss */
 .no-touch .art-detail figure:hover {
   cursor: url(../img/cursor/open-cursor.svg), auto;
 }
-/* line 84, src/pages/_art-detail.scss */
+/* line 63, src/pages/_art-detail.scss */
 .art-detail .meta {
   width: 200%;
   text-align: center;
@@ -1805,7 +1753,7 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 93, src/pages/_art-detail.scss */
+/* line 72, src/pages/_art-detail.scss */
 .art-detail h1 {
   margin: 20px 0;
   text-transform: uppercase;
@@ -1816,7 +1764,7 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 102, src/pages/_art-detail.scss */
+/* line 79, src/pages/_art-detail.scss */
 .art-detail h4 {
   color: #8c9397;
   opacity: 0;
@@ -1826,7 +1774,7 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 109, src/pages/_art-detail.scss */
+/* line 85, src/pages/_art-detail.scss */
 .art-detail a {
   color: #fb2323;
   font-size: 19px;
@@ -1838,11 +1786,11 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: color 0.3s linear 0s;
 }
-/* line 117, src/pages/_art-detail.scss */
+/* line 93, src/pages/_art-detail.scss */
 .no-touch .art-detail a:hover {
   color: #ffffff;
 }
-/* line 122, src/pages/_art-detail.scss */
+/* line 98, src/pages/_art-detail.scss */
 .art-detail span {
   position: relative;
   top: -2px;

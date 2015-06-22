@@ -43,15 +43,13 @@ define(function(require, exports, module) {
             });
 
             app.vent.on('slides:animate', this.animateSlidesIn, this);
-
-            this.$el.addClass('gallery-before-transition');
+            app.vent.on('slides:animateAfterDetail', this.animateSlidesAfterDetail, this);
         },
 
         onShow: function() {
             var self = this;
             this.delegateEvents();
             this.regionCollection.show(this.collectionView);
-            this.$el.removeClass('gallery-before-transition title-card-showing').addClass('gallery-transitioning-in');
             this.bindUIElements();
 
             if (app.firstLoad) {
@@ -63,7 +61,6 @@ define(function(require, exports, module) {
         },
 
         onClickGridLink: function(e) {
-
             if ($(window).width() < 480) {
                 e.preventDefault();
                 e.stopPropagation();
@@ -77,6 +74,7 @@ define(function(require, exports, module) {
                 }
 
             } else {
+                console.log('else')
                 this.animateSlidesDown();
             }
         },
@@ -86,13 +84,11 @@ define(function(require, exports, module) {
         },
 
         onClickPreviousGallery: function(e) {
-            this.$el.addClass('title-card-showing');
             app.vent.trigger('titleCard:show', this.model.get('previousGallery'), 'prev');
             this.hideSlides();
         },
 
         onClickNextGallery: function(e) {
-            this.$el.addClass('title-card-showing');
             app.vent.trigger('titleCard:show', this.model.get('nextGallery'), 'next');
             this.hideSlides();
         },
@@ -105,10 +101,8 @@ define(function(require, exports, module) {
             });
         },
 
-        animateSlidesIn: function(delay) {
-            this.bindUIElements();
-
-            this.ui.gridItems.velocity({
+        animateSlidesIn: function() {
+            $('.item').velocity({
                 translateY: '30%',
                 opacity: 0
             }, {
@@ -118,7 +112,8 @@ define(function(require, exports, module) {
         },
 
         animateSlidesUp: function() {
-            _.each(this.ui.gridItems, function(item, index) {
+            _.each($('.item'), function(item, index) {
+
                 $(item).velocity({
                     opacity: 1,
                     translateY: '0%'
@@ -128,6 +123,20 @@ define(function(require, exports, module) {
                     duration: 500
                 });
             });
+        },
+
+        animateSlidesAfterDetail: function() {
+            var self = this;
+
+            _.delay(function(){
+                $('.item').velocity({
+                    translateY: '30%',
+                    opacity: 0
+                }, {
+                    duration: 10,
+                    complete: _.bind(self.animateSlidesUp, self)
+                });
+            }, 200)
         },
 
         animateSlidesDown: function() {

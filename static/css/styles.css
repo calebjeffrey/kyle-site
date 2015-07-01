@@ -1350,27 +1350,27 @@ footer a {
 /* line 29, src/components/_grid.scss */
 .column .item {
   width: 100%;
-  padding: 8px 0;
+  margin: 8px 0;
   opacity: 0;
 }
 /* line 34, src/components/_grid.scss */
 .column .item:last-child {
-  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 @media only screen and (min-width: 480px) {
   /* line 29, src/components/_grid.scss */
   .column .item {
-    padding: 10px;
+    margin: 10px;
   }
 }
 @media only screen and (min-width: 768px) {
   /* line 29, src/components/_grid.scss */
   .column .item {
-    padding: 10%;
+    margin: 10%;
   }
   /* line 44, src/components/_grid.scss */
   .column .item:last-child {
-    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
 /* line 49, src/components/_grid.scss */
@@ -1379,7 +1379,7 @@ footer a {
 }
 /* line 53, src/components/_grid.scss */
 .column .item:first-child {
-  padding-top: 0;
+  margin-top: 0;
 }
 /* line 59, src/components/_grid.scss */
 .column .item.show-meta .overlay, .column .item.show-meta .meta {

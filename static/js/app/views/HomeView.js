@@ -25,6 +25,7 @@ define(function(require, exports, module) {
         },
 
         onShow: function() {
+            app.vent.trigger('hamburger:hide');
             _.delay(_.bind(this.animateUpAndOut, this), 4200);
         },
 

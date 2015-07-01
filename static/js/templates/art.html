@@ -1,29 +1,30 @@
 <figure>
     <a class="detail-link" href="/art/{{slug}}">
-    <div class="overlay"></div>
-    <!-- <img data-original="/img/artwork/{{type}}/{{image}}" class="lazy" alt="{{type}} painting by Chris Petersen"> -->
-    <img src="/img/artwork/{{type}}/{{image}}" class="lazy" alt="{{type}} painting by Chris Petersen">
-    <div class="meta">
+        <div class="overlay"></div>
 
-    {{#if isVisible}}
-    <h4 class="desc">{{width}} x {{height}}</h4>
-    <h1>{{title}}</h1>
-    <h4 class="desc">{{material}} <span>x</span> {{date}} <span>x</span>
+        <img src="/img/artwork/{{type}}/{{imageThumb}}" srcset="/img/artwork/{{type}}/{{imageThumb}} 1x, /img/artwork/{{type}}/{{imageThumb2x}} 2x" class="lazy" alt="{{type}} painting by Chris Petersen">
 
-    {{#if hasExternalUrl}}
-    <a class="inquire" href="{{externalUrl}}" target="_blank">{{linkText}}</a>
-    {{else}}
-    <a class="inquire" href="{{mailto}}">{{linkText}}</a>
-    {{/if}}
+        <div class="meta">
 
-    </h4>
+            {{#if isVisible}}
+            <h4 class="desc">{{width}} x {{height}}</h4>
+            <h1>{{title}}</h1>
+            <h4 class="desc">{{material}} <span>x</span> {{date}} <span>x</span>
 
-    {{else}}
-    <h4 class="desc">{{width}} x {{height}}</h4>
-    <h1>{{title}}</h1>
-    <h4 class="desc">{{material}} <span>x</span> {{date}}</h4>
-    {{/if}}
+            {{#if hasExternalUrl}}
+            <a class="inquire" href="{{externalUrl}}" target="_blank">{{linkText}}</a>
+            {{else}}
+            <a class="inquire" href="{{mailto}}">{{linkText}}</a>
+            {{/if}}
 
-</div>
+            </h4>
+
+            {{else}}
+            <h4 class="desc">{{width}} x {{height}}</h4>
+            <h1>{{title}}</h1>
+            <h4 class="desc">{{material}} <span>x</span> {{date}}</h4>
+            {{/if}}
+
+        </div>
     </a>
 </figure>

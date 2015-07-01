@@ -4,6 +4,8 @@ define(function(require, exports, module) {
         helpers = require('app/utils/helpers'),
         vent = require('app/vent');
 
+    require('respimage');
+
     return Marionette.CollectionView.extend({
 
         childView: ArtItemView,
@@ -17,6 +19,8 @@ define(function(require, exports, module) {
         onShow: function() {
             this.gridItems = $('.item');
             this.wrapItems();
+
+            window.respimage();
         },
 
         wrapItems: function() {

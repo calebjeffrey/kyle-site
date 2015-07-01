@@ -25,6 +25,7 @@ requirejs.config({
         'lazyLoad': 'libs/lazyLoad',
         'viewport': 'libs/viewport',
         'masonry': 'libs/masonry',
+        'respimage': 'libs/respimage.min',
 
         // shortcut to templates
         templates: './templates'
@@ -41,6 +42,11 @@ requirejs.config({
         'jquery.velocity': {
             exports: '$',
             deps: ['jquery']
+        },
+
+        'respimage.min': {
+            exports: 'respimage',
+            // deps: ['jquery']
         },
 
         'phosphor': {

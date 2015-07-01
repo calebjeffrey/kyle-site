@@ -78,7 +78,11 @@ define(function(require, exports, module) {
                 }
             };
 
-            image.src = '/img/artwork/' + this.model.get('type') + '/' + this.model.get('image2x');
+            if ($('body').hasClass('hires')) {
+                image.src = '/img/artwork/' + this.model.get('type') + '/' + this.model.get('image2x');
+            } else {
+                image.src = '/img/artwork/' + this.model.get('type') + '/' + this.model.get('image');    
+            }
 
             _.delay(function() {
                 self.showArtDetail();
@@ -169,6 +173,7 @@ define(function(require, exports, module) {
         },
 
         onShow: function() {
+            window.respimage();
             this.delegateEvents();
             this.handleImage();
             app.vent.trigger('menu:toggle');

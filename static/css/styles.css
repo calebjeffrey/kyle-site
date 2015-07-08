@@ -1322,72 +1322,73 @@ footer a {
   margin: 0 auto;
   padding: 65px 15px 0 15px;
   width: 100%;
+  min-height: 100%;
 }
-/* line 6, src/components/_grid.scss */
+/* line 7, src/components/_grid.scss */
 .grid:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 13, src/components/_grid.scss */
+/* line 14, src/components/_grid.scss */
 .column {
   float: left;
   width: 100%;
 }
-/* line 17, src/components/_grid.scss */
+/* line 18, src/components/_grid.scss */
 .grid .column:last-of-type {
   padding-right: 0;
 }
-/* line 21, src/components/_grid.scss */
+/* line 22, src/components/_grid.scss */
 .column:first-child {
   padding-left: 0;
 }
-/* line 25, src/components/_grid.scss */
+/* line 26, src/components/_grid.scss */
 .column:last-child {
   padding-right: 0;
 }
-/* line 29, src/components/_grid.scss */
+/* line 30, src/components/_grid.scss */
 .column .item {
   width: 100%;
   margin: 8px 0;
   opacity: 0;
 }
-/* line 34, src/components/_grid.scss */
+/* line 35, src/components/_grid.scss */
 .column .item:last-child {
   margin-bottom: 15px;
 }
 @media only screen and (min-width: 480px) {
-  /* line 29, src/components/_grid.scss */
+  /* line 30, src/components/_grid.scss */
   .column .item {
     margin: 0;
     padding: 10px;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 29, src/components/_grid.scss */
+  /* line 30, src/components/_grid.scss */
   .column .item {
     padding: 10%;
   }
-  /* line 45, src/components/_grid.scss */
+  /* line 46, src/components/_grid.scss */
   .column .item:last-child {
     padding-bottom: 0;
   }
 }
-/* line 50, src/components/_grid.scss */
+/* line 51, src/components/_grid.scss */
 .column .item .detail-link {
   display: block;
 }
-/* line 54, src/components/_grid.scss */
+/* line 55, src/components/_grid.scss */
 .column .item:first-child {
   margin-top: 0;
 }
-/* line 60, src/components/_grid.scss */
+/* line 61, src/components/_grid.scss */
 .column .item.show-meta .overlay, .column .item.show-meta .meta {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 65, src/components/_grid.scss */
+/* line 66, src/components/_grid.scss */
 .column .item.show-meta h4 {
   opacity: 1;
   -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
@@ -1396,7 +1397,7 @@ footer a {
   -webkit-transition-delay: 0.4s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
 }
-/* line 70, src/components/_grid.scss */
+/* line 71, src/components/_grid.scss */
 .column .item.show-meta h1 {
   -webkit-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   -moz-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
@@ -1409,11 +1410,11 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 76, src/components/_grid.scss */
+/* line 77, src/components/_grid.scss */
 .no-touch .column .item.show-meta figure:hover {
   cursor: url(../img/cursor/minimize-cursor.svg), auto;
 }
-/* line 82, src/components/_grid.scss */
+/* line 83, src/components/_grid.scss */
 .column .item .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
@@ -1424,7 +1425,7 @@ footer a {
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
   pointer-events: none;
 }
-/* line 90, src/components/_grid.scss */
+/* line 91, src/components/_grid.scss */
 .column .item .meta {
   width: 100%;
   text-align: center;
@@ -1437,12 +1438,12 @@ footer a {
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
 @media only screen and (min-width: 480px) {
-  /* line 90, src/components/_grid.scss */
+  /* line 91, src/components/_grid.scss */
   .column .item .meta {
     width: 200%;
   }
 }
-/* line 103, src/components/_grid.scss */
+/* line 104, src/components/_grid.scss */
 .column .item h1 {
   margin: 20px 0;
   text-transform: uppercase;
@@ -1454,7 +1455,7 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 111, src/components/_grid.scss */
+/* line 112, src/components/_grid.scss */
 .column .item h4 {
   color: #8c9397;
   opacity: 0;
@@ -1465,11 +1466,11 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 116, src/components/_grid.scss */
+/* line 117, src/components/_grid.scss */
 .column .item h4 a {
   color: #8c9397;
 }
-/* line 121, src/components/_grid.scss */
+/* line 122, src/components/_grid.scss */
 .column .item .inquire {
   color: #fb2323;
   font-size: 14px;
@@ -1481,33 +1482,33 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: color 0.3s linear 0s;
 }
-/* line 129, src/components/_grid.scss */
+/* line 130, src/components/_grid.scss */
 .no-touch .column .item .inquire:hover {
   color: #ffffff;
 }
 @media only screen and (min-width: 480px) {
-  /* line 135, src/components/_grid.scss */
+  /* line 136, src/components/_grid.scss */
   .column .item h4 {
     font-size: 1.9em;
     margin: 11px 0;
   }
-  /* line 139, src/components/_grid.scss */
+  /* line 140, src/components/_grid.scss */
   .column .item h4 .inquire {
     font-size: 19px;
   }
-  /* line 144, src/components/_grid.scss */
+  /* line 145, src/components/_grid.scss */
   .column .item h1 {
     font-size: 10em;
   }
 }
-/* line 150, src/components/_grid.scss */
+/* line 151, src/components/_grid.scss */
 .column .item span {
   position: relative;
   top: -2px;
   font-size: 0.9em;
   color: #5a5e60;
 }
-/* line 161, src/components/_grid.scss */
+/* line 162, src/components/_grid.scss */
 .column img {
   width: 100%;
   outline: #d9d9d9 solid 0px;
@@ -1517,7 +1518,7 @@ footer a {
   transition: outline 0.6s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-/* line 170, src/components/_grid.scss */
+/* line 171, src/components/_grid.scss */
 .no-touch .column .item:hover img {
   outline: #fb2323 solid 20px;
 }

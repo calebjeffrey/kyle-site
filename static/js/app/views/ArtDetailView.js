@@ -47,42 +47,44 @@ define(function(require, exports, module) {
 
         handleImage: function() {
             var self = this;
-            var image = new Image();
-            var windowHeight = $(window).height();
-            var windowWidth = $(window).width();
-            var offset = 0.8;
-            image.onload = function() {
-                var img = $(this);
-                if (this.naturalHeight > (windowHeight * offset) && windowHeight < 1000) {
-                    self.ui.img.css({
-                        height: windowHeight * 0.8
-                    });
-                }
+            var winHeight = $(window).height();
+            this.ui.img.css('max-height', winHeight * 0.8 + 'px');
+            // var image = new Image();
+            // var windowHeight = $(window).height();
+            // var windowWidth = $(window).width();
+            // var offset = 0.8;
+            // image.onload = function() {
+            //     var img = $(this);
+            //     if (this.naturalHeight > (windowHeight * offset) && windowHeight < 1000) {
+            //         self.ui.img.css({
+            //             height: windowHeight * 0.8
+            //         });
+            //     }
 
-                if (this.naturalHeight > (windowHeight * offset) && windowHeight > 1000) {
-                    self.ui.img.css({
-                        height: windowHeight * 0.8
-                    });
-                }
+            //     if (this.naturalHeight > (windowHeight * offset) && windowHeight > 1000) {
+            //         self.ui.img.css({
+            //             height: windowHeight * 0.8
+            //         });
+            //     }
 
-                if (windowWidth < 1000) {
-                    self.ui.img.css({
-                        height: 'auto'
-                    });
-                }
+            //     if (windowWidth < 1000) {
+            //         self.ui.img.css({
+            //             height: 'auto'
+            //         });
+            //     }
 
-                if (this.naturalWidth > this.naturalHeight) {
-                    self.ui.img.css({
-                        height: 'auto'
-                    });
-                }
-            };
+            //     if (this.naturalWidth > this.naturalHeight) {
+            //         self.ui.img.css({
+            //             height: 'auto'
+            //         });
+            //     }
+            // };
 
-            if ($('body').hasClass('hires')) {
-                image.src = '/img/artwork/' + this.model.get('type') + '/' + this.model.get('image2x');
-            } else {
-                image.src = '/img/artwork/' + this.model.get('type') + '/' + this.model.get('image');    
-            }
+            // if ($('body').hasClass('hires')) {
+            //     image.src = '/img/artwork/' + this.model.get('type') + '/' + this.model.get('image2x');
+            // } else {
+            //     image.src = '/img/artwork/' + this.model.get('type') + '/' + this.model.get('image');    
+            // }
 
             _.delay(function() {
                 self.showArtDetail();
@@ -187,20 +189,20 @@ define(function(require, exports, module) {
         },
 
         handleImageSize: function() {
-            var windowHeight = $(window).height();
-            var windowWidth = $(window).width();
-            var offset = 0.8;
-            if (this.ui.img.height() > (windowHeight * offset) && windowHeight < 1000) {
-                this.ui.img.css({
-                    height: windowHeight * 0.8
-                });
-            }
+            // var windowHeight = $(window).height();
+            // var windowWidth = $(window).width();
+            // var offset = 0.8;
+            // if (this.ui.img.height() > (windowHeight * offset) && windowHeight < 1000) {
+            //     this.ui.img.css({
+            //         height: windowHeight * 0.8
+            //     });
+            // }
 
-            if (windowWidth < 1000) {
-                this.ui.img.css({
-                    height: 'auto'
-                });
-            }
+            // if (windowWidth < 1000) {
+            //     this.ui.img.css({
+            //         height: 'auto'
+            //     });
+            // }
 
         },
 

@@ -15,6 +15,7 @@ define(function(require, exports, module) {
             figure: 'figure',
             content: '.content',
             wrapper: '.wrapper',
+            overlay: '.overlay',
             img: 'img'
         },
 

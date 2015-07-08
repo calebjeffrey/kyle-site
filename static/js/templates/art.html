@@ -1,30 +1,22 @@
 <figure>
-    <a class="detail-link" href="/art/{{slug}}">
+    <a class="detail-link" href="/art/{{slug}}"></a>
+
         <div class="overlay"></div>
 
-        <img src="/img/artwork/{{type}}/{{imageThumb}}" srcset="/img/artwork/{{type}}/{{imageThumb}} 1x, /img/artwork/{{type}}/{{imageThumb2x}} 2x" class="lazy" alt="{{type}} painting by Chris Petersen">
+        <img src="/img/artwork/{{type}}/{{imageThumb}}" srcset="/img/artwork/{{type}}/{{imageThumb}} 1x, /img/artwork/{{type}}/{{imageThumb2x}} 2x" class="lazy" alt="{{type}} painting by Chris Petersen" />
 
         <div class="meta">
 
-            {{#if isVisible}}
-            <h4 class="desc">{{width}} x {{height}}</h4>
-            <h1>{{title}}</h1>
-            <h4 class="desc">{{material}} <span>x</span> {{date}} <span>x</span>
-
             {{#if hasExternalUrl}}
-            <a class="inquire" href="{{externalUrl}}" target="_blank">{{linkText}}</a>
-            {{else}}
-            <a class="inquire" href="{{mailto}}">{{linkText}}</a>
-            {{/if}}
-
-            </h4>
-
+            <h4 class="desc">{{width}} x {{height}}</h4>
+            <h1>{{title}}</h1>
+            <h4 class="desc">{{material}} <span>x</span> {{date}} <span>x</span><a class="inquire" href="{{externalUrl}}" target="_blank">{{linkText}}</a></h4>
+                
             {{else}}
             <h4 class="desc">{{width}} x {{height}}</h4>
             <h1>{{title}}</h1>
-            <h4 class="desc">{{material}} <span>x</span> {{date}}</h4>
+            <h4 class="desc">{{material}} <span>x</span> {{date}} <span>x</span><a class="inquire" href="{{mailto}}">{{linkText}}</a></h4>
             {{/if}}
 
         </div>
-    </a>
 </figure>

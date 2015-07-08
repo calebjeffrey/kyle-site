@@ -26,13 +26,17 @@ define(function(require, exports, module) {
             nextGalleryLink: 'footer a',
             gridItems: '.item',
             gridLinks: '.item .detail-link',
+            overlay: '.overlay',
+            meta: '.meta',
             columns: '.column'
         },
 
         events: {
             'click @ui.previousGalleryLink': 'onClickPreviousGallery',
             'click @ui.nextGalleryLink': 'onClickNextGallery',
-            'click @ui.gridLinks': 'onClickGridLink'
+            'click @ui.gridLinks': 'onClickGridLink',
+            'click @ui.overlay': 'onClickDetailOverlay',
+            'click @ui.meta': 'onClickDetailOverlay'
         },
 
         initialize: function(options) {
@@ -77,6 +81,16 @@ define(function(require, exports, module) {
                 console.log('else')
                 this.animateSlidesDown();
             }
+        },
+
+        onClickDetailOverlay: function(e) {
+            var parent = $(e.currentTarget).closest('.item');
+
+                if (parent.hasClass('show-meta')) {
+                    parent.removeClass('show-meta');
+                } else {
+                    parent.addClass('show-meta');
+                }
         },
 
         genRandomNum: function(min, max) {

@@ -3,6 +3,7 @@
     padding: 20px 7px 0 7px;
     width: 100%;
     min-height: 100%;
+    max-width: 1200px;
 
     &:after {
         content: "";
@@ -42,13 +43,14 @@
         }
 
         @media only screen and (min-width: 768px) {
-            padding: 10%;
+            padding: 20px;
             &:last-child {
                 padding-bottom: 0;
             }
         }
 
         .detail-link {
+            @extend %spread;
             display: block;
         }
 
@@ -122,10 +124,15 @@
         .inquire {
             @extend .h4;
             color: $red;
+            margin-left: 4px;
             font-size: 14px;
             text-transform: uppercase;
             text-decoration: underline;
             @include transition(color 0.3s 0s linear);
+
+            @media only screen and (min-width: 768px) {
+                margin-left: 0;
+            }
 
             .no-touch &:hover {
                 color: $white;

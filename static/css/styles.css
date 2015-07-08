@@ -511,7 +511,7 @@ th {
 }
 
 /* line 47, src/_extends.scss */
-.full-bleed, .header .hamburger:after, .column .item .overlay, .info, .art-detail .wrapper, .art-detail .overlay {
+.full-bleed, .header .hamburger:after, .column .item .detail-link, .column .item .overlay, .info, .art-detail .wrapper, .art-detail .overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -997,24 +997,19 @@ form ul {
 .menu-is-open .header .header-logo {
   opacity: 0;
 }
-@media only screen and (min-width: 480) {
-  /* line 133, src/components/_header.scss */
-  .header .header-logo {
-    position: fixed;
-  }
-}
 @media only screen and (min-width: 768px) {
   /* line 133, src/components/_header.scss */
   .header .header-logo {
+    position: fixed;
     top: 40px;
     left: 40px;
   }
-  /* line 163, src/components/_header.scss */
+  /* line 161, src/components/_header.scss */
   .menu-is-open .header .header-logo {
     opacity: 1;
   }
 }
-/* line 168, src/components/_header.scss */
+/* line 166, src/components/_header.scss */
 .header .header-logo a {
   display: block;
   margin-top: -5px;
@@ -1026,7 +1021,7 @@ form ul {
   background-image: url(../img/logo/logo-mobile.svg);
 }
 @media only screen and (min-width: 768px) {
-  /* line 168, src/components/_header.scss */
+  /* line 166, src/components/_header.scss */
   .header .header-logo a {
     margin-top: 0px;
     background-image: url(../img/logo/logo.svg);
@@ -1323,72 +1318,73 @@ footer a {
   padding: 20px 7px 0 7px;
   width: 100%;
   min-height: 100%;
+  max-width: 1200px;
 }
-/* line 7, src/components/_grid.scss */
+/* line 8, src/components/_grid.scss */
 .grid:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 14, src/components/_grid.scss */
+/* line 15, src/components/_grid.scss */
 .column {
   float: left;
   width: 100%;
 }
-/* line 18, src/components/_grid.scss */
+/* line 19, src/components/_grid.scss */
 .grid .column:last-of-type {
   padding-right: 0;
 }
-/* line 22, src/components/_grid.scss */
+/* line 23, src/components/_grid.scss */
 .column:first-child {
   padding-left: 0;
 }
-/* line 26, src/components/_grid.scss */
+/* line 27, src/components/_grid.scss */
 .column:last-child {
   padding-right: 0;
 }
-/* line 30, src/components/_grid.scss */
+/* line 31, src/components/_grid.scss */
 .column .item {
   width: 100%;
   margin: 8px 0;
   opacity: 0;
 }
-/* line 35, src/components/_grid.scss */
+/* line 36, src/components/_grid.scss */
 .column .item:last-child {
   margin-bottom: 15px;
 }
 @media only screen and (min-width: 480px) {
-  /* line 30, src/components/_grid.scss */
+  /* line 31, src/components/_grid.scss */
   .column .item {
     margin: 0;
     padding: 10px;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 30, src/components/_grid.scss */
+  /* line 31, src/components/_grid.scss */
   .column .item {
-    padding: 10%;
+    padding: 20px;
   }
-  /* line 46, src/components/_grid.scss */
+  /* line 47, src/components/_grid.scss */
   .column .item:last-child {
     padding-bottom: 0;
   }
 }
-/* line 51, src/components/_grid.scss */
+/* line 52, src/components/_grid.scss */
 .column .item .detail-link {
   display: block;
 }
-/* line 55, src/components/_grid.scss */
+/* line 57, src/components/_grid.scss */
 .column .item:first-child {
   margin-top: 0;
 }
-/* line 61, src/components/_grid.scss */
+/* line 63, src/components/_grid.scss */
 .column .item.show-meta .overlay, .column .item.show-meta .meta {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 66, src/components/_grid.scss */
+/* line 68, src/components/_grid.scss */
 .column .item.show-meta h4 {
   opacity: 1;
   -moz-transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
@@ -1397,7 +1393,7 @@ footer a {
   -webkit-transition-delay: 0.4s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0.4s;
 }
-/* line 71, src/components/_grid.scss */
+/* line 73, src/components/_grid.scss */
 .column .item.show-meta h1 {
   -webkit-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
   -moz-animation: detailTitle 1s 0s cubic-bezier(0.215, 0.61, 0.355, 1) 1 forwards;
@@ -1410,11 +1406,11 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 77, src/components/_grid.scss */
+/* line 79, src/components/_grid.scss */
 .no-touch .column .item.show-meta figure:hover {
   cursor: url(../img/cursor/minimize-cursor.svg), auto;
 }
-/* line 83, src/components/_grid.scss */
+/* line 85, src/components/_grid.scss */
 .column .item .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
@@ -1425,7 +1421,7 @@ footer a {
   transition: opacity 0.5s cubic-bezier(0.42, 0, 0.58, 1) 0s;
   pointer-events: none;
 }
-/* line 91, src/components/_grid.scss */
+/* line 93, src/components/_grid.scss */
 .column .item .meta {
   width: 100%;
   text-align: center;
@@ -1438,12 +1434,12 @@ footer a {
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
 @media only screen and (min-width: 480px) {
-  /* line 91, src/components/_grid.scss */
+  /* line 93, src/components/_grid.scss */
   .column .item .meta {
     width: 200%;
   }
 }
-/* line 104, src/components/_grid.scss */
+/* line 106, src/components/_grid.scss */
 .column .item h1 {
   margin: 20px 0;
   text-transform: uppercase;
@@ -1455,7 +1451,7 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 112, src/components/_grid.scss */
+/* line 114, src/components/_grid.scss */
 .column .item h4 {
   color: #8c9397;
   opacity: 0;
@@ -1466,13 +1462,14 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
 }
-/* line 117, src/components/_grid.scss */
+/* line 119, src/components/_grid.scss */
 .column .item h4 a {
   color: #8c9397;
 }
-/* line 122, src/components/_grid.scss */
+/* line 124, src/components/_grid.scss */
 .column .item .inquire {
   color: #fb2323;
+  margin-left: 4px;
   font-size: 14px;
   text-transform: uppercase;
   text-decoration: underline;
@@ -1482,33 +1479,39 @@ footer a {
   -webkit-transition-delay: 0s;
   transition: color 0.3s linear 0s;
 }
-/* line 130, src/components/_grid.scss */
+@media only screen and (min-width: 768px) {
+  /* line 124, src/components/_grid.scss */
+  .column .item .inquire {
+    margin-left: 0;
+  }
+}
+/* line 137, src/components/_grid.scss */
 .no-touch .column .item .inquire:hover {
   color: #ffffff;
 }
 @media only screen and (min-width: 480px) {
-  /* line 136, src/components/_grid.scss */
+  /* line 143, src/components/_grid.scss */
   .column .item h4 {
     font-size: 1.9em;
     margin: 11px 0;
   }
-  /* line 140, src/components/_grid.scss */
+  /* line 147, src/components/_grid.scss */
   .column .item h4 .inquire {
     font-size: 19px;
   }
-  /* line 145, src/components/_grid.scss */
+  /* line 152, src/components/_grid.scss */
   .column .item h1 {
     font-size: 10em;
   }
 }
-/* line 151, src/components/_grid.scss */
+/* line 158, src/components/_grid.scss */
 .column .item span {
   position: relative;
   top: -2px;
   font-size: 0.9em;
   color: #5a5e60;
 }
-/* line 162, src/components/_grid.scss */
+/* line 169, src/components/_grid.scss */
 .column img {
   width: 100%;
   outline: #d9d9d9 solid 0px;
@@ -1518,7 +1521,7 @@ footer a {
   transition: outline 0.6s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-/* line 171, src/components/_grid.scss */
+/* line 178, src/components/_grid.scss */
 .no-touch .column .item:hover img {
   outline: #fb2323 solid 20px;
 }

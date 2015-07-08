@@ -153,10 +153,8 @@
         .menu-is-open & {
             opacity: 0;
         }
-        @media only screen and (min-width: 480) {
-            position: fixed;
-        }
         @media only screen and (min-width: 768px) {
+            position: fixed;
             top: 40px;
             left: 40px;
 

@@ -21,10 +21,8 @@
     .hamburger {
         @extend %transition-all-slow;
         position: fixed;
-        // top: 10px;
-        // right: 15px;
-        top: 35px;
-        right: 15px;
+        top: 10px;
+        right: 18px;
         width: 36px;
         height: 36px;
         cursor: pointer;
@@ -134,10 +132,8 @@
 
     .header-logo {
         position: absolute;
-        // top: 25px;
-        // left: 25px;
-        top: 50px;
-        left: 30px;
+        top: 25px;
+        left: 20px;
         z-index: 10;
         opacity: 0;
         @include translate3d(0, -200%, 0);

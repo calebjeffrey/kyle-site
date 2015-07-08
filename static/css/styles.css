@@ -845,8 +845,8 @@ form ul {
 /* line 21, src/components/_header.scss */
 .header .hamburger {
   position: fixed;
-  top: 35px;
-  right: 15px;
+  top: 10px;
+  right: 18px;
   width: 36px;
   height: 36px;
   cursor: pointer;
@@ -859,12 +859,12 @@ form ul {
     right: 40px;
   }
 }
-/* line 37, src/components/_header.scss */
+/* line 35, src/components/_header.scss */
 .header .hamburger.is-hiding {
   opacity: 0;
   visibility: hidden;
 }
-/* line 41, src/components/_header.scss */
+/* line 39, src/components/_header.scss */
 .header .hamburger:after {
   top: -10px;
   right: -10px;
@@ -872,48 +872,48 @@ form ul {
   left: -10px;
   padding: 10px;
 }
-/* line 59, src/components/_header.scss */
+/* line 57, src/components/_header.scss */
 .no-touch .header .hamburger:hover .cover {
   width: 23px;
   opacity: 1;
 }
-/* line 63, src/components/_header.scss */
+/* line 61, src/components/_header.scss */
 .no-touch .header .hamburger:hover .cover:before, .no-touch .header .hamburger:hover .cover:after {
   opacity: 1;
   width: 23px;
 }
-/* line 69, src/components/_header.scss */
+/* line 67, src/components/_header.scss */
 .menu-is-open .header .hamburger {
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-/* line 75, src/components/_header.scss */
+/* line 73, src/components/_header.scss */
 .menu-is-open .header .hamburger .patty, .menu-is-open .header .hamburger .cover {
   background: none !important;
   opacity: 1;
 }
-/* line 78, src/components/_header.scss */
+/* line 76, src/components/_header.scss */
 .menu-is-open .header .hamburger .patty:before, .menu-is-open .header .hamburger .patty:after, .menu-is-open .header .hamburger .cover:before, .menu-is-open .header .hamburger .cover:after {
   top: 0 !important;
   opacity: 1;
 }
-/* line 82, src/components/_header.scss */
+/* line 80, src/components/_header.scss */
 .menu-is-open .header .hamburger .patty:before, .menu-is-open .header .hamburger .cover:before {
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-/* line 85, src/components/_header.scss */
+/* line 83, src/components/_header.scss */
 .menu-is-open .header .hamburger .patty:after, .menu-is-open .header .hamburger .cover:after {
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 91, src/components/_header.scss */
+/* line 89, src/components/_header.scss */
 .header .hamburger .patty {
   position: absolute;
   top: 16px;
@@ -924,7 +924,7 @@ form ul {
   background: #c7c7c7;
   cursor: pointer;
 }
-/* line 101, src/components/_header.scss */
+/* line 99, src/components/_header.scss */
 .header .hamburger .patty:before, .header .hamburger .patty:after {
   content: '';
   position: absolute;
@@ -933,15 +933,15 @@ form ul {
   display: block;
   background: #c7c7c7;
 }
-/* line 109, src/components/_header.scss */
+/* line 107, src/components/_header.scss */
 .header .hamburger .patty:before {
   top: -8px;
 }
-/* line 112, src/components/_header.scss */
+/* line 110, src/components/_header.scss */
 .header .hamburger .patty:after {
   top: 8px;
 }
-/* line 115, src/components/_header.scss */
+/* line 113, src/components/_header.scss */
 .header .hamburger .patty.cover {
   top: 50%;
   left: 50%;
@@ -952,18 +952,18 @@ form ul {
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
 }
-/* line 124, src/components/_header.scss */
+/* line 122, src/components/_header.scss */
 .header .hamburger .patty.cover:before, .header .hamburger .patty.cover:after {
   background: #fb2323;
   overflow: hidden;
   opacity: 0;
   width: 0;
 }
-/* line 135, src/components/_header.scss */
+/* line 133, src/components/_header.scss */
 .header .header-logo {
   position: absolute;
-  top: 50px;
-  left: 30px;
+  top: 25px;
+  left: 20px;
   z-index: 10;
   opacity: 0;
   -moz-transform: translate3d(0, -200%, 0);
@@ -975,14 +975,14 @@ form ul {
   -webkit-transition-delay: 1.6s;
   transition: all 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 1.6s;
 }
-/* line 147, src/components/_header.scss */
+/* line 143, src/components/_header.scss */
 .header .header-logo.is-showing {
   opacity: 1;
   -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 152, src/components/_header.scss */
+/* line 148, src/components/_header.scss */
 .header .header-logo.gallery-header-showing {
   -moz-transition: -moz-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
   -o-transition: -o-transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
@@ -993,28 +993,28 @@ form ul {
   -webkit-transform: translate3d(0, 42px, 0);
   transform: translate3d(0, 42px, 0);
 }
-/* line 157, src/components/_header.scss */
+/* line 153, src/components/_header.scss */
 .menu-is-open .header .header-logo {
   opacity: 0;
 }
 @media only screen and (min-width: 480) {
-  /* line 135, src/components/_header.scss */
+  /* line 133, src/components/_header.scss */
   .header .header-logo {
     position: fixed;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 135, src/components/_header.scss */
+  /* line 133, src/components/_header.scss */
   .header .header-logo {
     top: 40px;
     left: 40px;
   }
-  /* line 167, src/components/_header.scss */
+  /* line 163, src/components/_header.scss */
   .menu-is-open .header .header-logo {
     opacity: 1;
   }
 }
-/* line 172, src/components/_header.scss */
+/* line 168, src/components/_header.scss */
 .header .header-logo a {
   display: block;
   margin-top: -5px;
@@ -1026,7 +1026,7 @@ form ul {
   background-image: url(../img/logo/logo-mobile.svg);
 }
 @media only screen and (min-width: 768px) {
-  /* line 172, src/components/_header.scss */
+  /* line 168, src/components/_header.scss */
   .header .header-logo a {
     margin-top: 0px;
     background-image: url(../img/logo/logo.svg);
@@ -1320,7 +1320,7 @@ footer a {
 /* line 1, src/components/_grid.scss */
 .grid {
   margin: 0 auto;
-  padding: 65px 15px 0 15px;
+  padding: 20px 7px 0 7px;
   width: 100%;
   min-height: 100%;
 }

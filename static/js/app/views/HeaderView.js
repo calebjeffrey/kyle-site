@@ -95,6 +95,7 @@ define(function(require, exports, module) {
                 translateX: '-50%',
                 translateY: '-50%'
             }, {
+                ease: [0.165, 0.84, 0.44, 1],
                 duration: 1000
             });
         },

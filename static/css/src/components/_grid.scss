@@ -1,6 +1,6 @@
 .grid {
     margin: 0 auto;
-    padding: 20px 7px 0 7px;
+    padding: 15px 7px 0 7px;
     width: 100%;
     min-height: 100%;
     max-width: 1200px;
@@ -168,6 +168,8 @@
     }
 
     figure {
+        position: relative;
+        overflow: hidden;
     }
 
     img {

@@ -36,7 +36,6 @@ define(function(require, exports, module) {
 
         initialize: function(options) {
             BaseView.prototype.initialize.call(this);
-            console.log(this.model);
             this.returnUrl = '/gallery/' + this.model.get('type');
             this.hasExternalUrl = (this.model.get('inquire').externalUrl) ? true : false;
             this.isVisible = (this.model.get('inquire').visible) ? true : false;
@@ -90,7 +89,7 @@ define(function(require, exports, module) {
 
             _.delay(function() {
                 self.showArtDetail();
-            }, 500);
+            }, 200);
         },
 
         showArtDetail: function() {
@@ -128,9 +127,8 @@ define(function(require, exports, module) {
         animateDetailIn: function() {
             this.ui.figure.velocity({
                 opacity: 1,
-                translateY: '-50%'
+                translateY: ['-50%', [0.165, 0.84, 0.44, 1]]
             }, {
-                ease: [0.165, 0.84, 0.44, 1],
                 duration: 600
             });
         },
@@ -138,15 +136,15 @@ define(function(require, exports, module) {
         animateDetailOut: function() {
             this.ui.figure.velocity({
                 opacity: 0,
-                translateY: '0%'
+                translateY: ['0%', [0.895, 0.03, 0.685, 0.22]]
             }, {
-                ease: [0.77, 0, 0.175, 1],
                 duration: 600,
                 complete: _.bind(this.hideArtDetail, this)
             });
         },
 
         hideArtDetail: function() {
+            app.firstLoad = false;
             app.appRouter.navigate(this.returnUrl, {
                 trigger: true
             });

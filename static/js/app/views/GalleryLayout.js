@@ -65,10 +65,9 @@ define(function(require, exports, module) {
         },
 
         onClickGridLink: function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             if ($(window).width() < 480) {
-                e.preventDefault();
-                e.stopPropagation();
-
                 var parent = $(e.currentTarget).closest('.item');
 
                 if (parent.hasClass('show-meta')) {
@@ -78,8 +77,7 @@ define(function(require, exports, module) {
                 }
 
             } else {
-                console.log('else')
-                this.animateSlidesDown();
+                this.animateSlidesDown($(e.currentTarget).data('link'));
             }
         },
 
@@ -129,10 +127,9 @@ define(function(require, exports, module) {
             _.each($('.item'), function(item, index) {
 
                 $(item).velocity({
-                    opacity: 1,
-                    translateY: '0%'
+                    opacity: [1, [0.25, 0.25, 0.75, 0.75]],
+                    translateY: ['0%', [0.19, 1, 0.22, 1]]
                 }, {
-                    ease: [0.895, 0.03, 0.685, 0.22],
                     delay: _.random(100, 600),
                     duration: 500
                 });
@@ -153,15 +150,25 @@ define(function(require, exports, module) {
             }, 200)
         },
 
-        animateSlidesDown: function() {
-            _.each(this.ui.gridItems, function(item, index) {
+        animateSlidesDown: function(link) {
+            var finishedCount = 0;
+
+            _.each(this.ui.gridItems, function(item, index, list) {
                 $(item).velocity({
-                    opacity: 0,
-                    translateY: '30%'
+                    opacity: [0, [0.25, 0.25, 0.75, 0.75]],
+                    translateY: ['30%', [0.95, 0.05, 0.795, 0.035]]
                 }, {
-                    ease: [0.895, 0.03, 0.685, 0.22],
-                    delay: _.random(100, 600),
-                    duration: 500
+                    delay: _.random(150, 300),
+                    duration: 500,
+                    complete: function() {
+                        finishedCount ++;
+
+                        if (finishedCount === list.length) {
+                            app.appRouter.navigate(link, {
+                                trigger: true
+                            });
+                        }
+                    }
                 });
             });
         },

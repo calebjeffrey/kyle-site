@@ -36,7 +36,8 @@ define(function(require, exports, module) {
 
         initialize: function(options) {
             BaseView.prototype.initialize.call(this);
-            this.returnUrl = options.returnUrl || '/';
+            console.log(this.model);
+            this.returnUrl = '/gallery/' + this.model.get('type');
             this.hasExternalUrl = (this.model.get('inquire').externalUrl) ? true : false;
             this.isVisible = (this.model.get('inquire').visible) ? true : false;
             this.linkText = this.model.get('inquire').linkText;
@@ -146,6 +147,10 @@ define(function(require, exports, module) {
         },
 
         hideArtDetail: function() {
+            app.appRouter.navigate(this.returnUrl, {
+                trigger: true
+            });
+
             this.$el.velocity({
                 translateY: '100%'
             }, {
@@ -158,11 +163,6 @@ define(function(require, exports, module) {
         onCloseComplete: function() {
             app.vent.trigger('menu:toggle');
             app.vent.trigger('slides:animateAfterDetail');
-
-            app.appRouter.navigate(this.returnUrl, {
-                trigger: true
-            });
-
             this.destroy();
         },
 

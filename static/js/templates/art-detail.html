@@ -5,26 +5,16 @@
             <img src="/img/artwork/{{type}}/{{image}}" srcset="/img/artwork/{{type}}/{{image}} 1x, /img/artwork/{{type}}/{{image2x}} 2x" alt="{{type}} painting by Chris Petersen">
             <div class="meta">
 
-
-                {{#if isVisible}}
-                <h4>{{width}} x {{height}}</h4>
-                <h1>{{title}}</h1>
-                <h4>{{material}} <span>x</span> {{date}} <span>x</span>
-
                 {{#if hasExternalUrl}}
-                <a class="inquire" href="{{externalUrl}}" target="_blank">{{linkText}}</a>
-                {{else}}
-                <a class="inquire" href="{{mailto}}">{{linkText}}</a>
-                {{/if}}
-
-                </h4>
-
-                {{else}}
-                <h4>{{width}} x {{height}}</h4>
+                <h4 class="desc">{{width}} x {{height}}</h4>
                 <h1>{{title}}</h1>
-                <h4>{{material}} <span>x</span> {{date}}</h4>
+                <h4 class="desc">{{material}} <span>x</span> {{date}} <span>x</span><a class="inquire" href="{{externalUrl}}" target="_blank">{{linkText}}</a></h4>
+                    
+                {{else}}
+                <h4 class="desc">{{width}} x {{height}}</h4>
+                <h1>{{title}}</h1>
+                <h4 class="desc">{{material}} <span>x</span> {{date}} <span>x</span><a class="inquire" href="{{mailto}}">{{linkText}}</a></h4>
                 {{/if}}
-
 
             </div>
         </figure>

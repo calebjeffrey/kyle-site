@@ -128,7 +128,7 @@ define(function(require, exports, module) {
 
                 $(item).velocity({
                     opacity: [1, [0.25, 0.25, 0.75, 0.75]],
-                    translateY: ['0%', [0.19, 1, 0.22, 1]]
+                    translateY: ['0%', [0.165, 0.84, 0.44, 1]]
                 }, {
                     delay: _.random(100, 600),
                     duration: 500
@@ -156,7 +156,7 @@ define(function(require, exports, module) {
             _.each(this.ui.gridItems, function(item, index, list) {
                 $(item).velocity({
                     opacity: [0, [0.25, 0.25, 0.75, 0.75]],
-                    translateY: ['30%', [0.95, 0.05, 0.795, 0.035]]
+                    translateY: ['30%', [0.895, 0.03, 0.685, 0.22]]
                 }, {
                     delay: _.random(150, 300),
                     duration: 500,

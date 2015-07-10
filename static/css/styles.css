@@ -1524,7 +1524,13 @@ footer a {
   position: relative;
   overflow: hidden;
 }
-/* line 175, src/components/_grid.scss */
+@media only screen and (min-width: 480px) {
+  /* line 170, src/components/_grid.scss */
+  .column figure {
+    overflow: visible;
+  }
+}
+/* line 179, src/components/_grid.scss */
 .column img {
   width: 100%;
   outline: #d9d9d9 solid 0px;
@@ -1534,7 +1540,7 @@ footer a {
   transition: outline 0.6s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
-/* line 184, src/components/_grid.scss */
+/* line 188, src/components/_grid.scss */
 .no-touch .column .item:hover img {
   outline: #fb2323 solid 20px;
 }

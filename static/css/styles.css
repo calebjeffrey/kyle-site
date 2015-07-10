@@ -1825,6 +1825,10 @@ footer a {
   font-size: 0.9em;
   color: #5a5e60;
 }
+/* line 105, src/pages/_art-detail.scss */
+.art-detail .inquire {
+  margin-left: 6px;
+}
 
 @-webkit-keyframes fadeIn {
   0% {

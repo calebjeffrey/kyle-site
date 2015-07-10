@@ -153,6 +153,11 @@ define(function(require, exports, module) {
         animateSlidesDown: function(link) {
             var finishedCount = 0;
 
+            if (this.ui.gridItems.hasClass('velocity-animating')) {
+                console.log('already moving')
+                this.ui.gridItems.velocity('stop', true);
+            }
+
             _.each(this.ui.gridItems, function(item, index, list) {
                 $(item).velocity({
                     opacity: [0, [0.25, 0.25, 0.75, 0.75]],
@@ -164,6 +169,7 @@ define(function(require, exports, module) {
                         finishedCount ++;
 
                         if (finishedCount === list.length) {
+                            console.log('complete')
                             app.appRouter.navigate(link, {
                                 trigger: true
                             });

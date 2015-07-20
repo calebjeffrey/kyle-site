@@ -39,3 +39,4 @@ type in 'git push' <= this will update codebase on github
 ####DEPLOYING TO HEROKU
 1. download heroku cli tools: https://toolbelt.heroku.com/
 2. while in the project root, aka, 'cd desktop/webroot/kyle-site', type in 'git remote add heroku  https://git.heroku.com/whileimstillhere.git'
+3. type in 'git push heroku master'

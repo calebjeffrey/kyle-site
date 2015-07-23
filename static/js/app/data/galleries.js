@@ -1,29 +1,24 @@
 define(function(require, exports, module) {
     module.exports = [
         {
-            "title": "allaprima",
+            "title": "portraits",
             "previousGallery": "studies",
             "nextGallery": "cityscapes"
         },
         {
             "title": "cityscapes",
-            "previousGallery": "allaprima",
+            "previousGallery": "portraits",
             "nextGallery": "pleinair"
         },
         {
             "title": "pleinair",
             "previousGallery": "cityscapes",
-            "nextGallery": "portraits"
-        },
-        {
-            "title": "portraits",
-            "previousGallery": "pleinair",
             "nextGallery": "studies"
         },
         {
             "title": "studies",
-            "previousGallery": "portraits",
-            "nextGallery": "allaprima"
+            "previousGallery": "pleinair",
+            "nextGallery": "portraits"
         }
     ];
 

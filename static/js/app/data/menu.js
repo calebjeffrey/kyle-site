@@ -2,8 +2,8 @@ define(function(require, exports, module) {
 
     module.exports = [
         {
-            title: 'Allaprima',
-            link: '/gallery/allaprima/'
+            title: 'Portraits',
+            link: '/gallery/portraits/'
         },
         {
             title: 'Cityscapes',
@@ -12,10 +12,6 @@ define(function(require, exports, module) {
         {
             title: 'PleinAir',
             link: '/gallery/pleinair/'
-        },
-        {
-            title: 'Portraits',
-            link: '/gallery/portraits/'
         },
         {
             title: 'Studies',
